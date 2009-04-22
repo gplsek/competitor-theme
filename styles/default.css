@@ -1,0 +1,22 @@
+
+body {
+	background: #8a6718 url(default/mtb-background.jpg) center top no-repeat;
+}
+
+
+#logo {
+	float: left;
+	width: 337px;
+	height: 82px;
+	background: url(images/header-logo.gif) 0 -10px no-repeat;
+	text-indent: 39px;
+	font-size:30px;
+	Padding-top:20px
+	
+}
+
+#logo a {
+	color:#FFFFFF;
+	text-decoration:none
+	
+}

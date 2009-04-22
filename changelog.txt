@@ -1,0 +1,49 @@
+*** Original Changelog ***
+
+2008.10.22 - version 1.2.0
+  * thumb.php - new version
+
+2008.10.09 - version 1.1.6
+  * functions/custom.php - Fixed bug with update of custom fields
+
+2008.10.02 - version 1.1.5
+  * functions.php - Changed post_title to post_name
+
+2008.09.04 - version 1.1.4 (only updated to svn)
+  * sitemap.php - fixed wp_list_pages
+  * header.php - fixed wp_list_pages
+  * style.css - fixed .nav-left, .nav-right
+
+2008.09.04 - version 1.1.3
+  * style.css - Fixed flickr badge style error
+
+2008.09.02 - Version 1.1.2
+  * functions.php - Fixed archives variable name
+  * includes/version.php - Archive variable with page ID 
+  * layouts/default.php - Archive variable with page ID
+
+2008.08.21 - Version 1.1.1
+  * functions.php - Changed default value on options
+
+2008.08.08 - Version 1.1
+
+  * changelog.txt - Added changelog and revised version number
+  * includes/test.php - Added phpinfo() file for debugging resizer on buggy hosts
+  * includes/popular.php - Display popular posts in sidebar.php
+  * includes/comments.php - Display recent comments in sidebarh.php
+  * functions/custom.php - Custom settings panel in WP post window
+  * sidebar.php - Changed tabs to use popular.php and comments.php
+  * sidebar.php - Changed flickr script
+  * sidebar.php - fixed <ul> to <span> to validate on tag cloud
+  * header.php - fixed <? to <?php 
+  * footer.php - Stripslashes on google analytics
+  * footer.php - WooThemes credit logo
+  * screenshot.png - New screenshot  
+  * functions.php - .mainrow border-bottom: 1px solid #D4E9FA !important;
+  * functions.php - Added flickr options
+  * functions.php - Added pages dropdown to archive
+  * functions.php - Fixed google analytics slashes when saving
+  * functions.php - No <br/> before description of checkboxes
+  * style.css - Fix float on .flickr img
+
+

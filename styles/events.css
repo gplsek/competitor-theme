@@ -1,0 +1,12 @@
+body {
+	background: #0787c6 url(events/background.jpg) center top no-repeat;
+}
+
+#content {
+	margin-top: 50px;
+}
+
+
+#banner {
+display:none
+}
