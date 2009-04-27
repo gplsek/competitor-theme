@@ -136,6 +136,13 @@ $options = array (
 			    		"std" => "6",
 			    		"type" => "select",
 			    		"options" => $other_entries),	
+			
+				array(	"name" => "Front Page Video Player",
+						"desc" => "Please paste your Bright Cove Video Player code here.",
+						 "id" => $shortname."_bright_cove",
+						 "std" => "",
+						 "type" => "textarea"),
+						
 						
 				array( 	"name" => "Featured Category",
 					   	"desc" => "Select the category that you would like to have displayed in the featured section on your homepage.",
