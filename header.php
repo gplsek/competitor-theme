@@ -235,14 +235,16 @@ height:100px;
 							global $current_user;
 							get_currentuserinfo();
 							echo  '<p>Welcome '.$current_user->display_name;
+							if(isset($fb_user) && $fb_user!=""){
+								echo "<a href='#' onclick='FB.Connect.logout(function() { reload(); }); return false;' ><img id='fb_logout_image' src='http://static.ak.fbcdn.net/images/fbconnect/logout-buttons/logout_small.gif' alt='Connect'/></a>";
+							}
+							else 
 							
 							echo ' <a href="'.wp_sidebarlogin_current_url('logout').'">'.__('Logout');
+							}
 							echo '</p>';
-							$fb_user = fbc_facebook_client()->get_loggedin_user();
-							if(isset($fb_user) && $fb_user!=""){
-							?>
-							<a href="#" onclick="FB.Connect.logout(function() { reload(); }); return false;" ><img id="fb_logout_image" src="http://static.ak.fbcdn.net/images/fbconnect/logout-buttons/logout_small.gif" alt="Connect"/></a>
-							<?php }
+							
+							 
 						} else {
 							?>
 			                    <p>
