@@ -862,6 +862,17 @@ width:640px;
 	float: left;
 	
 }
+.right_column .widget ul{
+	margin: 10px;
+	font-size: 12px;
+}
+.right_column .widget ul li{
+	padding: 5px;
+	margin:10px;
+}
+.right_column .widget ul li a{
+	font-size: 12px;
+}
 .right_column .widget .tab_content{
 	width: 320px;
 	margin-bottom: 0px;
