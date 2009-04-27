@@ -239,7 +239,7 @@ height:100px;
 								echo "<a href='#' onclick='FB.Connect.logout(function() { reload(); }); return false;' ><img id='fb_logout_image' src='http://static.ak.fbcdn.net/images/fbconnect/logout-buttons/logout_small.gif' alt='Connect'/></a>";
 							}
 							else 
-							
+							{
 							echo ' <a href="'.wp_sidebarlogin_current_url('logout').'">'.__('Logout');
 							}
 							echo '</p>';
