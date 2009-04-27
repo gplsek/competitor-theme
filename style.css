@@ -1,4 +1,4 @@
-/*  
+/*
 Theme Name: Competitor Master Theme
 Description: This theme should be used for Competitor's main sites. Theme can be customized by clicking the CompTheme Options button in lower left. Create a custom look by creating a new CSS file and uploading it to server. 
 Version: .5
@@ -15,8 +15,16 @@ body {
 	background: #694a33 url(images/body-bg1.jpg) center top no-repeat;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
-
-
+a{
+	color: #2A88B2;
+	text-decoration: none;
+}
+blockquote {
+    margin: 0px 20px 15px 20px;
+    padding: 5px 0px 5px 15px;
+    border-left: 5px solid #C0C0C0;
+	font-family: georgia;
+}
 #container {
 	margin: 0 auto;
 	width: 1090px;
@@ -270,7 +278,7 @@ input.gsc-search-button{
 }
 #content .signin {
     background-color:#c4161c;
-    background-image:url(images/nav_sep_2.jpg);
+    background-image:url(images/nav_sep_3.png);
     background-repeat:no-repeat;
     float: left;
     height:26px;
@@ -402,6 +410,10 @@ input.gsc-search-button{
     float: left;
 	list-style: none;
 }
+#content .main_column ul.options li,#content .main_column ul.article_info li {
+    float: left!important;
+	list-style: none;
+}
 
 .main_column .main_article {
     overflow: hidden;
@@ -462,7 +474,18 @@ input.gsc-search-button{
     border-left: none;
     padding:0 10px 0 0;
 }
-
+#content .wp-caption{
+	padding: 5px!important;
+	border: 1px solid #CACACA!important;
+	margin: 5px!important;
+	display: block!important;
+}
+#content .wp-caption p.wp-caption-text{	
+	font-family: georgia;
+	font-size: 11px;
+	text-align: center;
+	color: #CACACA;
+}
 .main_column .filters {
     background-image:url(images/bg_1.jpg);
 	background-repeat:repeat-x;
@@ -562,10 +585,18 @@ width:640px;
     float:left;
     margin-top:5px;
 }
-
+.main_column .article ul, .main_column .article ol{
+	margin-left: 20px;
+	margin-top: 10px;
+	font-size: 12px;
+}
+.main_column .article ul li, .main_column .article ol li{
+	padding: 5px;
+	float: none!important;
+}
 .main_column .article ul.options {
     margin-left:368px;
-    margin-top:5px;
+    margin-top:0px;
     overflow:hidden;
 	position: relative;
 }
@@ -583,6 +614,7 @@ width:640px;
     display:block;
     font-size:10px;
     overflow:hidden;
+    margin:0 0 0 0;
 }
 
 .main_column .article ul.article_info li {
@@ -675,6 +707,7 @@ width:640px;
 	list-style: none;
 	font-size: 1em;
 }
+
 .right_column .ad_large {
     margin: auto;
 }
@@ -1161,15 +1194,17 @@ a img
 {
 border:none;
 }
-#archivebox
-{
-font-size:12px !important;
-margin-top:5px;
+#archivebox{
+	font-size:12px !important;
+	border: 1px solid #444444;
+	margin: 10px;
+	padding: 5px 5px 5px 10px;
+	float: left;
 }
 .main_column .article p
 {
 display:block;
 font-size:12px !important;
-text-indent:15px;
+/*text-indent:15px;*/
 padding-bottom:2px;
 }

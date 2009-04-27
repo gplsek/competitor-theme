@@ -1,18 +1,4 @@
   <div class="right_column">
-	
-	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('single') ) : else : ?>		
-
-			<!--<div class="widget">
-
-				<h2 class="hl">RELATED SITES</h2>
-				<ul class="list2">
-					<?php sampleHelloWorld(); ?>
-				</ul>
-
-			</div>--><!--/widget-->
-
-		<?php endif; ?>
-		
           
  <div class="ad_large">
                     <a href="#">
@@ -35,7 +21,14 @@
                     </p>
                 </div><!-- End side tabs -->
 	
-		 <div class="tab_content">
+	
+	
+	
+	
+<!--	<div class="fix" style="height:2px;"></div>-->
+	
+	<!--<div class="navbox">-->
+	 <div class="tab_content">
 		
 		<ul class="list1" id="pop">
             <?php include(TEMPLATEPATH . '/includes/popular.php' ); ?>                    
@@ -67,12 +60,16 @@
 		
 		<?php } ?>
 	</div><!-- tab-content-->	
+	<!--</div>--><!--/navbox-->
+	
+
 	
 	
 	
-<!--	<div class="fix" style="height:2px;"></div>-->
 	
-	<div class="ad_large">
+	
+	
+	 <div class="ad_large">
                     <a href="#">
                         <img src="<?php bloginfo('template_directory'); ?>/images/ad_300.jpg" width="298" height="101" alt="" />
                     </a>
@@ -81,6 +78,7 @@
 
 
 <!-- FACEBOOK STUFF -->
+<div class="widget">
 <div class="fbnarrowcolumn narrowcolumn">
 
 <?php
@@ -99,7 +97,8 @@ if(isset($fb_user) && $fb_user!=""){
 
 }
 ?> 
-</div>
+</div></div>
+<div class="widget">
 <div class="fbnarrowcolumn narrowcolumn">
 <?php
 	$users_count = WPfbConnect_Logic::get_count_users();
@@ -139,11 +138,15 @@ if(isset($fb_user) && $fb_user!=""){
 
 
 
-
+</div>
 </div>
 <!-- End FB STUFF -->
 
-
+	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('home') ) : else : ?>		
+		
+		hello
+		
+		<?php endif; ?>
 	
 
 

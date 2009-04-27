@@ -82,13 +82,26 @@ global $user_ID, $wpdb, $post, $current_category;
 			</ul>
 			<p>
 		    	<?php //echo strip_tags(get_the_excerpt(), '<a><strong>'); ?>
-			    <?php the_advanced_excerpt('length=125'); ?>
+			    <?php 
+				if (!($post->post_excerpt)){
+				the_advanced_excerpt('length=125');
+				}
+				else 
+				{
+					echo $post->post_excerpt;
+				} ?>
 		   
 		   </p>
 			
 		</div><!--/article-->
 		
-		<?php if ( !($counter2 == $showposts) && ($counter == 0) ) { echo '<div class="hl-full"></div>'; ?> <div style="clear:both;"></div> <?php } ?>
+		
+		<?php 
+		if (($counter2 == '4') || ($counter2 == '8'))
+		{
+			echo "<div class='ad468x60'>ADVERTIZEMENT GOES HERE</div>";
+		}
+		if ( !($counter2 == $showposts) && ($counter == 0) ) { echo '<div class="hl-full"></div>'; ?> <div style="clear:both;"></div> <?php } ?>
 	
 	<?php endwhile; ?>
 	

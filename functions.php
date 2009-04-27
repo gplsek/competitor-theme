@@ -392,13 +392,36 @@ add_action('admin_head', 'compthemes_admin_head');
 
 // OTHER FUNCTIONS
 
-if ( function_exists('register_sidebar') )
-    register_sidebars(5,array(
-        'before_widget' => '<div class="widget">',
-        'after_widget' => '</div><!--/widget-->',
-        'before_title' => '<h2 class="hl">',
-        'after_title' => '</h2>',
-    ));
+if ( function_exists('register_sidebar') ){
+	$comp_sidebars = array();
+	array_push($comp_sidebars,
+		
+		array('name' => 'home',
+        	'before_widget' => '<div class="widget">',
+        	'after_widget' => '</div><!--/widget-->',
+        	'before_title' => '<h2 class="hl">',
+        	'after_title' => '</h2>'),
+
+		array('name' => 'category',
+	    	'before_widget' => '<div class="widget">',
+	    	'after_widget' => '</div><!--/widget-->',
+	    	'before_title' => '<h2 class="hl">',
+	    	'after_title' => '</h2>'),
+	
+		array('name' => 'single',
+		    'before_widget' => '<div class="widget">',
+		    'after_widget' => '</div><!--/widget-->',
+		    'before_title' => '<h2 class="hl">',
+		    'after_title' => '</h2>')
+		);
+	
+	foreach ($comp_sidebars as $sidebar) {
+		register_sidebar($sidebar);
+	}
+}
+	
+
+
 
 $bm_trackbacks = array();
 $bm_comments = array();

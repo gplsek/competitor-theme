@@ -36,7 +36,7 @@
 
 	<h2 class="commh2"><?php echo $commentcounter; ?> Comments For This Post</h2>
 
-	<ol class="commentlist">
+	<ul class="commentlist">
 
 	<?php foreach ($bm_comments as $comment) : ?>
 
@@ -67,7 +67,7 @@
 
 	<?php endforeach; /* end for each comment */ ?>
 
-	</ol>
+	</ul>
 
 	<?php if ( count( $bm_trackbacks ) > 0 ) { ?>
 
