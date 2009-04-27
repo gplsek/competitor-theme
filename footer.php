@@ -70,7 +70,7 @@
 
 <?php wp_footer(); ?>
 <div class="fb_resetstyles fb_popupContainer"></div>
-<?php if ( get_option('woo_google_analytics') <> "" ) { echo stripslashes(get_option('woo_google_analytics')); } ?>
+<?php if ( get_option('comp_google_analytics') <> "" ) { echo stripslashes(get_option('comp_google_analytics')); } ?>
 
 </body>
 </html>

@@ -91,11 +91,8 @@ jQuery.noConflict();
 	
 	
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/includes/js/facebox/facebox.css" type="text/css" media="print, projection, screen">
-	
-	
-	 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.css" />
-    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/mootools-trunk.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.js"></script>
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.css" />
+
     
 
 	
@@ -241,6 +238,9 @@ height:100px;
 							
 							echo ' <a href="'.wp_sidebarlogin_current_url('logout').'">'.__('Logout');
 							echo '</p>';
+							?>
+							<a href="#" onclick="FB.Connect.logout(function() { reload(); }); return false;" ><img id="fb_logout_image" src="http://static.ak.fbcdn.net/images/fbconnect/logout-buttons/logout_small.gif" alt="Connect"/></a>
+							<?php
 						} else {
 							?>
 			                    <p>
