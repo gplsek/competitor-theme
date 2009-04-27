@@ -1,7 +1,8 @@
 <?php
 session_start();
 ?>
-<?php get_header(); ?>
+<?php get_header(); 
+$template_path = get_bloginfo('template_directory');?>
             <div class="border"></div>
             <div id="mainTabs" class="main_column">
 			  
@@ -9,7 +10,7 @@ session_start();
 
 
                     <li><a href="#rotate">FEATURED STORIES</a></li>
-                    <li><a href="/wp-content/themes/pandemia-news/video.php">TOP VIDEOS</a></li>
+                    <li><a href="<?= $template_path?>/video.php">TOP VIDEOS</a></li>
                     <li>
                         <span style="float: left;">HOT:</span>
                         <ul>
@@ -59,9 +60,9 @@ session_start();
 			?>
 				<div id="contentTabs" class="filters">
 			  	  <ul id="TopFeature" class="main">
-				        <li><a class="first active" href="/wp-content/themes/pandemia-news/layouts/default.php?sort=post_date<?= $paging ?>" title="feature">MOST RECENT</a></li>
-                        <li><a href="/wp-content/themes/pandemia-news/layouts/default.php?sort=views<?= $paging ?>" title="feature">MOST VIEWED</a></li>
-                        <li><a href="/wp-content/themes/pandemia-news/layouts/default.php?sort=comment_count<?= $paging ?>" title="feature">MOST COMMENTED</a></li>
+				        <li><a class="first active" href="<?= $template_path?>/layouts/default.php?sort=post_date<?= $paging ?>" title="feature">MOST RECENT</a></li>
+                        <li><a href="<?= $template_path?>/layouts/default.php?sort=views<?= $paging ?>" title="feature">MOST VIEWED</a></li>
+                        <li><a href="<?= $template_path?>/layouts/default.php?sort=comment_count<?= $paging ?>" title="feature">MOST COMMENTED</a></li>
                     </ul>
 			<!--	</div>-->
 			<!--	<div id="BottomFeature">-->
