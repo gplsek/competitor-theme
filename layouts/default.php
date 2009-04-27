@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 
 if (!function_exists('add_action')) {
 	require_once('../../../../wp-config.php');
@@ -9,6 +11,8 @@ global $user_ID, $wpdb, $post, $current_category;
 	include('../includes/version.php');
 	
 	$order = "&orderby=post_date";
+	
+	//echo "Here we are set session: ".$_SESSION['cat'];
 	
 	if (!($_GET['sort'] == ""))
 	{
@@ -36,18 +40,21 @@ global $user_ID, $wpdb, $post, $current_category;
 			
 			$show_category = 'cat='. $_GET['cat'] .'&';
 			$_SESSION['cat'] = $_GET['cat'];
+			//echo "Here we are session: ".$_SESSION['cat'];
 		}
 	else if ((!($_SESSION['cat'] == "")) && ($_GET['cat'] == ""))
 		{
 			$show_category = 'cat='. $_SESSION['cat'] .'&';
+			//echo "Here we are session2: ".$_SESSION['cat'];
 			
 			
 		}
 		
 		
-	if (($_GET['cat'] == "All") || ($_SESSION['cat'] == "All"))
+	if (($_GET['cat'] == "") && ($_SESSION['cat'] == ""))
 		{
-			$show_category = "";
+			$show_category = 'cat='.$_GET['all'] .'&';
+			//echo "Here we are".$_GET['all'];
 		}
 		
 		
@@ -55,10 +62,10 @@ global $user_ID, $wpdb, $post, $current_category;
 	{
 		$paged = "&paged=".$_GET['paged'];
 	}
-	//echo $show_category . "sort:". $order;		
+			
 	
 	query_posts($show_category.'showposts=' . $showposts . $order . $paged .'&order=DESC');
-	
+	//echo "TEST: ".$show_category;
 	$counter2 = 0;
 			
 	while(have_posts()) : the_post();  $do_not_duplicate = $post->ID;

@@ -48,8 +48,25 @@ $template_path = get_bloginfo('template_directory');?>
 
 					?>
 			</div><!-- End main article -->
-		
-			<?php
+			<?php 
+			
+			$categories =  get_categories('hide_empty=0');
+			$option = "";
+			$all = "";
+			foreach ($categories as $cate) {
+
+				if (get_option('comp_nav_categories_'.$cate->cat_ID)){
+			  	$option .= '<li><a href="'.$template_path.'/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
+				$all .= $cate->cat_ID.",";
+
+			}
+
+			  }
+			
+			
+			
+			
+			
 			$page = get_query_var('paged');
 			if (!($page == "")){
 				$paging = "&paged=".$page;
@@ -57,16 +74,28 @@ $template_path = get_bloginfo('template_directory');?>
 				
 				$_SESSION['cat'] = "";
 				$_SESSION['sort'] = "";
+				$_SESSION['all'] = $all;
+				
 			?>
 				<div id="contentTabs" class="filters">
 			  	  <ul id="TopFeature" class="main">
-				        <li><a class="first active" href="<?= $template_path?>/layouts/default.php?sort=post_date<?= $paging ?>" title="feature">MOST RECENT</a></li>
-                        <li><a href="<?= $template_path?>/layouts/default.php?sort=views<?= $paging ?>" title="feature">MOST VIEWED</a></li>
-                        <li><a href="<?= $template_path?>/layouts/default.php?sort=comment_count<?= $paging ?>" title="feature">MOST COMMENTED</a></li>
+				        <li><a class="first active" href="<?= $template_path?>/layouts/default.php?all=<?= $all?>&sort=post_date<?= $paging ?>" title="feature">MOST RECENT</a></li>
+                        <li><a href="<?= $template_path?>/layouts/default.php?all=<?= $all?>&sort=views<?= $paging ?>" title="feature">MOST VIEWED</a></li>
+                        <li><a href="<?= $template_path?>/layouts/default.php?all=<?= $all?>&sort=comment_count<?= $paging ?>" title="feature">MOST COMMENTED</a></li>
                     </ul>
 			<!--	</div>-->
 			<!--	<div id="BottomFeature">-->
-						<?php include(TEMPLATEPATH . '/layouts/homefeaturenav.php'); ?>
+				
+					<p>SHOW ONLY:</p>
+					<ul id="BottomFeature" class="secondary">
+
+
+						<li><a href="<?= $template_path?>/layouts/default.php?cat=<?= $all?><?= $paging ?>" title="feature">All</a></li>
+						<?= $option;?>
+
+
+					</ul>
+						
 				</div>              
 
 		
