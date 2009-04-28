@@ -111,6 +111,6 @@ $template_path = get_bloginfo('template_directory');?>
 			<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>		
 			</div><!-- End main column -->
 
-<?php get_sidebar(); ?>
+<?php get_sidebar('home'); ?>
 
 <?php get_footer(); ?>
