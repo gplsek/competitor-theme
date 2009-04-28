@@ -112,31 +112,7 @@ jQuery.noConflict();
 		});
 		/* ]]> */
 	</script>
-<style>
-.widget-ajax
-{
-width:340px;
-height:340px;
-}
-.widget-ajax ul
-{
-padding:0px;
-margin:0px;
-}
-.widget-ajax ul li
-{
-padding:0px;
-margin:0px;
-display:block;
-float:left;
-padding:4px
-}
-.widget-ajax ul li img
-{
-width:100px;
-height:100px;
-}
-</style>
+
 
 <?php //include(TEMPLATEPATH . '/includes/stylesheet.php'); ?>
 

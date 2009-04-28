@@ -256,9 +256,10 @@ input.gsc-search-button{
 }*/
 #content #searchform {
     background-color:#AFAFAF;
-	/*background-image:url(images/nav_sep_1.jpg);*/
+  
 	background-image:url(images/nav_sep_3.png);
-	background-repeat:no-repeat;
+	
+    background-repeat:no-repeat;
     float:left;
     height:26px;
     margin:4px 0 0 -10px;
@@ -869,19 +870,45 @@ width:640px;
     text-align:left;
 	border: 1px solid #cacaca;
 	float: left;
+	width: 340px;
 	
 }
-.right_column .widget ul.inside{
+.right_column .widget ul{
 	margin: 10px;
 	font-size: 12px;
 }
-.right_column .widget ul.inside li{
+.right_column .widget ul li{
 	padding: 5px;
 	margin:10px;
 }
-.right_column .widget ul.inside li a{
+.right_column .widget ul li a{
 	font-size: 12px;
 }
+
+.widget-ajax
+{
+width:340px;
+height:340px;
+}
+.widget-ajax ul
+{
+padding:0px;
+margin:0px;
+}
+.widget-ajax ul li
+{
+padding:0px;
+margin:0px;
+display:block;
+float:left;
+padding:4px
+}
+.widget-ajax ul li img
+{
+width:100px;
+height:100px;
+}
+
 .right_column .widget .tab_content{
 	width: 320px;
 	margin-bottom: 0px;
