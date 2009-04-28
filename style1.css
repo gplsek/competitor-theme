@@ -22,16 +22,8 @@ a{
 blockquote {
     margin: 0px 20px 15px 20px;
     padding: 5px 0px 5px 15px;
-    border-left: 1px dotted #185672;
-	font-family: georgia!important;
-	color: #185672;
-	font-style: italic;
-}
-blockquote p{
-	font-family: georgia!important;
-	margin: 0px!important;
-	padding: 0px!important;
-	font-style: italic;
+    border-left: 5px solid #C0C0C0;
+	font-family: georgia;
 }
 #container {
 	margin: 0 auto;
@@ -256,12 +248,12 @@ input.gsc-search-button{
 }*/
 #content #searchform {
     background-color:#AFAFAF;
-  
+    /*background-image:url(images/nav_sep_1.jpg);*/
 	background-image:url(images/nav_sep_3.png);
 	
     background-repeat:no-repeat;
     float:left;
-    height:26px;
+    height:25px;
     margin:4px 0 0 -10px;
     padding:3px 5px 0 25px;
  width: 139px;
@@ -293,8 +285,8 @@ input.gsc-search-button{
     float: left;
     height:26px;
     margin:3px 0 0 0px;
-    padding:3px 5px 0 15px;
-    width:288px;
+    padding:3px 5px 0 25px;
+    width:278px;
 }
 #content .signin .dark{
 	width: 16px;
@@ -872,15 +864,15 @@ width:640px;
 	float: left;
 	
 }
-.right_column .widget ul.inside{
+.right_column .widget ul{
 	margin: 10px;
 	font-size: 12px;
 }
-.right_column .widget ul.inside li{
+.right_column .widget ul li{
 	padding: 5px;
 	margin:10px;
 }
-.right_column .widget ul.inside li a{
+.right_column .widget ul li a{
 	font-size: 12px;
 }
 .right_column .widget .tab_content{
