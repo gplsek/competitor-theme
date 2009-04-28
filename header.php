@@ -255,9 +255,7 @@ height:100px;
 			                        <a href="/wp-signup.php">JOIN </a>
 									
 			                    </p>
-			                    <p class="small">Login with Facebook >></p> 
-                                <fb:login-button size="small" background="dark" length="short">
-                                    </fb:login-button>
+			                    <?php do_action('fbc_display_login_button')  ?>
 							<?php } ?>
 							
                 </div>
