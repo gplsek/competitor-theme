@@ -123,13 +123,6 @@ $options = array (
 				array(	"name" => "Front Page Layout",
 						"type" => "heading"),
 
-				array(	"name" => "Front Page Layout",
-						"desc" => "Choose the layout of to be used for the other entries on your homepage.",
-			    		"id" => $shortname."_layout",
-			    		"std" => "",
-			    		"type" => "select",
-			    		"options" => $layouts),
-
 				array(	"name" => "Homepage Entries",
 						"desc" => "Select the number of entries that should appear in the feature box on the homepage and category pages.",
 			    		"id" => $shortname."_other_entries",

@@ -1,19 +1,21 @@
   <div class="right_column">
-   <?php fbc_display_login_state(); ?>       
+    
  <div class="ad_large">
                     <a href="#">
                         <img src="<?php bloginfo('template_directory'); ?>/images/ad_300_250.jpg" width="302" height="252" alt="" />
                     </a>
-	<?php //include('ads/ads-management.php'); ?>
-	 </div>
-
-	<?php //include('ads/ads-top.php'); ?>
 	
+	 </div>
+	<?php
+		$featcat = get_option('comp_featured_category');
+	
+	
+	?>
 	 <div id="sideTabs" class="side_tabs">
                     <ul>
-                        <li><a class="active" href="#pop">NEWS</a></li>
+                        <li><a class="active" href="#news">NEWS</a></li>
                         <li><a href="#comm">COMMENTS</a></li>
-                        <li><a href="#feat">FEATURED</a></li>
+                        <li><a href="#feat"><?= $featcat;?></a></li>
 						<!--<?php if (function_exists('wp_tag_cloud')) { ?><li><a href="#tagcloud">TAG CLOUD</a></li><?php } ?>-->
                     </ul>
                     <p class="feeds">
@@ -30,9 +32,20 @@
 	<!--<div class="navbox">-->
 	 <div class="tab_content">
 		
-		<ul class="list1" id="pop">
-            <?php include(TEMPLATEPATH . '/includes/popular.php' ); ?>                    
+		<ul class="list1" id="news">
+			<?php 
+				$the_query = new WP_Query('category_name=news&showposts=10&orderby=post_date&order=desc');	
+				while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
+			?>
+
+				<li><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
+				<label class="date"><?php the_date('M, j'); ?></label><?php the_excerpt(); ?></li>
+
+			<?php endwhile; ?>		
 		</ul>
+        <p class="more">
+                        <a href="/category/news/">+ More News</a>
+                    </p>
         
 		<ul class="list3" id="comm">
             <?php include(TEMPLATEPATH . '/includes/comments.php' ); ?>                    
@@ -40,7 +53,7 @@
         
 		<ul class="list4" id="feat">
 			<?php 
-				$the_query = new WP_Query('category_name=news&showposts=10&orderby=post_date&order=desc');	
+				$the_query = new WP_Query('category_name='.$featcat.'&showposts=10&orderby=post_date&order=desc');	
 				while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
 			?>
 			
@@ -50,7 +63,7 @@
 			<?php endwhile; ?>		
 		</ul>
         <p class="more">
-                        <a href="#">+ More News</a>
+                        <a href="/category/<?= $featcat;?>">+ More News</a>
                     </p>
 		<?php if (function_exists('sswp_tag_cloud')) { ?>
 		
