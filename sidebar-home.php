@@ -1,5 +1,5 @@
   <div class="right_column">
-          
+   <?php fbc_display_login_state(); ?>       
  <div class="ad_large">
                     <a href="#">
                         <img src="<?php bloginfo('template_directory'); ?>/images/ad_300_250.jpg" width="302" height="252" alt="" />
