@@ -1,13 +1,8 @@
   <div class="right_column">
           
- <div class="ad_large">
-                    <a href="#">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/ad_300_250.jpg" width="302" height="252" alt="" />
-                    </a>
-	<?php //include('ads/ads-management.php'); ?>
-	 </div>
 
-	<?php //include('ads/ads-top.php'); ?>
+
+
 	
 	 <div id="sideTabs" class="side_tabs">
                     <ul>
