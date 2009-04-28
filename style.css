@@ -256,10 +256,9 @@ input.gsc-search-button{
 }*/
 #content #searchform {
     background-color:#AFAFAF;
-  
+	/*background-image:url(images/nav_sep_1.jpg);*/
 	background-image:url(images/nav_sep_3.png);
-	
-    background-repeat:no-repeat;
+	background-repeat:no-repeat;
     float:left;
     height:26px;
     margin:4px 0 0 -10px;
