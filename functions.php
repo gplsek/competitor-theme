@@ -496,8 +496,8 @@ function add_javascript( ) {
 	wp_enqueue_script('jquery-ui-resonalized','/wp-content/themes/pandemia-news/includes/js/jquery-ui-personalized-1.6rc6.js', array('jquery'));
 	wp_enqueue_script('accordion','/wp-content/themes/pandemia-news/includes/js/ui.accordion.js', array('jquery'));
 	wp_enqueue_script('facebox','/wp-content/themes/pandemia-news/includes/js/facebox/facebox.js', array('jquery'));
-	wp_enqueue_script('mootools','/wp-content/themes/pandemia-news/includes/js/mootools-trunk.js', array('jquery'));
-	wp_enqueue_script('remooz','/wp-content/themes/pandemia-news/includes/js/ReMooz.js', array('jquery'));
+	//wp_enqueue_script('mootools','/wp-content/themes/pandemia-news/includes/js/mootools-trunk.js', array('jquery'));
+	//wp_enqueue_script('remooz','/wp-content/themes/pandemia-news/includes/js/ReMooz.js', array('jquery'));
 }
 
 
