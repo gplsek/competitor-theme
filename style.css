@@ -263,8 +263,8 @@ input.gsc-search-button{
     float:left;
     height:26px;
     margin:4px 0 0 -10px;
-    padding:3px 5px 0 25px;
- width: 139px;
+    padding:3px 5px 0 20px;
+ width: 144px;
 }
 
 #content #searchform fieldset {
@@ -288,7 +288,7 @@ input.gsc-search-button{
 }
 #content .signin {
     background-color:#c4161c;
-    background-image:url(images/nav_sep_3.png);
+    background-image:url(images/nav_sep_4.png);
     background-repeat:no-repeat;
     float: left;
     height:26px;
@@ -901,7 +901,7 @@ margin:0px;
 margin:0px!important;
 display:block;
 float:left;
-padding:4px!important;
+padding:3px!important;
 }
 .widget-ajax ul li img
 {
