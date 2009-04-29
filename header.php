@@ -94,6 +94,7 @@ jQuery.noConflict();
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.css" />
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/mootools-trunk.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/jquery-ui-personalized-1.6rc6.js"></script>
 
     
 
