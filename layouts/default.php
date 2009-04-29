@@ -91,7 +91,8 @@ global $user_ID, $wpdb, $post, $current_category;
 		    	<?php //echo strip_tags(get_the_excerpt(), '<a><strong>'); ?>
 			    <?php 
 				if (!($post->post_excerpt)){
-				the_advanced_excerpt('length=125');
+				//the_advanced_excerpt('length=125');
+				the_content();
 				}
 				else 
 				{
