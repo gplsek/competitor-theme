@@ -33,7 +33,12 @@
 <![endif]--> 
 	 <?php wp_head(); ?>  
 	
-
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/includes/js/facebox/facebox.css" type="text/css" media="print, projection, screen">
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.css" />
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/ui.core.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/mootools-trunk.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/jquery-ui-personalized-1.6rc6.js"></script>
 	 
 <script type="text/javascript">
 jQuery.noConflict();
@@ -86,17 +91,7 @@ jQuery.noConflict();
 					
 					
 					
-	
-	
-	
-	
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/includes/js/facebox/facebox.css" type="text/css" media="print, projection, screen">
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.css" />
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/mootools-trunk.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/jquery-ui-personalized-1.6rc6.js"></script>
 
-    
 
 	
 	<script type="text/javascript">
