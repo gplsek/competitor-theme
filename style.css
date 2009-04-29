@@ -897,11 +897,11 @@ margin:0px;
 }
 .widget-ajax ul li
 {
-padding:0px;
-margin:0px;
+/*padding:0px!important;*/
+margin:0px!important;
 display:block;
 float:left;
-padding:4px
+padding:4px!important;
 }
 .widget-ajax ul li img
 {
