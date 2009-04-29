@@ -204,29 +204,30 @@ jQuery.noConflict();
 	 	                      </fieldset>
 	 	                  </form>
 	
-	   <div class="signin">
-                    <?php
-						if ($user_ID != '') {
-							// User is logged in
-							global $current_user;
-							get_currentuserinfo();
-							echo  '<p>Welcome '.$current_user->display_name;
-							echo ' <a href="'.wp_sidebarlogin_current_url('logout').'">'.__('Logout');
-							echo '</p>';
-							
-							 
-						} else {
-							?>
-			                    <p>
-			                        <a href="<?php bloginfo('template_directory'); ?>/includes/login.php?redir=<?= $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] ?>" rel="facebox">LOGIN</a>
-                                    
-                                   
-			                        OR
-			                        <a href="/wp-signup.php">JOIN </a>
-									
-			                    </p>
-			                    <?php do_action('fbc_display_login_button')  ?>
-							<?php } ?>
-							
-                </div>
+	   					<div class="signin">
+					                    <?php
+											if ($user_ID != '') {
+												// User is logged in
+												global $current_user;
+												get_currentuserinfo();
+												echo  '<p>Welcome '.$current_user->display_name;
+
+												echo ' <a href="'.wp_sidebarlogin_current_url('logout').'">'.__('Logout');
+												echo '</p>';
+											} else {
+												?>
+								                    <p>
+								                        <a href="<?php bloginfo('template_directory'); ?>/includes/login.php?redir=<?= $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] ?>" rel="facebox">LOGIN</a>
+
+
+								                        OR
+								                        <a href="/wp-signup.php">JOIN </a>
+
+								                    </p>
+								                    <p class="small">Login with Facebook >></p> 
+					                                <fb:login-button size="small" background="dark" length="short">
+					                                    </fb:login-button>
+												<?php } ?>
+
+					                </div>
             </div><!-- End navigation bars-->
