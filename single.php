@@ -13,10 +13,27 @@
 
 
 				    <?php echo get_avatar($authorID,$size = '64'); ?>
-					<h1><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+					<h1 class="title"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 					<h2 class="author"><?php the_author_posts_link(); ?></h2>
 					<ul class="options">
-		                        <li><?php the_category('</li><li> ') ?></li></ul>
+		                        <?php
+								    $count = 1;
+									foreach((get_the_category()) as $category) {
+									$linkcat = get_category_link($category->cat_ID);
+                                    if ($count < 2) {									
+										echo '<li><a href="'.$linkcat .'">'.$category->cat_name . '</a></li>'; 
+									} 
+                                    if ($count == 2){
+										echo '<li class="last"><a href="'.$linkcat .'">'.$category->cat_name . '</a></li>'; 
+									}
+									if ($count==3){
+										echo '(...)';
+									}
+									$count++;
+									} 
+								?>
+								<!--<li><?php the_category('</li><li> ') ?></li>-->
+								</ul>
 					<ul class="article_info">
 						<li class="first red"><?php the_time('d F Y'); ?></li>
 		                <li><?php if(function_exists('the_views')) { the_views(); } ?></li>

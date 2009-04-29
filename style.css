@@ -343,7 +343,12 @@ input.gsc-search-button{
 	display: inline;
     width:660px;
 }
-
+#content .main_column h1{
+	margin-top:10px;
+}
+#content .main_column h1.title{
+	margin-top:0px;
+}
 #content .main_column h1, #content .main_column h1 a {
     color:#185672;
     font-family:georgia;
@@ -423,8 +428,11 @@ input.gsc-search-button{
 #content .main_column ul.options li,#content .main_column ul.article_info li {
     float: left!important;
 	list-style: none;
+	background: none!important;
 }
-
+#content .main_column ul.options li{
+	padding: 5px 0px!important;
+}
 .main_column .main_article {
     overflow: hidden;
     width:660px;
@@ -586,9 +594,11 @@ width:640px;
     float: left;
 }
 
-.main_column .article img.profile_img, img.avatar {
+.main_column .article img.profile_img, img.avatar , img.fb_profile_pic_rendered{
     margin-right: 10px;
-	display: inline;
+	/*display: inline;*/
+	float: left;
+	margin-top:5px;
 }
 
 .main_column .article h2.author {
@@ -600,9 +610,15 @@ width:640px;
 	margin-top: 10px;
 	font-size: 12px;
 }
-.main_column .article ul li, .main_column .article ol li{
-	padding: 5px;
+.main_column .article ul li{
+	padding: 5px 5px 5px 15px;
 	float: none!important;
+	background: url(images/red-arrow.jpg) 0px 7px no-repeat;
+}
+.main_column .article ol li{
+	padding: 5px 5px 5px 15px;
+	float: none!important;
+
 }
 .main_column .article ul.options {
     margin-left:368px;
@@ -910,7 +926,7 @@ height:100px;
 }
 
 .right_column .widget .tab_content{
-	width: 320px;
+	width: 338px;
 	margin-bottom: 0px;
 }
 .right_column .widget .tab_content ul{
