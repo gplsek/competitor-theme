@@ -83,12 +83,14 @@ global $user_ID, $wpdb, $post, $current_category;
 			<ul class="options">
                          <?php
 								    $count = 1;
-									foreach((get_the_category()) as $category) {
+									$catarray = get_the_category();
+									$limite = count($catarray);
+									foreach(($catarray) as $category) {
 									$linkcat = get_category_link($category->cat_ID);
-                                    if ($count < 2) {									
+                                    if (($count < 2) AND ($count < $limite) AND ($limite > 1)) {									
 										echo '<li><a href="'.$linkcat .'">'.$category->cat_name . '</a></li>'; 
 									} 
-                                    if ($count == 2){
+                                    if (($count == 2) OR ($limite == 1)){
 										echo '<li class="last"><a href="'.$linkcat .'">'.$category->cat_name . '</a></li>'; 
 									}
 									if ($count==3){
