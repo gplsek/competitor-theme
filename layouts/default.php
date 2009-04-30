@@ -131,21 +131,7 @@ global $user_ID, $wpdb, $post, $current_category;
 		if ($counter2 == '4') 
 		{ // start add
 		?>
-		<script type="text/javascript" language="JavaScript">
-		  aj_server = 'http://adj43.thruport.com/servlet/ajrotator/'; aj_tagver = '1.0';
-		  aj_zone = 'inside'; aj_adspot = '619348'; aj_page = '0'; aj_dim ='317216'; aj_ch = '619353'; aj_ct = ''; aj_kw = '<?= $_SESSION['kw'] = $kw;?>';
-		  aj_pv = true; aj_click = '';
-		</script><script type="text/javascript" language="JavaScript" src="http://img1.cdn.adjuggler.com/banners/ajtg.js"></script>
-		<?php 
-		}else if ($counter == '8')
-		{
-			?>
-			
-			<script type="text/javascript" language="JavaScript">
-			  aj_server = 'http://adj43.thruport.com/servlet/ajrotator/'; aj_tagver = '1.0';
-			  aj_zone = 'inside'; aj_adspot = '619348'; aj_page = '0'; aj_dim ='317216'; aj_ch = '619354'; aj_ct = ''; aj_kw = '<?= $_SESSION['kw'] = $kw;?>';
-			  aj_pv = true; aj_click = '';
-			</script><script type="text/javascript" language="JavaScript" src="http://img1.cdn.adjuggler.com/banners/ajtg.js"></script>
+		
 			
 			<?php //end add
 			
