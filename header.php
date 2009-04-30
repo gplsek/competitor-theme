@@ -169,7 +169,6 @@ jQuery.noConflict();
 					$magazine_name = $subdomain[0];
 
 					$kw = $magazine_name.','.$cat_name;
-            
 
 
             ?>

@@ -1,23 +1,7 @@
 <?php
 session_start();
 
-$cat = get_category_by_path(get_query_var('category_name'),false);
-  $category = $cat->cat_ID;
-  $cat_name = $cat->cat_name;
-  if (is_home())
- 	{
-	$cat_name = 'home';
-	}
 
-	$parse_url_array 	= parse_url(get_option('siteurl'));
-	$subdomain 				= explode('.', $parse_url_array['host']);
-	if ($subdomain[0] == "www")
-	{
-	   $subdomain[0] = "competitor";
-	}
-	$magazine_name = $subdomain[0];
-
-	$kw = $magazine_name.','.$cat_name;
 	
 
 if (!function_exists('add_action')) {
@@ -27,6 +11,26 @@ if (!function_exists('add_action')) {
 global $user_ID, $wpdb, $post, $current_category;
 
 	include('../includes/version.php');
+	
+	$cat = get_category_by_path(get_query_var('category_name'),false);
+	  $category = $cat->cat_ID;
+	  $cat_name = $cat->cat_name;
+	  if (is_home())
+	 	{
+		$cat_name = 'home';
+		}
+
+		$parse_url_array 	= parse_url(get_option('siteurl'));
+		$subdomain 				= explode('.', $parse_url_array['host']);
+		if ($subdomain[0] == "www")
+		{
+		   $subdomain[0] = "competitor";
+		}
+		$magazine_name = $subdomain[0];
+
+		$kw = $magazine_name.','.$cat_name;
+		
+		
 	
 	$order = "&orderby=post_date";
 	
