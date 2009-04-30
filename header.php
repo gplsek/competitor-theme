@@ -150,7 +150,34 @@ jQuery.noConflict();
         
         <div id="banner">
         	
-            <iframe width="728" height="90" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" src="http://adj43.thruport.com/servlet/ajrotator/49/0/vh?z=inside&amp;ch=317223&amp;dim=317217"><script language="JavaScript" type="text/javascript" src="http://adj43.thruport.com/servlet/ajrotator/49/0/vj?z=inside&amp;ch=317223&amp;dim=317217&amp;abr=$scriptiniframe"></script><noscript> <a href="http://adj43.thruport.com/servlet/ajrotator/49/0/cc?z=inside"><img src="http://adj43.thruport.com/servlet/ajrotator/49/0/vc?z=inside&amp;ch=317223&amp;dim=317217&amp;abr=$imginiframe" width="728" height="90" border="0" alt = "Advertisement" /></a></noscript></iframe>
+            <?php  // get add keywords
+
+				$cat = get_category_by_path(get_query_var('category_name'),false);
+				  $category = $cat->cat_ID;
+				  $cat_name = $cat->cat_name;
+				  if (is_home())
+				 	{
+					$cat_name = 'home';
+					}
+
+					$parse_url_array 	= parse_url(get_option('siteurl'));
+					$subdomain 				= explode('.', $parse_url_array['host']);
+					if ($subdomain[0] == "www")
+					{
+					   $subdomain[0] = "competitor";
+					}
+					$magazine_name = $subdomain[0];
+
+					$kw = $magazine_name.','.$cat_name;
+            
+
+
+            ?>
+			<script type="text/javascript" language="JavaScript">
+			  aj_server = 'http://adj43.thruport.com/servlet/ajrotator/'; aj_tagver = '1.0';
+			  aj_zone = 'inside'; aj_adspot = '619316'; aj_page = '0'; aj_dim ='317217'; aj_ch = ''; aj_ct = ''; aj_kw = '<?= $kw?>';
+			  aj_pv = true; aj_click = '';
+			</script><script type="text/javascript" language="JavaScript" src="http://img1.cdn.adjuggler.com/banners/ajtg.js"></script>
         	
         </div><!-- End banner -->
 	

@@ -1,6 +1,24 @@
 <?php
 session_start();
 
+$cat = get_category_by_path(get_query_var('category_name'),false);
+  $category = $cat->cat_ID;
+  $cat_name = $cat->cat_name;
+  if (is_home())
+ 	{
+	$cat_name = 'home';
+	}
+
+	$parse_url_array 	= parse_url(get_option('siteurl'));
+	$subdomain 				= explode('.', $parse_url_array['host']);
+	if ($subdomain[0] == "www")
+	{
+	   $subdomain[0] = "competitor";
+	}
+	$magazine_name = $subdomain[0];
+
+	$kw = $magazine_name.','.$cat_name;
+	
 
 if (!function_exists('add_action')) {
 	require_once('../../../../wp-config.php');
@@ -125,8 +143,14 @@ global $user_ID, $wpdb, $post, $current_category;
 		
 		<?php 
 		if (($counter2 == '4') || ($counter2 == '8'))
-		{
-			echo "<div class='ad468x60'>ADVERTIZEMENT GOES HERE</div>";
+		{ // start add
+		?>
+		<script type="text/javascript" language="JavaScript">
+		  aj_server = 'http://adj43.thruport.com/servlet/ajrotator/'; aj_tagver = '1.0';
+		  aj_zone = 'inside'; aj_adspot = '619348'; aj_page = '0'; aj_dim ='317216'; aj_ch = '619353'; aj_ct = ''; aj_kw = '<?= $kw?>';
+		  aj_pv = true; aj_click = '';
+		</script><script type="text/javascript" language="JavaScript" src="http://img1.cdn.adjuggler.com/banners/ajtg.js"></script>
+		<?php //end add
 		}
 		if ( !($counter2 == $showposts) && ($counter == 0) ) { echo '<div class="hl-full"></div>'; ?> <div style="clear:both;"></div> <?php } ?>
 	
