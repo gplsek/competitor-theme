@@ -33,7 +33,11 @@
 <![endif]--> 
 	 <?php wp_head(); ?>  
 	
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/includes/js/facebox/facebox.css" type="text/css" media="print, projection, screen">
 
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/ui.core.js"></script>
+
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/jquery-ui-personalized-1.6rc6.js"></script>
 	 
 <script type="text/javascript">
 jQuery.noConflict();
@@ -86,17 +90,10 @@ jQuery.noConflict();
 					
 					
 					
-	
-	
-	
-	
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/includes/js/facebox/facebox.css" type="text/css" media="print, projection, screen">
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.css" />
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/mootools-trunk.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/jquery-ui-personalized-1.6rc6.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.css" />
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/mootools-trunk.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.js"></script>
 
-    
 
 	
 	<script type="text/javascript">
@@ -115,9 +112,6 @@ jQuery.noConflict();
 		});
 		/* ]]> */
 	</script>
-
-
-<?php //include(TEMPLATEPATH . '/includes/stylesheet.php'); ?>
 
 </head>
 
@@ -166,7 +160,7 @@ jQuery.noConflict();
             <div class="nav_bars">
                 <ul class="main_nav">
                      <?php //wp_list_bookmarks('title_li=&categorize=0&category_name=MainNav'); ?>
-					  <?php $links = get_bookmarks('category_name=MainNav');
+					  <?php $links = get_bookmarks('category_name=MainNav&orderby=order&category_orderby=order');
 							$count = 0;
 							$i=count($links)-1;
 							while( $count <= $i){
@@ -184,7 +178,7 @@ jQuery.noConflict();
                 <ul class="sec_nav">
                 
                 <?php //wp_list_bookmarks('title_li=&categorize=0&category_name=Sub'); ?>
-				 <?php $links = get_bookmarks('category_name=Sub');
+				 <?php $links = get_bookmarks('category_name=Sub&orderby=order&category_orderby=order');
 							$count = 0;
 							$i=count($links)-1;
 							while( $count <= $i){
@@ -215,7 +209,7 @@ jQuery.noConflict();
 												get_currentuserinfo();
 												echo  '<p>Welcome '.$current_user->display_name;
 
-												echo ' <a href="'.wp_sidebarlogin_current_url('logout').'">'.__('Logout');
+												echo "<a href='".wp_sidebarlogin_current_url('logout')."'>".__(' Logout')."</a>";
 												echo '</p>';
 											} else {
 												?>
@@ -231,6 +225,6 @@ jQuery.noConflict();
 					                                <fb:login-button size="small" background="dark" length="short">
 					                                    </fb:login-button>
 												<?php } ?>
-
-					                </div>
+												<br clear="all" />
+ 							</div><!-- End signin-->
             </div><!-- End navigation bars-->

@@ -4,21 +4,19 @@
 
 		<?php if (have_posts()) : ?>
 		
-		<div id="archivebox">
-        	
-            	<h2><?php the_title(); ?></h2>        
 		
-		</div><!--/archivebox-->
+        	
+            
 	
 			<?php while (have_posts()) : the_post(); ?>		
 
-				<div class="post-alt blog" id="post-<?php the_ID(); ?>">
+				<div class="article">
 		
 					<div class="entry">
 						<?php the_content('<span class="continue">Continue Reading</span>'); ?> 
 					</div>
 				
-				</div><!--/post-->
+				</div><!--/article-->
 
 			<?php endwhile; ?>
 
