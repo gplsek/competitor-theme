@@ -412,7 +412,13 @@ if ( function_exists('register_sidebar') ){
 		    'before_widget' => '<div class="widget">',
 		    'after_widget' => '</div><!--/widget-->',
 		    'before_title' => '<h2 class="hl">',
-		    'after_title' => '</h2>')
+		    'after_title' => '</h2>'),
+		
+		array('name' => 'page',
+			'before_widget' => '<div class="widget">',
+			'after_widget' => '</div><!--/widget-->',
+			'before_title' => '<h2 class="hl">',
+			'after_title' => '</h2>')
 		);
 	
 	foreach ($comp_sidebars as $sidebar) {
