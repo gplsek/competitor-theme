@@ -3,7 +3,7 @@
 
 
 
-	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('single') ) : else : ?>		
+	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('page') ) : else : ?>		
 		
 	
 		

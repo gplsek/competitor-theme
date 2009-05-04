@@ -2,11 +2,11 @@
 
 		<div id="mainTabs" class="main_column">
 
-			<div id="archivebox">
+			
 
-			    	<h2><em>Tag Archive |</em> "<?php single_tag_title("", true); ?>"</h2>        
+			    	<h1 class="<?php single_tag_title("", true); ?>-head">"<?php single_tag_title("", true); ?>"</h1>        
 
-			</div><!--/archivebox-->
+			
 			
 		<?php if (have_posts()) : ?>
 		

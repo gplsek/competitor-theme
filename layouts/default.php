@@ -132,7 +132,12 @@ global $user_ID, $wpdb, $post, $current_category;
 		{ // start add
 		?>
 		
-		
+		<iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619354&dim=317216&kw=<?= $_SESSION['kw']?>">
+		<?php 
+		}else if ($counter == '8')
+		{
+			?>
+		<iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619353&dim=317216&kw=<?= $_SESSION['kw']?>">
 			<?php //end add
 			
 		}
