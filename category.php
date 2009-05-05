@@ -56,6 +56,6 @@
 	
 </div>
 
-<?php get_sidebar(); ?>
+<?php get_sidebar('category'); ?>
 
 <?php get_footer(); ?>
