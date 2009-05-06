@@ -356,7 +356,9 @@ input.gsc-search-button{
     font-weight:normal;
 	text-align: left;
 }
-
+#content .main_column h1:hover, #content .main_column h1 a:hover {
+	color: #C4161C;
+}
 #content .main_column h2, #content .main_column h2 a {
     color:#185672;
     font-family:georgia;
@@ -446,6 +448,9 @@ input.gsc-search-button{
 }
 
 .main_column .main_article img:hover {
+   /* border: 1px solid #C4161C;*/
+}
+.main_column .main_article .ui-tabs-selected a img {
     border: 1px solid #C4161C;
 }
 
@@ -552,6 +557,7 @@ input.gsc-search-button{
 
 .main_column .filters ul.main li.ui-state-hover a.first, .main_column .filters ul.main li.ui-state-active a.first {
     background-image:url(images/filter_fst_btn_sel.png);
+	margin:0 0 0 -15px;
 }
 
 #content .main_column .filters p {
@@ -891,11 +897,12 @@ width:640px;
 	float: left;
 }
 .right_column .widget {
-    margin-top: 20px;
+    margin-top: 5px;
     text-align:left;
 	border: 1px solid #cacaca;
 	float: left;
 	width: 340px;
+	margin-bottom: 15px;
 	
 }
 .right_column .widget ul{
@@ -1129,14 +1136,24 @@ div.featured {
 /*Comment*/
 #comment{
 	padding: 10px 10px 10px 30px;
+	float: left;
 }
-#comment ol.commentlist li{
+#comment ol.commentlist, #comment ul.commentlist{
+	width: 600px;
+	
+}
+#comment ol.commentlist li,#comment ul.commentlist li{
 	padding: 10px 0px 5px 0px;
 	border-bottom: 1px solid #cacaca;
+	width: 100%;
 }
-#comment ol.commentlist li .avatar{
+#comment ol.commentlist li .avatar,#comment ul.commentlist li .avatar{
 	float: left;
 	margin-right: 16px;
+}
+#comment h2.commh2{
+	float: left;
+	width: 100%;
 }
 #commentform{
 	float: left;
@@ -1314,6 +1331,7 @@ border:none;
 	margin: 10px;
 	padding: 5px 5px 5px 10px;
 	float: left;
+	width: 625px;
 }
 .main_column .article p
 {

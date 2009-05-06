@@ -23,7 +23,7 @@
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php  echo get_bloginfo_rss('rss2_url');  ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link rel="stylesheet" type="text/css"  href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
-	
+	<link rel="stylesheet" type="text/css"  href="<?php bloginfo('template_directory'); ?>/event.css" media="screen" />
 
 	<!--[if IE 6]>
 <script src="<?php bloginfo('template_directory'); ?>/DD_belatedPNG.js"></script>
