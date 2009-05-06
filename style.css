@@ -598,9 +598,9 @@ width:640px;
 	width: 100%;
 }
 
-.main_column .article img {
+/*.main_column .article img {
     float: left;
-}
+}*/
 
 .main_column .article img.profile_img, img.avatar , img.fb_profile_pic_rendered{
    /* margin-right: 10px;*/
