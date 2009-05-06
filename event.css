@@ -1,0 +1,100 @@
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#event {
+	float: left;
+	width: 330px;
+}
+
+#event div.box {
+	float: left;
+	width: 330px;
+	margin: 0 0 15px 0;
+	background: url(images/box-bg.gif) repeat-x;
+}
+
+#event div.box h3 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 23px;
+	color: #b9995f;
+	margin: 10px 0 0 12px;
+}
+
+#event div.box p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 19px;
+	margin: 5px 0 7px 12px;
+	text-align: left;
+}
+
+#event div.box ul {
+	float: left;
+	width: 100%;
+	text-align: left;
+}
+
+#event div.box li {
+	border-top: 1px dashed #000000;
+	list-style: none;
+	padding: 5px 0 5px 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000000;
+}
+
+#event div.box li.last {
+	border-bottom: 1px dashed #000000;
+}
+
+#event div.boxspan.bold,#event div.box li span.bold {
+	font-weight: bold;
+}
+
+#event div.box span.red {
+	font-weight: bold;
+	color: #990033;
+}
+
+#event div.box form {
+	width: 295px;
+	margin: 15px 0 0 12px;
+}
+
+#event div.box fieldset {
+	border: none;
+}
+
+#event div.box label {
+	float: left;
+	margin: 5px 5px 0 0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#event div.box input {
+	float: left;
+	width: 226px;
+	height: 24px;
+	background: url(images/input-bg.gif) no-repeat;
+}
+
+#event div.box button {
+	float: right;
+	border: none;
+	background: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #990033;
+	margin: 7px 0 0 0;
+}
+
+
+
+
+
