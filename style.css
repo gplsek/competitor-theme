@@ -597,10 +597,10 @@ width:640px;
 }
 
 .main_column .article img.profile_img, img.avatar , img.fb_profile_pic_rendered{
-    margin-right: 10px;
+   /* margin-right: 10px;*/
 	/*display: inline;*/
-	float: left;
-	margin-top:5px;
+	/*float: left;
+	margin-top:5px;*/
 }
 
 .main_column .article h2.author {
@@ -1164,7 +1164,7 @@ div.featured {
 	width: 292px;
 	height: 71px;
 	display: inline;
-	margin: 0px 0 0 70px;/*25px 0 0 70px;*/
+	margin: 10px 0 0 70px;/*25px 0 0 70px;*/
 	background: url(images/footer-logo.jpg);
 	/* hide from IE Mac \*/
     text-indent: -999em;
@@ -1198,7 +1198,17 @@ div.featured {
 #footer div.images {
 	float: left;
 	width: 810px;
-	margin: 45px 0 0px 115px;
+	margin: 15px 0 0px 115px;
+	display: inline;
+	/* hide from IE Mac \*/
+    text-indent: -999em;
+    overflow: hidden;
+    /* end hide */
+}
+#footer div.images-two {
+	float: left;
+	width: 810px;
+	margin: 0px 0 0px 315px;
 	display: inline;
 	/* hide from IE Mac \*/
     text-indent: -999em;
@@ -1229,6 +1239,26 @@ div.featured {
 
 #footer #image4 {
 	background: url(images/footer-img4.jpg) no-repeat;
+}
+#footer a.imagetwo {
+	float: left;
+	width: 95px;
+	height: 40px;
+	display: block;
+	margin: 0 0 0 10px;
+	display: inline;
+}
+
+#footer #image-two1 {
+	background: url(images/carlsbad-logo.jpg) top center no-repeat;
+}
+
+#footer #image-two2 {
+	background: url(images/muddy-buddy-logo.jpg) top center no-repeat;
+}
+
+#footer #image-two3 {
+	background: url(images/esa-logo.jpg) top center no-repeat;
 }
 
 #footer p {

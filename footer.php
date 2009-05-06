@@ -23,7 +23,7 @@
                         
   </ul>
               
-               <ul class="middle">
+          <!--     <ul class="middle">
                    <li><strong>Other Competitor Events >></strong></li>
                    <li><a href="http://www.carlsbad5000.com" target="_blank">Carlsbad 5K</a> | </li>
                    <li><a href="http://www.juniorcarlsbad.com" target="_blank">Junior Carlsbad</a> | </li>
@@ -31,9 +31,21 @@
                    <li><a href="#">Denver</a> | </li>
                    <li><a href="http://www.muddybuddy.com/" target="_blank">Muddy Buddy</a> | </li>
                    <li><a href="http://www.endurancesportsawards.com/" target="_blank">ESA Awards</a></li>
-  </ul>
+  </ul>-->
                
-          
+              <div class="images-two">
+                    	
+                   <a href="http://www.carlsbad5000.com" target="_blank" class="imagetwo" id="image-two1">Carlsbad 5k</a>
+                            
+                   <a href="http://www.muddybuddy.com/" target="_blank" class="imagetwo" id="image-two2">Muddy Buddy</a>
+                            
+                   <a href="http://www.endurancesportsawards.com/" target="_blank" class="imagetwo" id="image-two3">ESA Awards</a>
+                            
+            
+			</div>
+		  
+		  
+		  
               <div class="images">
                     	
                    <a href="http://www.velonews.com/" target="_blank" class="image" id="image1">Velonews</a>
