@@ -432,6 +432,13 @@ if ( function_exists('register_sidebar') ){
 			'after_widget' => '</div><!--/widget-->',
 			'before_title' => '<h2 class="hl">',
 			'after_title' => '</h2>')
+			,
+		
+		array('name' => 'homewidgets',
+			'before_widget' => '<div class="hwidget">',
+			'after_widget' => '</div><!--/hwidget-->',
+			'before_title' => '<h2 class="hl">',
+			'after_title' => '</h2>')
 		);
 	
 	foreach ($comp_sidebars as $sidebar) {

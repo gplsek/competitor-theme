@@ -109,6 +109,16 @@ $template_path = get_bloginfo('template_directory');?>
 					
 			<!-- Aca dentro van los articles pero creo que no -->	
 			<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>		
+			<div class='homewidgets'>
+				
+				<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('homewidgets') ) : else : ?>		
+
+
+
+					<?php endif; ?>
+					
+					
+			</div>
 			</div><!-- End main column -->
 
 <?php get_sidebar('home'); ?>
