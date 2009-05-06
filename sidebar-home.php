@@ -1,6 +1,6 @@
   <div class="right_column">
 
- <?php/*     <div id="event">
+      <div id="event">
     	
         <div class="box">
         	
@@ -46,8 +46,7 @@
         </div><!-- End box -->
         
     </div><!-- End event -->
-*/
-?>
+
 	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('home') ) : else : ?>		
 		
 	
