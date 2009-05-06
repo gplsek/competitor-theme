@@ -98,6 +98,7 @@ foreach ($comp_pages_obj as $comp_page) {
 $other_entries = array("Select a number:","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19");
 //$categories_tmp = array_unshift($comp_categories, "Select a category:");
 $comp_pages_tmp = array_unshift($comp_pages, "Select a page:");
+$alt_stylesheets_tmp = array_unshift($alt_stylesheets, "Select Style:");
 
 // THIS IS THE DIFFERENT FIELDS
 
@@ -105,6 +106,13 @@ $options = array (
 
 				array(	"name" => "General Settings",
 						"type" => "heading"),
+						
+				array(	"name" => "Secondary Stylesheet",
+						"desc" => "Please select your secondary style sheet here if needed.",
+						"id" => $shortname."_secondary_stylesheet",
+						"std" => "",
+						"type" => "select",
+						"options" => $alt_stylesheets),
 
 				array(	"name" => "Theme Stylesheet",
 						"desc" => "Please select your colour scheme here.",
