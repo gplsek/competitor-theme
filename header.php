@@ -56,6 +56,7 @@ jQuery.noConflict();
 <script type="text/javascript">
 	jQuery(function() {
 		jQuery("#mainTabs").tabs({ fx: { opacity: 'toggle' } });
+		
 	});
 </script>
 

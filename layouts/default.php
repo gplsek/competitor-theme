@@ -15,6 +15,7 @@ global $user_ID, $wpdb, $post, $current_category;
 	
 	
 	$order = "&orderby=post_date";
+	$showposts = get_option('comp_other_entries');
 	
 	//echo "Here we are set session: ".$_SESSION['cat'];
 	
@@ -68,8 +69,8 @@ global $user_ID, $wpdb, $post, $current_category;
 	}
 			
 	
-	query_posts($show_category.'showposts=' . $showposts . $order . $paged .'&order=DESC');
-	//echo "TEST: ".$show_category;
+	query_posts($show_category.$order . $paged .'&order=DESC');
+	//echo "TEST: ".$show_category.'showposts=' . $showposts . $order . $paged .'&order=DESC';
 	$counter2 = 0;
 			
 	while(have_posts()) : the_post();  $do_not_duplicate = $post->ID;
@@ -132,12 +133,12 @@ global $user_ID, $wpdb, $post, $current_category;
 		{ // start add
 		?>
 		
-		<iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619354&dim=317216&kw=<?= $_SESSION['kw']?>">
+		<iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619354&dim=317216&kw=<?= $_SESSION['kw']?>"></iframe>
 		<?php 
 		}else if ($counter == '8')
 		{
 			?>
-		<iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619353&dim=317216&kw=<?= $_SESSION['kw']?>">
+		<iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619353&dim=317216&kw=<?= $_SESSION['kw']?>"></iframe>
 			<?php //end add
 			
 		}

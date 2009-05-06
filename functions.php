@@ -388,6 +388,11 @@ function compthemes_wp_head() {
           ?> <link href="<?php bloginfo('template_directory'); ?>/styles/<?php echo $style; ?>.css" rel="stylesheet" type="text/css" /><?php 
      } else { 
           $stylesheet = get_option('comp_alt_stylesheet');
+		  $sec_stylesheet = get_option('comp_secondary_stylesheet');
+		if($sec_stylesheet != ''){
+               ?><link href="<?php bloginfo('template_directory'); ?>/styles/<?php echo $sec_stylesheet; ?>" rel="stylesheet" type="text/css" /><?php         
+          }
+
           if($stylesheet != ''){
                ?><link href="<?php bloginfo('template_directory'); ?>/styles/<?php echo $stylesheet; ?>" rel="stylesheet" type="text/css" /><?php         
           }
