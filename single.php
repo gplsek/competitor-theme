@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 
 		<div id="mainTabs" class="main_column">
-
+			<?php if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+			} ?>
 		<?php if (have_posts()) : ?>
 	
 			<?php while(have_posts()) : the_post();  $do_not_duplicate = $post->ID;

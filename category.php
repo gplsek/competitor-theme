@@ -27,6 +27,9 @@
 
          
 <div class="main_column">
+	<?php if ( function_exists('yoast_breadcrumb') ) {
+		yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+	} ?>
 	<h2><?= $cat_name?></h2>
 	<div id="contentTabs" class="filters">
   	  <ul id="TopFeature" class="main">
