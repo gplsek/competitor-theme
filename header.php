@@ -247,9 +247,10 @@ jQuery.noConflict();
 								                        <a href="/wp-signup.php">JOIN </a>
 
 								                    </p>
-								                    <p class="small">Login with Facebook >></p> 
-					                                <fb:login-button size="small" background="dark" length="short">
+													<fb:login-button size="small" background="dark" length="short">
 					                                    </fb:login-button>
+								                    <p class="small">Login with Facebook >></p> 
+					                                
 												<?php } ?>
 												<br clear="all" />
  							</div><!-- End signin-->

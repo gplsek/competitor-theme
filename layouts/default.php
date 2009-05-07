@@ -66,6 +66,7 @@ global $user_ID, $wpdb, $post, $current_category;
 	if (!($_GET['paged'] == ""))
 	{
 		$paged = "&paged=".$_GET['paged'];
+		//echo $paged;
 	}
 			
 	
@@ -73,6 +74,7 @@ global $user_ID, $wpdb, $post, $current_category;
 	//echo "TEST: ".$show_category.'showposts=' . $showposts . $order . $paged .'&order=DESC';
 	$counter2 = 0;
 			
+	echo '<span id="top" name="top"></span>';
 	while(have_posts()) : the_post();  $do_not_duplicate = $post->ID;
 	$authorID = $post->post_author;
 ?>
@@ -116,13 +118,17 @@ global $user_ID, $wpdb, $post, $current_category;
 			    <?php 
 				if (!($post->post_excerpt)){
 				//the_advanced_excerpt('length=125');
-				the_content();
+				the_content('Read more...');
 				}
 				else 
 				{
-					echo $post->post_excerpt;
+				//	echo $post->post_excerpt;
+				the_excerpt();
+				?>
+				<a class="more-link" href="<?php the_permalink() ?>">Read more...</a>
+				<?
 				} ?>
-		   
+		      
 		   </p>
 			
 		</div><!--/article-->

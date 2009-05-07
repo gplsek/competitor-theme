@@ -160,8 +160,8 @@ blockquote p{
 
 #content .nav_bars ul.main_nav {
     background-color:#000;
-    height:30px;
-    padding:15px 0 10px 15px;
+    height:28px;
+    padding:17px 0 10px 15px;
 }
 
 .nav_bars ul.main_nav li a {
@@ -182,9 +182,9 @@ blockquote p{
 #content .nav_bars ul.sec_nav {
     background-color:#D4D4D4;
     float: left;
-    height:21px;
+    height:18px;
     margin-top:3px;
-    padding:5px 0 3px 15px;
+    padding:8px 0 3px 15px;
     width:540px;
 }
 
@@ -314,14 +314,18 @@ input.gsc-search-button{
     font-weight: bold;
 	text-decoration: none;
 }
-
+#RES_ID_fb_login{
+	float: left;
+	margin-top:3px;
+	margin-left: 5px;
+}
 #content .signin p.small {
     font-family:helvetica,arial;
     font-size:10px;
     margin-left:5px;
     text-align:center;
     width:130px;
-    margin-top:0px;
+    margin-top:5px;
 }
 
 #content .border{
@@ -565,7 +569,7 @@ input.gsc-search-button{
     font-size:10px;
     font-weight:bold;
     float:left;
-    margin:5px 0 0 0px;
+    margin:5px 0 0 5px;
 }
 
 .main_column .filters ul.secondary {
@@ -827,12 +831,12 @@ width:640px;
 }
 
 .right_column .tab_content ul {
-    margin: 20px 0 0 10px;
+    margin: 0px 0 0 10px;
 }
 
 .right_column .tab_content ul li {
     border-bottom:1px dashed #B7B7B7;
-    margin-top:5px;
+    margin-top:10px;
     padding-bottom:2px;
     width:319px;
 	list-style: none;
@@ -846,7 +850,7 @@ width:640px;
     color:#185672;
     float:left;
     font-weight: bold;
-    width:277px;/*280px;*/
+    width:227px;/*280px;*/
 	text-decoration: none;
 }
 .right_column .tab_content ul.tags {

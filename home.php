@@ -123,4 +123,4 @@ $template_path = get_bloginfo('template_directory');?>
 
 <?php get_sidebar('home'); ?>
 
-<?php get_footer(); ?>
+<?php get_footer(); ?><?php get_footer(); ?>
