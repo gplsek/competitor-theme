@@ -77,6 +77,7 @@ $template_path = get_bloginfo('template_directory');?>
 				$_SESSION['all'] = $all;
 				
 			?>
+			<a name="top"></a>
 				<div id="contentTabs" class="filters">
 			  	  <ul id="TopFeature" class="main">
 				        <li><a class="first active" href="<?= $template_path?>/layouts/default.php?all=<?= $all?>&sort=post_date<?= $paging ?>" title="feature">MOST RECENT</a></li>
