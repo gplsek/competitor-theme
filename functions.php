@@ -110,14 +110,14 @@ $options = array (
 				array(	"name" => "Secondary Stylesheet",
 						"desc" => "Please select your secondary style sheet here if needed.",
 						"id" => $shortname."_secondary_stylesheet",
-						"std" => "",
+						"std" => "Select Style:",
 						"type" => "select",
 						"options" => $alt_stylesheets),
 
 				array(	"name" => "Theme Stylesheet",
 						"desc" => "Please select your colour scheme here.",
 					    "id" => $shortname."_alt_stylesheet",
-					    "std" => "",
+					    "std" => "Select Style:",
 					    "type" => "select",
 					    "options" => $alt_stylesheets),												    
 
@@ -145,9 +145,23 @@ $options = array (
 						 "type" => "textarea"),
 						
 						
-				array( 	"name" => "Featured Category",
-					   	"desc" => "Select the category that you would like to have displayed in the featured section on your homepage.",
+				array( 	"name" => "Featured Category 1",
+					   	"desc" => "Select the category that you would like to have displayed in the featured widget .",
 						"id" => $shortname."_featured_category",
+						"std" => "Select a category:",
+						"type" => "select",
+						"options" => $comp_categories),
+						
+				array( 	"name" => "Featured Category 2",
+						"desc" => "Select the category that you would like to have displayed in the featured widget.",
+						"id" => $shortname."_featured_category2",
+						"std" => "Select a category:",
+						"type" => "select",
+						"options" => $comp_categories),
+								
+				array( 	"name" => "Featured Category 3",
+						"desc" => "Select the category that you would like to have displayed in the featured widget.",
+						"id" => $shortname."_featured_category3",
 						"std" => "Select a category:",
 						"type" => "select",
 						"options" => $comp_categories),
