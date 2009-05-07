@@ -369,7 +369,14 @@ input.gsc-search-button{
     font-size:16px;
     font-weight:normal;
 }
-
+#content .alignright{
+	float: right;
+	margin: 5px;
+}
+#content .alignleft{
+	float: left;
+	margin: 5px;
+}
 #content .main_column p {
     font-family:arial;
     font-size:13px;
