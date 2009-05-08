@@ -542,6 +542,9 @@ input.gsc-search-button{
     overflow:hidden;
 	width: 100%;
 	height:32px;
+	background-image:url(images/filter_btn.png);
+	background-position:623px 0;
+	background-repeat:no-repeat;
 }
 
 .main_column .filters ul.main li a {
@@ -568,7 +571,7 @@ input.gsc-search-button{
 
 .main_column .filters ul.main li.ui-state-hover a.first, .main_column .filters ul.main li.ui-state-active a.first {
     background-image:url(images/filter_fst_btn_sel.png);
-	margin:0 0 0 -15px;
+	/*margin:0 0 0 -15px;*/
 }
 
 #content .main_column .filters p {
@@ -614,10 +617,11 @@ width:640px;
 }*/
 
 .main_column .article img.profile_img, img.avatar , img.fb_profile_pic_rendered{
-   /* margin-right: 10px;*/
+    margin-right: 10px;
 	/*display: inline;*/
-	/*float: left;
-	margin-top:5px;*/
+	float: left;
+	
+	/*margin-top:5px;*/
 }
 
 .main_column .article h2.author {
@@ -1347,7 +1351,7 @@ border:none;
 .main_column .article p
 {
 display:block;
-font-size:12px !important;
+font-size:13px !important;
 /*text-indent:15px;*/
 padding-bottom:2px;
 }

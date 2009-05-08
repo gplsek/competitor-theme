@@ -85,7 +85,7 @@ global $user_ID, $wpdb, $post, $current_category;
 		
 			
 		    <?php echo get_avatar($authorID,$size = '64'); ?>
-			<h1><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+			<h1 class="title"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 			<h2 class="author"><?php the_author_posts_link(); ?></h2>
 			<ul class="options">
                          <?php
