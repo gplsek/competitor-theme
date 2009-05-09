@@ -15,7 +15,7 @@
 
 
 				    <?php echo get_avatar($authorID,$size = '64'); ?>
-					<h1 class="title"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+					<h1 class="title"><a title="Permanent link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 					<h2 class="author"><?php the_author_posts_link(); ?></h2>
 					<ul class="options">
 		                        <?php
@@ -46,20 +46,19 @@
 
 				   </p>
 
-				</div><!--/article-->
-				
-				<div id="archivebox">
-					<?php if(function_exists('the_views')) { the_views(); } ?>
-						<h2><em>Categorized |</em> <?php the_category(', ') ?></h2>
-						<?php if (function_exists('the_tags')) { ?><div class="singletags"><?php the_tags('Tags | ', ', ', ''); ?></div><?php } ?>        
-						
-				
-				</div><!--/archivebox-->
-				
-				
-				<div id="comment">
-					<?php comments_template(); ?>
 				</div>
+                
+<!--/article--><div id="archivebox">
+<?php if(function_exists('the_views')) { the_views(); } ?>
+<h2><em>Categorized |</em> <?php the_category(', ') ?></h2>
+<?php if (function_exists('the_tags')) { ?><div class="singletags"><?php the_tags('Tags | ', ', ', ''); ?></div><?php } ?>  
+<br/><strong><?php edit_post_link('>> Edit this article','',''); ?></strong>     
+</div><!--/archivebox-->
+				
+
+<div id="comment">
+    <?php comments_template(); ?>
+</div>
 
 		<?php endwhile; ?>
 		
