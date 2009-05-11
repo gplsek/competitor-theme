@@ -796,7 +796,7 @@ padding:5px 0 5px 11px;
 */
 /* style.css (línea 761) */
 
-.right_column .side_tabs li.feeds {
+/*.right_column .side_tabs li.feeds {
 background:transparent url(images/rss_small.jpg) no-repeat scroll 65px 7px;
 border-bottom:1px solid #CCCCCC;
 display:inline;
@@ -805,8 +805,28 @@ height:21px;
 margin-bottom:1px;
 padding:4px 0 2px;
 width:89px;
-}
+}*/
+/* style.css (línea 799) */
 
+.right_column .side_tabs li.feeds {
+background:#FFFFFF none repeat scroll 0 0;
+border-bottom:1px solid #CCCCCC;
+display:inline;
+float:left;
+ /* height:21px;
+margin-bottom:1px;
+padding:4px 0 2px; */
+width:91px;
+}
+.right_column .side_tabs ul li a.inside-feed {
+background:#FFFFFF url(images/rss_small.jpg) no-repeat scroll right center;
+border-right:medium none;
+border-top:medium none;
+color:#006699;
+font-size:11px;
+line-height:15px;
+text-transform:capitalize;
+}
 .right_column .side_tabs p.feeds a {
 color:#185672;
 font-size:11px;
@@ -863,7 +883,7 @@ text-decoration:none;
 .right_column .tab_content ul.tags {
 width:319px;
 text-align:center;
-padding-bottom:20px;
+/*padding-bottom:20px;*/
 }
 
 .right_column .tab_content ul.tags li {
@@ -878,7 +898,17 @@ padding:5px;
 float:none;
 width:auto;
 }
+/* style.css (línea 897) */
+.right_column .tab_content ul.tags li a {
+color:#000000;
+float:none;
+font-family:Georgia;
+font-size:12px;
+width:auto;
+}
+.right_column .tab_content ul.tags li a.tags-a {
 
+}
 .right_column .tab_content ul li label {
 float:right;
 }
@@ -979,6 +1009,20 @@ margin-bottom:10px;
 font-weight:400;
 font-family:georgia;
 margin-left:20px;
+}
+.right_column .widget .tab_content h3 {
+	float: left;
+	margin-top:10px;
+	color: #000000!important;
+	
+}
+
+
+
+.right_column .widget .tab_content ul {
+	margin:12px 0 0 !important;
+	width: auto;
+	float: left;
 }
 .right_column .widget ul {
 font-size:12px;
@@ -1134,8 +1178,12 @@ width:261px;
 */
 /* style.css (línea 1032) */
 
-.right_column .ui-tabs-nav {
+/*.right_column .ui-tabs-nav {
 width:251px;
+}*/
+/* style.css (línea 1137) */
+.right_column .ui-tabs-nav {
+width:342px;
 }
 .ui-tabs-nav a {
 margin:0 5px 0 0;
