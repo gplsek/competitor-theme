@@ -425,34 +425,34 @@ if ( function_exists('register_sidebar') ){
 		
 		array('name' => 'home',
         	'before_widget' => '<div class="widget">',
-        	'after_widget' => '</div><!--/widget-->',
-        	'before_title' => '<h2 class="hl">',
-        	'after_title' => '</h2>'),
+        	'after_widget' => '</div></div><!--/widget-->',
+        	'before_title' => '<div class="widget-title"><h2 class="hl">',
+        	'after_title' => '</h2></div><div class="content-widget">'),
 
 		array('name' => 'category',
 	    	'before_widget' => '<div class="widget">',
-	    	'after_widget' => '</div><!--/widget-->',
-	    	'before_title' => '<h2 class="hl">',
-	    	'after_title' => '</h2>'),
+	    	'after_widget' => '</div></div><!--/widget-->',
+	    	'before_title' => '<div class="widget-title"><h2 class="hl">',
+	    	'after_title' => '</h2></div><div class="content-widget">'),
 	
 		array('name' => 'single',
 		    'before_widget' => '<div class="widget">',
-		    'after_widget' => '</div><!--/widget-->',
-		    'before_title' => '<h2 class="hl">',
-		    'after_title' => '</h2>'),
+		    'after_widget' => '</div></div><!--/widget-->',
+		    'before_title' => '<div class="widget-title"><h2 class="hl">',
+		    'after_title' => '</h2></div><div class="content-widget">'),
 		
 		array('name' => 'page',
 			'before_widget' => '<div class="widget">',
-			'after_widget' => '</div><!--/widget-->',
-			'before_title' => '<h2 class="hl">',
-			'after_title' => '</h2>')
+			'after_widget' => '</div></div><!--/widget-->',
+			'before_title' => '<div class="widget-title"><h2 class="hl">',
+			'after_title' => '</h2></div><div class="content-widget">')
 			,
 		
 		array('name' => 'homewidgets',
 			'before_widget' => '<div class="hwidget">',
-			'after_widget' => '</div><!--/hwidget-->',
-			'before_title' => '<h2 class="hl">',
-			'after_title' => '</h2>')
+			'after_widget' => '</div></div><!--/hwidget-->',
+			'before_title' => '<div class="widget-title"><h2 class="hl">',
+			'after_title' => '</h2></div><div class="content-widget">')
 		);
 	
 	foreach ($comp_sidebars as $sidebar) {

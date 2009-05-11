@@ -235,7 +235,7 @@ jQuery.noConflict();
 												get_currentuserinfo();
 												echo  '<p>Welcome '.$current_user->display_name;
 
-												echo "<a href='".wp_sidebarlogin_current_url('logout')."'>".__(' Logout')."</a>";
+												echo "<a  class=\"cursive\" href='".wp_sidebarlogin_current_url('logout')."'>[".__(' Logout')."]</a>";
 												echo '</p>';
 											} else {
 												?>
