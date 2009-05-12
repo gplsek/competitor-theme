@@ -79,8 +79,8 @@
     settings: {
       opacity      : 0,
       overlay      : true,
-      loadingImage : '/wp-content/themes/news/includes/js//facebox/loading.gif',
-      closeImage   : '/wp-content/themes/news/includes/js//facebox/closelabel.gif',
+      loadingImage : '/wp-content/themes/pandemia-news/includes/js/facebox/loading.gif',
+      closeImage   : '/wp-content/themes/pandemia-news/includes/js/facebox/closelabel.gif',
       imageTypes   : [ 'png', 'jpg', 'jpeg', 'gif' ],
       faceboxHtml  : '\
     <div id="facebox" style="display:none;"> \
