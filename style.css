@@ -28,7 +28,7 @@ padding:0;
 }
 
 body {
-background:#002750;
+	background: #002750 url(images/default-background.gif) center top no-repeat;
 font-family:Verdana,Arial,Helvetica,sans-serif;
 }
 
@@ -117,7 +117,7 @@ text-decoration:underline;
 float:left;
 width:337px;
 height:102px;
-background: url(images/default-background.gif) no-repeat scroll 2px -18px;
+background: url(images/header-logo.gif) no-repeat scroll 2px -18px;
 text-indent:-999em;
 overflow:hidden;
 }
