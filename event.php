@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Event Page
+*/
+?>
 <?php get_header(); ?>
 
 		<div id="mainTabs" class="main_column">
@@ -5,6 +10,9 @@
 				yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 			} ?>
 		<?php if (have_posts()) : ?>
+			
+			
+			<h2 class='pageheading'><?php the_title(); ?></h2> 
 		
 		
         	
@@ -13,9 +21,8 @@
 			<?php while (have_posts()) : the_post(); ?>		
 
 				<div class="article">
-				
+		
 					<div class="entry">
-						<h2 class='pageheading'><?php the_title(); ?></h2> 
 						<?php the_content('<span class="continue">Continue Reading</span>'); ?> 
 					</div>
 				
