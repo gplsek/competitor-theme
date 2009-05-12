@@ -48,6 +48,11 @@ jQuery.noConflict();
 </script>
 			
 <script type="text/javascript">
+	jQuery("#out a").attr('target', '_top');
+	jQuery("#out a").click(function() {
+				location.href = this.rel;
+                return false;
+              });
 	jQuery(function() {
 		jQuery("#sideTabs").tabs({ fx: { opacity: 'toggle' } });
 	});
@@ -55,8 +60,13 @@ jQuery.noConflict();
 
 <script type="text/javascript">
 	jQuery(function() {
-		jQuery("#mainTabs").tabs({ fx: { opacity: 'toggle' } });
 		
+		jQuery("#out a").attr('target', '_top');
+		jQuery("#out a").click(function() {
+						location.href = this.rel;
+		                return false;
+		              });
+		jQuery("#mainTabs").tabs({ fx: { opacity: 'toggle' }});
 	});
 </script>
 

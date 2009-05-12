@@ -11,9 +11,9 @@ $template_path = get_bloginfo('template_directory');?>
 
                     <li><a href="#rotate">FEATURED STORIES</a></li>
                     <li><a href="<?= $template_path?>/video.php">TOP VIDEOS</a></li>
-                    <li>
+                    <li id="out">
                         <span style="float: left;">HOT:</span>
-                        <ul>
+                        <ul id="out">
                          <?php //wp_list_bookmarks('title_li=&categorize=0&category_name=Hot'); ?>
 						  <?php $links = get_bookmarks('category_name=Hot');
 							$count = 0;
@@ -22,9 +22,9 @@ $template_path = get_bloginfo('template_directory');?>
 								$name = $links[$count]->link_name;
 								$url = $links[$count]->link_url;
 								if ($count == $i) {
-									echo '<li class="last"><a href="'.$url.'">'.$name.'</a></li>';
+									echo '<li id="out" class="last"><a id="out" rel="'.$url.'" href="'.$url.'">'.$name.'</a></li>';
 								} else {
-									echo '<li><a href="'.$url.'">'.$name.'</a></li>';
+									echo '<li id="out"><a id="out" href="'.$url.'" rel="'.$url.'">'.$name.'</a></li>';
 								}
 								$count++;
 							}  
