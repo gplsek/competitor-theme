@@ -1,0 +1,16 @@
+body {
+	background-color: #ace7ff;
+	background-image: url(philadelphia/pdr_background.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+#content {
+	margin-top: 50px;
+}
+
+
+#banner {
+display:none
+}
+

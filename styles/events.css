@@ -1,12 +1,827 @@
-body {
-	background: #0787c6 url(events/background.jpg) center top no-repeat;
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
 }
 
-#content {
-	margin-top: 50px;
+#event {
+	float: left;
+	width: 330px;
+}
+
+#event div.box {
+	float: left;
+	width: 330px;
+	margin: 0 0 15px 0;
+	background: url(box-bg.gif) repeat-x;
+}
+
+#event div.box h3 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 23px;
+	color: #b9995f;
+	margin: 10px 0 0 12px;
+}
+
+#event div.box p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 19px;
+	margin: 5px 0 7px 12px;
+}
+
+#event div.box ul {
+	float: left;
+	width: 100%;
+}
+
+#event div.box li {
+	border-top: 1px dashed #000000;
+	list-style: none;
+	padding: 5px 0 5px 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000000;
+}
+
+#event div.box li.last {
+	border-bottom: 1px dashed #000000;
+}
+
+#event div.boxspan.bold {
+	font-weight: bold;
+}
+
+#event div.box span.red {
+	font-weight: bold;
+	color: #990033;
+}
+
+#event div.box form {
+	width: 295px;
+	margin: 15px 0 0 12px;
+}
+
+#event div.box fieldset {
+	border: none;
+}
+
+#event div.box label {
+	float: left;
+	margin: 5px 5px 0 0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#event div.box input {
+	float: left;
+	width: 226px;
+	height: 24px;
+	background: url(input-bg.gif) no-repeat;
+}
+
+#event div.box button {
+	float: right;
+	border: none;
+	background: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #990033;
+	margin: 7px 0 0 0;
 }
 
 
-#banner {
-display:none
+/****************************************
+ITEMS CHANGED FROM COMPETITOR GLOBAL STYLE
+*/
+
+/* Removes Leaderboard banner from top of page */
+#banner { display:none; visibility:hidden;}
+
+
+/* Removes Post Filter */
+#contentTabs  { height:10px;width:98%; }
+#TopFeature { visibility:hidden;display:none;}
+#BottomFeature { visibility:hidden;display:none;}
+
+
+* { font-family:Helvetica,Arial,sans-serif!Important; }
+
+a { text-decoration: underline!Important;
+font-weight:bold!Important;
 }
+.main_nav a, .sec_nav a, #top-bar a { text-decoration:none!Important;font-weight:normal!Important;}
+.main_column .article {width:95%; }
+.main_column .article p { margin-bottom:10px;font-size:12px!Important; }
+
+#content .main_column h1,#content .main_column h1 a { font-size:22px!Important;}
+
+/****************************************
+ FEATURED STORIES  
+*/
+
+.featstory { }
+.featstory H1 {}
+.featstory p { }
+.featstory img { }
+
+
+/****************************************
+SUBSECTION LINKS
+*/
+
+.subsections { padding:10px 0px 30px 20px;}
+.subsections div {margin-bottom:15px;}
+
+
+/****************************************
+ TABLES  
+*/
+
+.grid td {
+	border-top: 1px solid #CCCCCC;
+	padding: 3px 2px 3px 4px;
+font-size:12px;
+}
+.grid {
+	border: 1px solid #CCCCCC;
+	background-image: url(images/bg_table.jpg);
+	background-repeat: repeat-x;
+	margin-bottom: 20px;
+	border-top: 1px solid black;
+}
+
+.grid p { ;margin:0px;}
+.grid h1, .grid h1, .grid h1 { margin:0px; padding:0px; }
+.grid h1 { font-size: 16px!Important;	font-weight: bold;}
+.grid H2 { font-size: 14px!Important;}
+.grid H3 {}
+
+.rowheader td {
+	font-weight: bold;
+	color:#000000;
+	border-bottom: none;
+}
+
+
+
+/****************************************
+ ATTENTION BOX
+*/
+
+
+.attn a:link { 	color: #006699;}
+.attn a:visited { color: #006699;}
+.attn H1 a:link { color: #006699;	text-decoration:none;}
+.attn H1 a:visited { color: #006699;}
+.attn H1 a:hover {	color: #006699;}
+.attn H1 a:active {	color: #006699;}
+
+.attn {
+	background-color: #FFFFFF;
+	border: 1px solid;
+	padding: 5px 5px 0px 5px;
+	background-image: url(http://www.rnrchicago.com/Sites/22/templates/css/images/bg_attn.jpg);
+	background-repeat: repeat-x;
+	margin-bottom: 20px;
+}
+.attn H1 {
+	margin-top: 0px;
+	color: #006699;
+	font-size: 16px;
+	margin-bottom: 2px;
+	padding-top: 2px;
+	font-weight: bold;
+	border-bottom: 2px solid;
+	border-bottom-color: #006699;
+}
+.attn H2 {
+	margin-top: 0px;
+	color: #006699;
+	margin-bottom: 2px;
+	padding-top: 2px;
+	font-weight: bold;
+}
+.attn p {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-bottom: 8px;
+}
+
+/****************************************
+PAGEHEADING
+*/
+
+.pageheading {
+	
+	MARGIN-TOP:10px;
+width:98%;
+	BORDER-BOTTOM:#000000 1px dotted;
+	font-size:26px!Important;
+margin-bottom:30px;
+}
+
+
+/****************************************
+ HOTEL PAGE STYLES
+*/
+
+.hq_hotel {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border: 1px solid;
+	border-color: #008BD1;
+	margin-bottom: 25px;
+	float: left;
+	height: 100%;
+	width: 640px;
+}
+.hq_hotel .hq_hotel_title {
+	width: 620px;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #008BD1;
+	color: #FFFFFF;
+	padding: 10px;
+}
+.hq_hotel .hq_hotel_col_left {
+	float: left;
+	width: 180px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.hq_hotel .hq_hotel_col_right {
+	float: left;
+	width: 395px;
+	border-left-width: thin;
+	border-left-style: solid;
+	border-left-color: #999999;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.hotel {
+	float: left;
+	height: 100%;
+	width: 640px;
+	margin-bottom: 25px;
+	background-image: url(http://www.rnrseattle.com/Sites/18/templates/css/images/bg_hotellisting.jpg);
+	background-repeat: repeat-x;
+	border: thin solid #D6D6D6;
+}
+.hotel .hotel_col_left {
+	float: left;
+	width: 300px;
+	height: 100%;
+	padding: 10px;
+}
+.hotel .hotel_col_right {
+	padding: 10px;
+	float: left;
+	width: 300px;
+}
+.hotel .hotel_col {
+	padding: 10px;
+	float: left;
+	width: 600px;
+	background-color: #E1F3FF;
+	color: #003366;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	border: 1px solid #66CCFF;
+}
+
+.hotel_col_left h1{
+font-size:16px;
+}
+
+.hotel_area {
+	float: left;
+	width: 640px;
+	margin-bottom: 25px;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #003366;
+}
+
+/* charitystory */
+
+.charitystory img {
+	float: left;
+	border: 1px solid #000;
+	margin-right: 10px;
+}
+.charitystory H1 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	color: #18336A;
+	border: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.charitystory A:link {
+	color: #18336A;
+}
+
+.charitystory p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	margin: 0px;
+}
+.charitystory {
+	padding: 0px;
+	margin-top: 0px;
+	margin-bottom: 25px;
+	height: 100px;
+}
+.charitystory a:visited {
+	color: #18336A;
+}
+
+/****************************************
+ SIDEBAR STYLES  
+*/
+
+.sidebar {  }
+.sidebar H1 { 
+	FONT-SIZE: 16px;
+  }
+  
+  
+.sidebar H2 {
+	FONT-SIZE: 14px!Important;	
+}
+.sidebar H3 {
+	FONT-SIZE: 12px!Important;
+	
+}
+/*
+.sidebar UL {
+	PADDING-LEFT: 15px;
+	MARGIN-BOTTOM: 0px;
+	PADDING-BOTTOM: 0px;
+	MARGIN-LEFT: 20px;
+	margin-right: 0px;
+	padding-right: 0px;
+}
+.sidebar OL {
+	PADDING-LEFT: 12px;
+	MARGIN-BOTTOM: 5px;
+	PADDING-BOTTOM: 5px;
+	MARGIN-LEFT: 17px;
+}
+.sidebar LI {
+	padding: 0px 0px 3px 0px!Important;
+}
+*/
+
+/****************************************
+ REGISTRATION PAGE  
+*/
+
+#content .main_column .regDetails h1 { 
+        color:#FFFFFF;
+}
+.regDetails li {
+	margin-bottom: 5px;
+	margin-top: 0px;
+}
+.regDetails ul {
+	margin-bottom: 5px;
+	margin-top: 0px;	
+	font-size: 12px;
+	margin-left: 10px;
+	padding-left: 10px;
+}
+.regDetails td {
+	background-color: #DDDDDD;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	padding-top: 0px;
+	font-size: 12px;
+}
+.regDetails {
+	border: 1px solid;
+	border-color: #333333;
+}
+.regDetails H1 {
+	font-size: 18px;
+	background-color: #333333;
+	color: #FFFFFF;
+	margin-top: 5px;
+	padding: 2px 0px 2px 5px;
+	font-weight: normal;
+	background-image: url(images/bg_rowheader.jpg);
+}
+.regDetails table td {
+	background-color: #F4F4F4;
+	padding: 5px;
+}
+.regDetails table {
+	border: 1px solid;
+	border-color: #999999;
+}
+.regDetails H2 {
+	color: #000000;
+	font-size: 14px;
+}
+
+
+/****************************************
+ IMAGE FLOATS  
+*/
+
+.floatright {
+	float: right!important;
+	margin: 0px 0px 10px 10px;
+}
+.floatleft {
+	float: left!important;
+	margin: 0px 10px 10px 0px;
+}
+.floatright p, .floatleft p{
+	font-weight: normal;
+	color: #333333;
+	margin: 0px 0px 5px 0px;
+}
+
+
+/****************************************
+ MAIN COLUMN ARTICLE
+*/
+
+/* Remove the the Avatar */
+.avatar { display:none;}
+.main_column .article h1.title { display:none;visibility:hidden;}
+.main_column .article h2.author { display:none;visibility:hidden;}
+.main_column .article ul.article_info { display:none;visibility:hidden; }
+.main_column .article { padding:10px; }
+.main_column .article p { width:auto; }
+.main_column .article h1 a {font-weight:normal!Important;}
+.main_column .article img { float: left!Important; margin:0px 20px 20px 0px;!Important;}
+
+
+/****************************************
+ SPONSORS  
+*/
+
+.sponsors {
+	height: 100%;
+	width: 640px;
+	margin-top: 25px;
+	text-align: center;
+}
+
+.sponsortitle  {
+	text-align: center;
+	float: left;
+	width: 635px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	background-color:#FFFFFF;
+	border-bottom-width: medium;
+	border-bottom-style: solid;
+	border-bottom-color: #666666;
+}
+
+.sponsortitle h1 {
+	text-align: center;
+
+}
+
+.sponsors img {
+	text-align: center;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+/************************************ 
+RESULTS STYLES
+*/
+
+#stats a:link, #stats a:visited, #stats a:hover, #stats a:active { font-size:12px;}
+#stats, #lastUpdated { padding:0px;margin:0px;font-size:12px;}
+
+#eventName {
+	float:left;
+	font-size:22px;
+
+}
+
+#eventDate {
+	font-size:14px;
+	padding:0px;
+clear:both;
+
+}
+
+#eventLinks { 
+visibility:hidden;
+display:none; 
+}
+#poweredBy {
+  visibility:hidden;
+  display:none;
+}
+#main_content td { font-size:12px; }
+
+input, option { font-size:14px; }
+.SearchTable select { font-size:12px; }
+.SearchTable textarea { }
+
+/* Search Table Style */
+
+.ContainerSearchTable {
+	width: 100%;
+	text-align:left;
+	clear:left;
+	margin:0px;
+	padding:0px;
+  }
+
+.SearchTable {
+  border-style:solid;
+  border-color: #B1BFC8;
+  background-color: #FFFFFF;
+  border-width:1px;
+  margin: 0px;
+  padding: 0px;
+  color: #000000;
+  width: 500px;
+}
+.SearchTable td {
+	padding:2px 0px 2px 4px;
+}
+
+.SearchHeader {
+	border-bottom: 1px solid #B1BFC8;
+	color: #FFFFFF;
+	font-size:14px;
+	background: url(http://www.rnrvb.com/Sites/8/templates/css/images/blueHeader_fill.jpg) repeat-x;
+}
+
+.Search {
+  color:#000000;  
+  margin: 0px;
+  padding: 2px;
+}
+
+.EventSearchTable {
+  width:100%;
+  border-style:solid;
+  border-color: #B1BFC8;
+  background-color: #FFFFFF;
+  border-width:1px;
+  margin: 0px;
+  padding: 0px;
+  color:#000000;
+}
+
+.EventSearchTable td {
+	padding:2px 0px 2px 4px;
+}
+
+
+/* Leaderboard Style */
+.LeaderboardTable {
+	border: 1px solid #B1BFC8;
+	background-color: #FFFFFF;  
+	width: 350px;
+	margin-bottom: 5px;
+	padding: 0px;
+}
+.LeaderboardTable td {
+	padding:2px 2px 2px 2px;
+}
+.LeaderboardHeader {
+	border-bottom: 1px solid #B1BFC8;
+	font-size:14px;
+	color:#000000;  
+	text-decoration: none;
+	margin: 0px;
+	background: url(http://www.rnrvb.com/Sites/8/templates/css/images/grayHeader_fill.jpg) repeat-x; 
+}
+.Leaderboard {
+	color:#000000;  
+	margin: 0px;
+	padding: 2px;
+	font-weight:normal;
+}
+
+.LeaderboardPulldown {
+	font-size:10px;
+	background-color: #ffffff; 
+	color: #000000;
+	margin-top:0px;
+	padding-top: 0px;
+}
+
+#div_leaderboard_M {
+  margin-bottom:4px;
+  border: 1px solid #eeeeee;
+}
+
+#div_leaderboard_F {
+  margin-bottom:4px;
+  border: 1px solid #eeeeee;
+}
+
+	
+/* Results Table Style */
+
+#ResultsContainer {
+width:100%;
+	padding: 0 0 0 5px;
+	background-color: #FFFFFF;
+}
+#ResultsContainer p.showSplits {
+	display:block;
+	font-weight:bold;
+}
+
+.ResultsTable {
+  width:100%;
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+  border-style:solid;
+  border-color: #B1BFC8;
+  background-color: #EEEEEE;
+  border-width:1px;
+  margin: 5px 0 10px 0;
+  padding: 0px;
+  color:#000000;
+}
+.ResultsTable tr {
+  background-color:#EAF4FE;  
+}
+.ResultsTable td {
+	padding:2px 0px 2px 4px;
+	font-family:Arial,Helvetica,sans-serif;
+}
+
+tr.off {
+  background: #FFFFFF;
+}
+
+tr.on {
+  background: #EDEDED;
+}
+
+.ResultsHeader {
+	border-bottom: 1px solid #B1BFC8;
+	color: #FFFFFF;
+	font-size:12px;
+	background: url(http://www.rnrvb.com/Sites/8/templates/css/images/blueHeader_fill.jpg) repeat-x;
+    white-space:nowrap;
+}
+
+
+.ResultsHeader a {
+  color:#FFFFFF;  
+  font-weight:bold;
+}
+.ResultsHeader a:hover {
+  color:#FFFFFF;  
+  font-weight:bold;
+}
+
+
+/* Results Pagination Style */
+#Pagination {
+  width:100%;
+  color: #000000;
+  overflow: auto;
+font-family:Arial,Helvetica,sans-serif;
+font-size:14px;
+}
+#Pagination .left {
+  float: left;
+  padding: .3em 0 0 0;
+}
+#Pagination .center {
+  padding: .3em 0 0 0;
+  text-align: center;
+}
+#Pagination .right {
+  float: right;
+  padding: 0 .3em 0 0;
+}
+#Pagination a {   }
+
+#toDate {
+  background:#fefefe;
+  padding: 1px 2px 1px 2px;
+  border: 1px solid #aaaaaa;
+}
+
+#fromDate {
+	background:#fefefe; 
+	border: 1px solid #aaaaaa;
+	padding: 1px 2px 1px 2px;
+}  
+
+#toDateTrigger {
+  vertical-align:bottom;
+}
+
+#fromDateTrigger {
+	vertical-align:bottom;
+}  
+
+
+/* START Tab Menu Style */
+.shadetabs {
+	padding: 3px 0;
+	margin-left: 0;
+	margin-top: 1px;
+	margin-bottom: 0;
+	list-style-type:none !Important;
+	text-align: left; /*set to left, center, or right to align the menu as desired*/
+}
+
+
+.shadetabs li {
+	display: inline;
+	margin: 0px;
+}
+.shadetabs li a {
+	text-decoration: none;
+
+	padding: 3px 7px;
+	margin-right: 3px;
+	border: 1px solid #778;
+	color: #2d2b2b;
+	background: url(http://www.rnrvb.com/Sites/8/templates/css/images/shade.gif) top left repeat-x;
+}
+
+.shadetabs li a:visited {
+	color: #2d2b2b;
+}
+
+.shadetabs li a:hover {
+	text-decoration: underline;
+	color: #2d2b2b;
+}
+
+.shadetabs li.selected {
+	position: relative;
+	top: 1px;
+}
+
+.shadetabs li.selected a { /*selected main tab style */
+	background-image: url(http://www.rnrvb.com/Sites/8/templates/css/images/shadeactive.gif);
+	border-bottom-color: #FFFFFF;
+}
+
+.shadetabs li.selected a:hover { /*selected main tab style */
+	text-decoration: none;
+}
+
+.tabcontentstyle { /*style of tab content oontainer*/
+	border: 1px solid gray;
+	width: 95%;
+	margin-bottom: 1em;
+	padding: 10px;
+}
+
+.tabcontent {
+	border: 1px solid #000055;
+	background-color: #F4F9FF;
+	font-size:12px;
+	text-indent: 10px;
+	padding-bottom: 20px;
+	padding-top: 3px; 
+	width: 100%;
+}
+
+.tabcontent li {
+  margin-left: 25px;
+}
+
+@media print {
+	.tabcontent {
+		display:block!important;
+	}
+}
+/* END Tab Menu Style */  
+
+
+
+#prp_side_nav,#prp_comment_form { display:none;visibility:hidden; }
+#prp_main {width:100%;}
+
+div#respagelet1,div#respagelet2 {clear:both; }
+
+/* END RESULTS STYLES */  /
+
+

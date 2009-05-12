@@ -45,7 +45,7 @@
 				    <?php the_content('<span class="continue">Continue Reading</span>'); ?> 
 
 				   </p>
-
+				<?php wp_link_pages(); ?>
 				</div>
                 
 <!--/article--><div id="archivebox">
