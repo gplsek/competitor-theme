@@ -56,7 +56,7 @@
 
 #facebox img {
   border: 0;
-  margin: 0;
+  margin: 5px 0 5px 20px;
 }
 
 #facebox .footer {
@@ -98,7 +98,7 @@
 }
 /*START FACEBOOK BUTTON*/
 #fform{
-	width: 230px;
+	width: 205px;
 	float: left;
 	border-right: 1px solid #000000;
 }
