@@ -35,9 +35,9 @@
 	
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/includes/js/facebox/facebox.css" type="text/css" media="print, projection, screen">
 
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/ui.core.js"></script>
-
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/jquery-ui-personalized-1.6rc6.js"></script>
+	
+    
+	
 	 
 <script type="text/javascript">
 jQuery.noConflict();
@@ -48,6 +48,7 @@ jQuery.noConflict();
 </script>
 			
 <script type="text/javascript">
+jQuery.noConflict();
 	//jQuery("#out a").attr('target', '_top');
 	jQuery("#out a").click(function() {
 				location.href = this.rel;
@@ -59,6 +60,7 @@ jQuery.noConflict();
 </script>
 
 <script type="text/javascript">
+jQuery.noConflict();
 	jQuery(function() {
 		
 		//jQuery("#out a").attr('target', '_top');
@@ -71,6 +73,7 @@ jQuery.noConflict();
 </script>
 
 <script type="text/javascript">
+jQuery.noConflict();
 	jQuery(function() {
 		jQuery("#contentTabs").tabs({ fx: { opacity: 'toggle' } });
 	
@@ -78,6 +81,7 @@ jQuery.noConflict();
 </script>
 
 <script type="text/javascript">
+jQuery.noConflict();
 	jQuery().click(function(event) {
 		jQuery("#BottomFeature").tabs({fx: {opacity: 'toggle'}});
 	//$("#BottomFeature").data('disabled.tabs', []); 
@@ -87,11 +91,13 @@ jQuery.noConflict();
 </script>
 
 <script type="text/javascript">
+jQuery.noConflict();
 	// $(function() {
 	// 	//$("#SiteSettings").accordion({ collapsible: true, active: 1 });
 	// });
 	</script>
 <script type="text/javascript">
+jQuery.noConflict();
 	jQuery(document).ready(function($) {
 	  $('a[rel*=facebox]').facebox();
 	   $.facebox.settings.opacity = 0.8; 
