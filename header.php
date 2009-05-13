@@ -48,7 +48,7 @@ jQuery.noConflict();
 </script>
 			
 <script type="text/javascript">
-	jQuery("#out a").attr('target', '_top');
+	//jQuery("#out a").attr('target', '_top');
 	jQuery("#out a").click(function() {
 				location.href = this.rel;
                 return false;
@@ -61,7 +61,7 @@ jQuery.noConflict();
 <script type="text/javascript">
 	jQuery(function() {
 		
-		jQuery("#out a").attr('target', '_top');
+		//jQuery("#out a").attr('target', '_top');
 		jQuery("#out a").click(function() {
 						location.href = this.rel;
 		                return false;

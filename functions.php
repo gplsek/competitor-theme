@@ -531,7 +531,7 @@ function the_image($size = 'medium' , $class = ''){
 
 add_action( 'wp_print_scripts', 'add_javascript' );
 function add_javascript( ) {
-	wp_enqueue_script('jquery');
+	wp_enqueue_script('jquery','http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js');
 	//wp_enqueue_script('ui-core','/wp-content/themes/pandemia-news/includes/js/ui.core.js', array('jquery'));
 	//wp_enqueue_script('ui','/jqueryui.js',array('jquery'));
 	//wp_enqueue_script('jquery-ui-pesonalized','/wp-content/themes/pandemia-news/includes/js/jquery-ui-personalized-1.6rc6.js', array('jquery'));
