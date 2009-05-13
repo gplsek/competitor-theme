@@ -48,8 +48,11 @@ jQuery.noConflict();
 </script>
 			
 <script type="text/javascript">
-	jQuery("#out a").attr('target', '_top');
+
 	jQuery.noConflict();
+	
+	//jQuery("#out a").attr('target', '_top');
+	
 	jQuery("#out a").click(function() {
 				location.href = this.rel;
                 return false;
