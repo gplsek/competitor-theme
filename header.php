@@ -66,7 +66,7 @@ jQuery.noConflict();
 jQuery.noConflict();
 	jQuery(function() {
 		
-		jQuery("#out a").attr('target', '_top');
+		//jQuery("#out a").attr('target', '_top');
 		jQuery("#out a").click(function() {
 						location.href = this.rel;
 		                return false;
@@ -111,7 +111,7 @@ jQuery.noConflict();
 					
 					
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.css" />
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/mootools-trunk.js"></script>
+
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.js"></script>
 
 <script type="text/javascript">
