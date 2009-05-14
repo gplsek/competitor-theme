@@ -35,11 +35,11 @@
                
               <div class="images-two">
                     	
-                   <a href="http://www.carlsbad5000.com" target="_blank" class="imagetwo" id="image-two1">Carlsbad 5k</a>
+                   <a href="http://www.carlsbad5000.com" target="_blank" class="imagetwo" id="image-two1" alt="Carlsbad 5k- Worlds Fastest 5k">Carlsbad 5k</a>
                             
-                   <a href="http://www.muddybuddy.com/" target="_blank" class="imagetwo" id="image-two2">Muddy Buddy</a>
+                   <a href="http://www.muddybuddy.com/" target="_blank" class="imagetwo" id="image-two2" alt="Muddy Buddy - 13 cities">Muddy Buddy</a>
                             
-                   <a href="http://www.endurancesportsawards.com/" target="_blank" class="imagetwo" id="image-two3">ESA Awards</a>
+                   <a href="http://www.endurancesportsawards.com/" target="_blank" class="imagetwo" id="image-two3" alt="Endurance Sports Awards">ESA Awards</a>
                             
             
 			</div>
@@ -62,6 +62,7 @@
 					    Competitor Group Inc, All Rights Reserved</span> |</li>
                         <li><a href="http://competitor.com/contact-information" target="_blank">Contact</a> |</li>
                         <li><a href="http://cgimediakit.com/" target="_blank">Media Kit</a> |</li>
+                        <li><a href="http://competitor.com/event-sponsorship/" target="_blank">Event Sponsorship Opportunities</a> |</li>
                         <li><a href="http://competitor.com/tos">Terms of Use</a> |</li>
                         <li><a href="http://competitor.com/privacy-policy">Privacy </a>|</li>
                         <li><a href="http://competitor.com/report-a-problem">Report a Web Problem</a> |</li> 

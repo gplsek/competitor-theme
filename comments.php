@@ -132,22 +132,25 @@
 
 <?php else : ?>
 
-<p style="padding:10px 0px 10px 0px;"><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
-<label for="author"><small>Name <?php if ($req) echo "(required)"; ?></small></label></p>
+<p><span>*</span> Fields required</p>
 
-<p style="padding:10px 0px 10px 0px;"><input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
-<label for="email"><small>Mail (will not be published) <?php if ($req) echo "(required)"; ?></small></label></p>
+<p><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
+<label for="author">Name <?php if ($req) echo "<span>*</span>"; ?></label></p>
 
-<p style="padding:10px 0px 10px 0px;"><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-<label for="url"><small>Website</small></label></p>
+<p><input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
+<label for="email">Mail <small>(will not be published)</small> <?php if ($req) echo "<span>*</span>"; ?></label></p>
+
+<p><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
+<label for="url">Website</label></p>
 
 <?php endif; ?>
 
 <!--<p><small><strong>XHTML:</strong> You can use these tags: <?php echo allowed_tags(); ?></small></p>-->
 
-<p style="padding:10px 0px 10px 0px;"><textarea name="comment" id="comment" style="width:99%;" rows="10" tabindex="4"></textarea></p>
+<p><textarea name="comment" id="comment" style="width:99%;" rows="10" tabindex="4"></textarea></p>
 
-<p style="padding:10px 0px 10px 0px;"><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<p>
+<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
 <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
 </p>
 <?php do_action('comment_form', $post->ID); ?>

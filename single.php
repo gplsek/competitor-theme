@@ -51,7 +51,7 @@
 <!--/article--><div id="archivebox">
 <?php if(function_exists('the_views')) { the_views(); } ?>
 <h2><em>Categorized |</em> <?php the_category(', ') ?></h2>
-<?php if (function_exists('the_tags')) { ?><div class="singletags"><?php the_tags('Tags | ', ', ', ''); ?></div><?php } ?>  
+<?php if (function_exists('the_tags')) { ?><div class="singletags"><?php the_tags('Tags : ', ', ', ''); ?></div><?php } ?>  
 <br/><strong><?php edit_post_link('>> Edit this article','',''); ?></strong>     
 </div><!--/archivebox-->
 				
