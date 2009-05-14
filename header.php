@@ -66,7 +66,7 @@ jQuery.noConflict();
 jQuery.noConflict();
 	jQuery(function() {
 		
-		//jQuery("#out a").attr('target', '_top');
+		jQuery("#out a").attr('target', '_top');
 		jQuery("#out a").click(function() {
 						location.href = this.rel;
 		                return false;
