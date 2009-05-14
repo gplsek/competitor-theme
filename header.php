@@ -267,8 +267,9 @@ jQuery.noConflict();
 
 								                    </p>
 													<fb:login-button size="small" background="dark" length="short">
+													 <p class="small">Login with Facebook >></p>
 					                                    </fb:login-button>
-								                    <p class="small">Login with Facebook >></p> 
+								                  <!--  <p class="small"><a class="fbconnect_login_button" id="RES_ID_fb_login">Login with Facebook >></a></p> -->
 					                                
 												<?php } ?>
 												<br clear="all" />

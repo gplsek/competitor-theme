@@ -132,7 +132,7 @@
 
 <?php else : ?>
 
-<p><span>*</span> Fields required</p>
+<p><span>*</span> <small><strong>Fields required</strong></small></p>
 
 <p><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
 <label for="author">Name <?php if ($req) echo "<span>*</span>"; ?></label></p>
