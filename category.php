@@ -1,4 +1,43 @@
 <?php get_header(); ?>
+
+<script type="text/javascript">
+jQuery.noConflict();
+	jQuery(function() {
+		
+		//jQuery("#out a").attr('target', '_top');
+		jQuery("#out a").click(function() {
+						location.href = this.rel;
+		                return false;
+		              });
+		jQuery("#mainTabs").tabs({ fx: { opacity: 'toggle' }});
+	});
+</script>
+
+<script type="text/javascript">
+jQuery.noConflict();
+	jQuery(function() {
+		jQuery("#contentTabs").tabs({ fx: { opacity: 'toggle' } });
+	
+	});
+</script>
+
+<script type="text/javascript">
+jQuery.noConflict();
+	jQuery().click(function(event) {
+		jQuery("#BottomFeature").tabs({fx: {opacity: 'toggle'}});
+	//$("#BottomFeature").data('disabled.tabs', []); 
+	
+	
+	});
+</script>
+
+<script type="text/javascript">
+jQuery.noConflict();
+	// $(function() {
+	// 	//$("#SiteSettings").accordion({ collapsible: true, active: 1 });
+	// });
+	</script>
+	
  <?php
  	//global $user_ID, $wpdb, $post;
 	//$cat = get_the_category();
@@ -45,7 +84,7 @@
 			<li><a href="<?= $template_path?>/layouts/default.php?cat=<?= $category?><?= $paging ?>" title="feature">All</a></li>
 		<?php 
 		foreach ($children as $cate) {
-		  	$option = '<li><a href="<?= $template_path?>/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
+		  	$option = '<li><a href="'.$template_path.'/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
 			echo $option;
 		  }
 		
