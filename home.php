@@ -1,7 +1,57 @@
 <?php
 session_start();
 ?>
-<?php get_header(); 
+<?php get_header(); ?>
+
+<script type="text/javascript">
+jQuery.noConflict();
+
+	jQuery(function() {
+		jQuery('#rotate > ul').tabs({ fx: { opacity: 'toggle' } }).tabs('rotate', 5000);
+	});
+</script>
+			
+
+
+<script type="text/javascript">
+jQuery.noConflict();
+	jQuery(function() {
+		
+		//jQuery("#out a").attr('target', '_top');
+		jQuery("#out a").click(function() {
+						location.href = this.rel;
+		                return false;
+		              });
+		jQuery("#mainTabs").tabs({ fx: { opacity: 'toggle' }});
+	});
+</script>
+
+<script type="text/javascript">
+jQuery.noConflict();
+	jQuery(function() {
+		jQuery("#contentTabs").tabs({ fx: { opacity: 'toggle' } });
+	
+	});
+</script>
+
+<script type="text/javascript">
+jQuery.noConflict();
+	jQuery().click(function(event) {
+		jQuery("#BottomFeature").tabs({fx: {opacity: 'toggle'}});
+	//$("#BottomFeature").data('disabled.tabs', []); 
+	
+	
+	});
+</script>
+
+<script type="text/javascript">
+jQuery.noConflict();
+	// $(function() {
+	// 	//$("#SiteSettings").accordion({ collapsible: true, active: 1 });
+	// });
+	</script>
+
+<?
 $template_path = get_bloginfo('template_directory');?>
             <div class="border"></div>
             <div id="mainTabs" class="main_column">
