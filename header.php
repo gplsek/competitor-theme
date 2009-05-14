@@ -51,26 +51,7 @@ jQuery.noConflict();
 					
 					
 					
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.css" />
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/mootools-trunk.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/ReMooz.js"></script>
 
-<script type="text/javascript">
-		/* <![CDATA[ */
-		window.addEvent('load', function() {
-			ReMooz.assign('.lightbox a', {
-				'origin': 'img',
-				'shadow': 'onOpenEnd',
-				'resizeFactor': 0.5, 
-				'cutOut': false, 
-				'opacityResize': 0.1, 
-				'dragging': false, 
-				'centered': false,
-				'temporary': true
-			});
-		});
-		/* ]]> */
-	</script>
 
 </head>
 
