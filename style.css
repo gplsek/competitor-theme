@@ -397,7 +397,7 @@ padding:5px 0;
 }
 
 .main_column .main_article {
-/* overflow:hidden; */
+float:left;
 width:620px;
 }
 
@@ -754,15 +754,11 @@ color:#000;
 }
 
 .right_column .side_tabs li.feeds {
-/* border-bottom:1px solid #CCCCCC;
-float:left;
-overflow:hidden;*/
-width:71px; 
-
+width:86px;
 }
 
 .right_column .side_tabs ul li a.inside-feed {
-background:#FFFFFF url(images/rss_small.jpg) no-repeat scroll 63px center;
+background:#FFFFFF url(images/rss_small.jpg) no-repeat scroll 75px center;
 border-right:medium none;
 border-top:medium none;
 color:#006699;
