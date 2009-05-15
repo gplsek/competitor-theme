@@ -162,7 +162,7 @@ jQuery.noConflict();
                 </ul>
 
 
-				<form action="http://hotparks.com/search" id="cse-search-box">
+				<form action="<?php bloginfo('url'); ?>/search" id="cse-search-box">
 				  <fieldset>
 				    <input type="hidden" name="cx" value="015459459567427136655:6whklon_3ea" />
 				    <input type="hidden" name="cof" value="FORID:10" />
