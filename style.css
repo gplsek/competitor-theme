@@ -726,15 +726,12 @@ margin:10px 0 -10px;
 
 .right_column .side_tabs ul li a {
 background-color:#ECECEC;
-/* 
-border:1px solid #CCCCCC; 
-*/
 color:#777777;
 display:block;
-font-size:12px;
+font-size:11px;
 font-weight:bold;
 margin:0;
-padding:7px 6px 5px;
+padding:7px 6px 6px;
 text-decoration:none;
 text-transform:uppercase;
 }
@@ -762,19 +759,16 @@ color:#000;
 }
 
 .right_column .side_tabs li.feeds {
-width:100px;
-border: none;
+border:medium none;
+float:right;
 }
 
 .right_column .side_tabs ul li a.inside-feed {
-background:#FFFFFF url(images/rss_small.jpg) no-repeat scroll 80px center;
-/*
-border-right:medium none;
-border-top:medium none;
-*/
+background:#FFFFFF url(images/rss_small.jpg) no-repeat scroll right center;
 color:#006699;
 font-size:11px;
 line-height:15px;
+padding-right:20px;
 text-transform:capitalize;
 }
 
