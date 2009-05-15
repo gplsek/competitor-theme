@@ -2,11 +2,11 @@
 
 		<div id="mainTabs" class="main_column">
 
-			<div id="archivebox">
+			
 
-	            	<h2><em>Search Results |</em> "<?php printf(__('\'%s\''), $s) ?>"</h2>        
+			    	<h1><em>Search Results |</em> "<?php printf(__('\'%s\''), $s) ?>"</h1>       
 
-			</div><!--/archivebox-->
+			
 			
 		<?php if (have_posts()) : ?>
 		
@@ -51,6 +51,6 @@
 				
 			</div><!-- End main column -->	
 
-<?php get_sidebar('home'); ?>
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>	
