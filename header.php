@@ -176,13 +176,6 @@ jQuery.noConflict();
 				<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script>
 
 
-	  <!-- <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/"> 
-	 	                      
-	 	                          <!--<label>SEARCH</label>-->
-	 	                          <!-- <input type="text" value="SEARCH" onclick="this.value='';" name="s" id="s" />
-	 	                          	 	  					
-	 	                          	 	                      
-	 	                          	 	                  </form> -->
 	
 	   					<div class="signin">
 					                    <?php
