@@ -7,7 +7,7 @@ session_start();
 jQuery.noConflict();
 
 	jQuery(function() {
-		jQuery('#rotate > ul').tabs({ fx: { opacity: 'toggle' } }).tabs('rotate', 5000);
+		jQuery('#rotate > ul').tabs({ fx: {opacity: 'toggle', duration: 'fast' } }).tabs('rotate', 5000).tabs({ ajaxOptions: { async: false } });
 	});
 </script>
 			
