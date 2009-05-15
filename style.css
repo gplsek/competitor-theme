@@ -715,8 +715,9 @@ margin-top:27px;
 }
 
 .right_column .side_tabs {
-margin:10px 0 0px;
+margin:10px 0 0;
 overflow:hidden;
+position:static;
 width:330px;
 }
 
@@ -1099,6 +1100,7 @@ width:560px;
 }
 
 .right_column .ui-tabs-nav {
+float:left;
 height:28px;
 width:330px;
 }
