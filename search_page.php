@@ -46,6 +46,6 @@ Template Name: Search Template
 
 			</div><!--/main column-->
 
-	<?php get_sidebar('page'); ?>
+	<?php get_sidebar('home'); ?>
 
 	<?php get_footer(); ?>
