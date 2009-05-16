@@ -198,7 +198,7 @@ text-decoration:none;
 color:#c4161c;
 }
 
-#content #searchform {
+#content #cse-search-box {
 background-color:#AFAFAF;
 background-image:url(images/nav_sep_3.png);
 background-repeat:no-repeat;
@@ -209,13 +209,13 @@ margin:3px 0 0 -10px;
 padding:3px 5px 0 20px;
 }
 
-#content #searchform fieldset label {
+#content #cse-search-box fieldset label {
 color:#FFF;
 font-family:georgia;
 font-size:14px;
 }
 
-#content #searchform fieldset input {
+#content #cse-search-box fieldset input {
 width:135px;
 margin-top:1px;
 font-family:georgia;
