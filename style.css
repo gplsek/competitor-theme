@@ -62,6 +62,7 @@ margin:0 auto;
 background:#000000 none repeat scroll 0 0;
 float:right;
 height:18px;
+margin-right:22px;
 width:1030px;
 }
 
@@ -131,12 +132,14 @@ float:left;
 height:90px;
 width:730px;
 display:inline;
-padding-top: 10px;
+padding: 10px 0 0 4px;
 }
 
+/* 
 * html #banner {
 margin:-10px 0;
 }
+*/
 
 #content {
 float:right;
@@ -182,13 +185,13 @@ width:520px;
 }
 
 #content .nav_bars ul.sec_nav li a {
+border-right:1px solid #000000;
+color:#000000;
 float:left;
-color:#000;
 font-family:georgia;
 font-size:12px;
-border-right:1px solid #000;
+padding:0 8px 0 7px;
 text-decoration:none;
-padding:0 18px 0 15px;
 }
 
 #content .nav_bars ul.sec_nav li a:hover {
@@ -282,9 +285,11 @@ width:1022px;
 margin:0 0 0 18px;
 }
 
+
 * html #content .border {
 margin:0 0 -10px 18px;
 }
+
 
 #content .main_column {
 display:inline;
@@ -719,9 +724,11 @@ float: left;
 width:330px;
 }
 
+/*
 * html .right_column .side_tabs {
 margin:10px 0 -10px;
 }
+*/
 
 .right_column .side_tabs ul li a {
 background-color:#ECECEC;
@@ -774,14 +781,16 @@ background-repeat:repeat-x;
 border:1px solid #B7B7B7;
 float:left;
 font-size:11px;
-/* margin:-1px 0 10px;  */
+margin:-3px 0 10px;
 overflow:hidden;
 text-align:left;
 }
 
+/*
 * html .right_column .tab_content {
 margin:-10px 0 0;
 }
+*/
 
 .right_column .tab_content ul {
 margin:0 0 0 10px;
@@ -897,30 +906,35 @@ background-repeat:repeat-x;
 border:1px solid #CCCCCC;
 float:left;
 margin-top:-1px;
-padding:5px 10px;
-width:308px;
-}		
+padding:5px;
+width:318px;
+}
 
 .right_column .widget .content-widget a:hover{
 color: #FF0000;
 }
 
 .right_column .widget .content-widget .textwidget {
-	padding: 10px;	
+padding: 10px;	
+}
+
+.right_column .widget .content-widget .widget-ajax .lightbox a {
+width: 100px;
 }
 
 .right_column .widget .widget-title h2 {
-background: #000000 url(images/h2-back-widget-arrow.jpg) no-repeat;
-background-position:right;
+background:#000000 url(images/h2-back-widget-arrow.jpg) no-repeat scroll right center;
 color:#FFFFFF;
-font-family:georgia;
-font-size:1.1em;
-font-weight:400;
-height:21px;
-line-height: 25px;
-margin-bottom:10px;
-padding:0 30px 5px 10px;
 float:left;
+font-family:georgia;
+font-size:20px;
+font-weight:400;
+/* 
+height:21px;
+line-height:21px;
+margin-bottom:10px;
+*/
+padding:0 30px 2px 10px;
 }
 
 .right_column .widget h3 {
@@ -985,7 +999,7 @@ padding:5px 5px 5px 15px;
 
 .widget-ajax {
 float:left;
-width:328px;
+width:318px;
 }
 
 .widget-ajax ul {
