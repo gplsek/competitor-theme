@@ -324,7 +324,7 @@ text-align:left;
 }
 
 #content .main_column h2.cat-header {
-font-size: 24px;
+font-size: 32px;
 }
 
 #content .alignright {
@@ -650,6 +650,7 @@ float:right;
 margin:10px 0 50px 10px;
 }
 
+/******************* Pagination & Breadcumbs ******************************/
 .main_column .pagination {
 overflow:hidden;
 padding:10px;
@@ -695,6 +696,23 @@ color:#fff;
 color:#000;
 text-decoration:none;
 }
+
+#content .pagination ul li.current{
+font-family:arial;
+font-size:12px;
+width:auto;
+float:left;
+display:inline;
+height:18px;
+text-decoration:none;
+margin:0 5px;
+padding:3px 7px 0;
+border:1px solid #000;
+background-color:#000;
+color:#fff;
+}
+
+#breadcrumbs {font-size:12px; margin-bottom:20px; font-family:georgia!important}
 
 #content .right_column {
 float:left;
@@ -1350,21 +1368,6 @@ list-style-image:none;
 list-style-position:outside;
 list-style-type:none;
 border: 1px solid #B7B7B7;
-}
-
-#content .pagination ul li.current{
-font-family:arial;
-font-size:12px;
-width:auto;
-float:left;
-display:inline;
-height:18px;
-text-decoration:none;
-margin:0 5px;
-padding:3px 7px 0;
-border:1px solid #000;
-background-color:#000;
-color:#fff;
 }
 
 #content .nav_bars ul.main_nav li a:hover,#content .main_column .pagination p.link:hover a {

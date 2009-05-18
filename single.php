@@ -44,9 +44,10 @@
 					<p>
 				    <?php the_content('<span class="continue">Continue Reading</span>'); ?> 
 
-				   </p>
-				<?php wp_link_pages(); ?>
-				</div>
+				   </p>	</div>
+				
+<?php wp_link_pages('before=<div class="pagination"><ul><li>Pages:</li>&after=</ul></div>&link_before=<li>&link_after=</li>'); ?>
+			
                 
 <!--/article--><div id="archivebox">
 <?php if(function_exists('the_views')) { the_views(); } ?>

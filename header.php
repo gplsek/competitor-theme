@@ -68,9 +68,9 @@ jQuery.noConflict();
 	
 	  <div id="top-bar"> <!-- START TOP NAVIGATION BAR -->
 	
-		  <p class="comp logo">logo</p>
-            <p class="comp brand">Competitor</p>
-            <!--<p>network site</p>-->
+		  <p class="comp logo"></p>
+            <p class="comp brand">Competitor.com</p>
+         
 		
 		 <ul>
             

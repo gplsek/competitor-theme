@@ -20,7 +20,7 @@ Template Name: Search Template
 	
 			<?php while (have_posts()) : the_post(); ?>		
 
-				<div class="article">
+				
 		
 					<div class="entry">
 						<div id="cse-search-results"></div>
@@ -34,7 +34,7 @@ Template Name: Search Template
 						<script type="text/javascript" src="http://www.google.com/afsonline/show_afs_search.js"></script>
 
 						
-					</div>
+					
 				
 				</div><!--/article-->
 
