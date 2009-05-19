@@ -36,8 +36,11 @@ jQuery.noConflict();
 
 <script type="text/javascript">
 jQuery.noConflict();
-	jQuery().click(function(event) {
-		jQuery("#BottomFeature").tabs({fx: {opacity: 'toggle'}});
+	//jQuery().click(function(event) {
+		jQuery(function() {
+		jQuery("#BottomFeature").tabs({
+			fx: {opacity: 'toggle'}
+		});
 	//$("#BottomFeature").data('disabled.tabs', []); 
 	
 	
@@ -128,6 +131,7 @@ $template_path = get_bloginfo('template_directory');?>
 				
 			?>
 			<a name="top"></a>
+			<?php include(TEMPLATEPATH . '/layouts/custom_content.php'); ?>
 				<div id="contentTabs" class="filters">
 			  	  <ul id="TopFeature" class="main">
 				        <li><a class="first active" href="<?= $template_path?>/layouts/default.php?all=<?= $all?>&sort=post_date<?= $paging ?>" title="feature">MOST RECENT</a></li>
@@ -136,7 +140,7 @@ $template_path = get_bloginfo('template_directory');?>
                     </ul>
 			<!--	</div>-->
 			<!--	<div id="BottomFeature">-->
-				
+				    
 					<p>SHOW ONLY:</p>
 					<ul id="BottomFeature" class="secondary">
 
@@ -149,7 +153,7 @@ $template_path = get_bloginfo('template_directory');?>
 						
 				</div>              
 
-		
+				
 			
 		
 				<div id="feature">
