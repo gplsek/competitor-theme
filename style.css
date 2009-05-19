@@ -408,10 +408,9 @@ width:620px;
 }
 
 .main_column .main_article img {
-/* border:5px solid #FFFFFF; */
+ border:5px solid #FFFFFF; 
 margin-bottom:2px;
 }
-
 .main_column .main_article .ui-tabs-selected a img {
 border:5px solid #C4161C;
 }
@@ -1314,9 +1313,11 @@ font-weight:700;
 }
 
 #footer ul.middle, #footer ul.bottom {
-display:inline;
+/*display:inline;*/
 float:left;
-margin:0 20px 5px;
+/*margin:0 20px 5px;*/
+width: 100%;
+text-align: center;
 }
 
 #footer ul.middle li {
@@ -1410,4 +1411,11 @@ font-size: 12px;
 
 #comment #submit {
 margin: 10px 0 0 230px;
+}
+#rotate{
+	position: relative
+}
+#maqnav{
+	position: absolute;
+	top: 425px;
 }
