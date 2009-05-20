@@ -75,9 +75,9 @@ $template_path = get_bloginfo('template_directory');?>
 								$name = $links[$count]->link_name;
 								$url = $links[$count]->link_url;
 								if ($count == $i) {
-									echo '<li id="out" class="last"><a id="out" rel="'.$url.'" href="'.$url.'">'.$name.'</a></li>';
+									echo '<li id="out" class="last"><a id="out" rel="'.$url.'" href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
 								} else {
-									echo '<li id="out"><a id="out" href="'.$url.'" rel="'.$url.'">'.$name.'</a></li>';
+									echo '<li id="out"><a id="out" href="'.$url.'" rel="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
 								}
 								$count++;
 							}  
