@@ -114,9 +114,9 @@ jQuery.noConflict();
 								$name = $links[$count]->link_name;
 								$url = $links[$count]->link_url;
 								if ($count == $i) {
-									echo '<li class="last"><a href="'.$url.'">'.$name.'</a></li>';
+									echo '<li class="last"><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
 								} else {
-									echo '<li><a href="'.$url.'">'.$name.'</a></li>';
+									echo '<li><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
 								}
 								$count++;
 							}  
