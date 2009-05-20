@@ -60,10 +60,9 @@ margin:0 auto;
 
 #top-bar {
 background:#000000 none repeat scroll 0 0;
-float:right;
-height:18px;
-margin-right:22px;
+height:22px;
 width:1030px;
+margin: 0 auto;
 }
 
 #top-bar p {
@@ -73,25 +72,15 @@ font-size:10px;
 margin:3px 0 0 5px;
 }
 
-#top-bar p.comp {
-display:block;
-text-indent:-9999px;
-float:left;
-}
 
 #top-bar p.logo {
-background-image:url(images/header_comp_logo.png);
-width:52px;
-height:13px;
-margin-left:-17px;
+background-image:url(images/header_comp_logo.gif);
+width:204px;
+height:22px;
+margin-top:0;
+text-indent:-999em;
 }
 
-#top-bar p.brand {
-background-image:url(images/header_comp.jpg);
-width:100px;
-height:16px;
-margin:0 0 0 5px;
-}
 
 #top-bar ul {
 float:right;
@@ -102,7 +91,7 @@ margin:3px 15px 0 0;
 
 #top-bar ul li,#top-bar ul li a {
 color:#FFF;
-font-size:10px;
+font-size:12px;
 display:inline;
 float:left;
 margin:0 3px;
@@ -468,8 +457,8 @@ text-align:center;
 font-family:georgia;
 text-align:center;
 color:#333333;
-font-size:11pt;
-line-height:18pt;
+font-size:8pt;
+line-height:10pt;
 }
 
 .main_column .filters {
@@ -1164,6 +1153,7 @@ margin:10px 0 0;
 #comment {
 float:left;
 padding:10px 10px 10px 30px;
+width:620px;
 }
 
 #comment ol.commentlist,#comment ul.commentlist {

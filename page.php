@@ -10,12 +10,13 @@
         	
             
 	
-			<?php while (have_posts()) : the_post(); ?>		
+			<?php while (have_posts()) : the_post(); ?>	
+            <?php edit_post_link('>> Edit this article','',''); ?>	
 
 				<div class="article">
 				
 					<div class="entry">
-						<h2 class='pageheading'><?php the_title(); ?></h2> 
+						<h1 class="title"><?php the_title(); ?></h1> 
 						<?php the_content('<span class="continue">Continue Reading</span>'); ?> 
 					</div>
 				
