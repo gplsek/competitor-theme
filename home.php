@@ -131,7 +131,11 @@ $template_path = get_bloginfo('template_directory');?>
 				
 			?>
 			<a name="top"></a>
-			<?php include(TEMPLATEPATH . '/layouts/custom_content.php'); ?>
+			<?php 
+			if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld'))
+			{
+			include(TEMPLATEPATH . '/layouts/custom_content.php');
+			} ?>
 				<div id="contentTabs" class="filters">
 			  	  <ul id="TopFeature" class="main">
 				        <li><a class="first active" href="<?= $template_path?>/layouts/default.php?all=<?= $all?>&sort=post_date<?= $paging ?>" title="feature">MOST RECENT</a></li>
