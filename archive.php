@@ -8,7 +8,7 @@
 		
         		<?php if (is_category()) { ?>
         	
-            	<h2><em>Archive |</em> <?php echo single_cat_title(); ?></h2>        
+            	<h1><em>Archive |</em> <?php echo single_cat_title(); ?></h1>        
             	
             	<div class="archivefeed"><?php $cat_obj = $wp_query->get_queried_object(); $cat_id = $cat_obj->cat_ID; echo '<a href="'; get_category_rss_link(true, $cat, ''); echo '">RSS feed for this section</a>'; ?></div>
             	

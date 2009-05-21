@@ -69,7 +69,7 @@ jQuery.noConflict();
 	<?php if ( function_exists('yoast_breadcrumb') ) {
 		yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 	} ?>
-	<h2 class="cat-header"><?= $cat_name?></h2>
+	<h1 class="cat-header"><?= $cat_name?></h1>
 	<div id="contentTabs" class="filters">
   	  <ul id="TopFeature" class="main">
 	        <li><a class="first active" href="<?= $template_path?>/layouts/default.php?sort=post_date&cat=<?= $category?><?= $paging ?>" title="feature">MOST RECENT</a></li>

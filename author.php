@@ -9,14 +9,18 @@ endif;
 ?>
 
 
-		<div id="mainTabs" class="main_column">
+<div id="mainTabs" class="main_column">
+	<?php if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+			} ?>
 
-			<div id="archivebox">
+<h1><?php echo $curauth->display_name; ?></h1><br />
+<?php echo get_avatar($curauth->ID,$size = '100'); ?><p><?php echo $curauth->description; ?></p>
+                    
+                          
 
-			    	<h2><em>Articles by: |</em> "<?php echo $curauth->display_name; ?>"</h2>        
-
-			</div><!--/archivebox-->
-			
+			<!--/archivebox-->
+		<br /><h2>Articles posted by <?php echo $curauth->display_name; ?> </h2>	
 		<?php if (have_posts()) : ?>
 		
 		
@@ -32,18 +36,16 @@ endif;
 				<div class="article">
 
 
-				    <?php echo get_avatar($authorID,$size = '64'); ?>
-					<h1><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-					<h2 class="author"><?php the_author_posts_link(); ?></a></h2>
-					<ul class="options">
-		                        <li><?php the_category('</li><li> ') ?></li></ul>
+				    <?php //echo get_avatar($authorID,$size = '64'); ?>
+					<h1><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1><br />
+				
 					<ul class="article_info">
 						<li class="first red"><?php the_time('d F Y'); ?></li>
 		                <li><?php if(function_exists('the_views')) { the_views(); } ?></li>
 		                <li><?php comments_popup_link('Comments (0)', 'Comments (1)', 'Comments (%)'); ?></li>
 					</ul>
 					<p>
-				    <?php the_excerpt(); ?> 
+				    <?php the_content('<span class="continue">Continue Reading</span>'); ?> 
 
 				   </p>
 

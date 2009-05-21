@@ -192,10 +192,14 @@ background-color:#AFAFAF;
 background-image:url(images/nav_sep_3.png);
 background-repeat:no-repeat;
 float:left;
-height:26px;
-width:144px;
-margin:3px 0 0 -10px;
-padding:3px 5px 0 20px;
+height:28px;
+margin:2px 0 0;
+padding:2px 0 0 15px;
+width:143px;
+}
+
+#content #cse-search-box fieldset {
+border: none;
 }
 
 #content #cse-search-box fieldset label {
@@ -1183,6 +1187,18 @@ height:auto !important;
 background:none !important;
 width:300px;
 }
+
+
+/* Ads */
+
+#inlinead {clear:left;width:640px; background-color:#e5e7e6; text-align:center;padding:15px 10px; border-bottom:1px dashed #2E2E2E;}
+
+#right_ad {}
+
+
+
+
+
 
 /*#####   FOOTER ######*/
 #footer {
