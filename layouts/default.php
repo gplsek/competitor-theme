@@ -84,19 +84,6 @@ global $user_ID, $wpdb, $post, $current_category;
 				
 		<div class="article">
 	
-			
-		    <?php echo get_avatar($authorID,$size = '64'); ?>
-			<h1 class="title">
-				<?php
-				if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld')) // custom setting for home
-				{
-				?>
-				<a title="Permanent Link to <?php the_title(); ?>" href="<?php 	echo $post->guid; ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-				<?php }
-				else {?>
-					<a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-				<?php }?>
-			<h2 class="author"><?php the_author_posts_link(); ?></h2>
 			<ul class="options">
 
                          <?php
@@ -122,7 +109,15 @@ global $user_ID, $wpdb, $post, $current_category;
 			
 		    <?php echo get_avatar($authorID,$size = '45'); ?>
 			<h1 class="title">
-            	<a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
+            		<?php
+					if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld')) // custom setting for home
+					{
+					?>
+					<a title="Permanent Link to <?php the_title(); ?>" href="<?php 	echo $post->guid; ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+					<?php }
+					else {?>
+						<a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+					<?php }?>
             </h1>
 			<h2 class="author"><?php the_author_posts_link(); ?></h2>
 			
