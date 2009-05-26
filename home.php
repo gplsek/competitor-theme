@@ -72,7 +72,7 @@ $template_path = get_bloginfo('template_directory');?>
                 <ul class="third_nav">
 
 
-                    <li><a href="#rotate">FEATURED STORIES</a></li>
+                    <li><a href="#meta-rotate">FEATURED STORIES</a></li>
                     <li><a href="<?= $template_path?>/video.php">TOP VIDEOS</a></li>
                     <li id="out">
                         <span style="float: left;">HOT:</span>
@@ -98,7 +98,7 @@ $template_path = get_bloginfo('template_directory');?>
 
 			
 			<?php /*<div class="marquee main_article" id="rotate"> */ ?>
-			<?php /*<div id="rotate">*/ ?>
+			<?php echo '<div id="meta-rotate">'; ?>
 					<?php
 					
 					$url = get_option('siteurl');
@@ -111,7 +111,7 @@ $template_path = get_bloginfo('template_directory');?>
 					
 
 					?>
-			<?php /*</div>*/ ?><!-- End main article -->
+			<?php echo '</div>'; ?><!-- End main article -->
 			<?php 
 			
 			
