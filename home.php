@@ -66,24 +66,20 @@ jQuery.noConflict();
 
 <?
 $template_path = get_bloginfo('template_directory');?>
-            <div class="border"></div>
+           
             <div id="mainTabs" class="main_column">
 			  
                 <ul class="third_nav">
 
 
-                    <li><a href="#meta-rotate">FEATURED STORIES</a></li>
+                    <li><a href="#rotate">FEATURED STORIES</a></li>
                     <li><a href="<?= $template_path?>/video.php">TOP VIDEOS</a></li>
                     <li id="out">
-                        
+                        <span style="float: left;">HOT:</span>
+                        <ul id="out">
                          <?php //wp_list_bookmarks('title_li=&categorize=0&category_name=Hot'); ?>
 						  <?php $links = get_bookmarks('category_name=Hot');
 							$count = 0;
-							if (count($links) != 0)
-							{
-							   echo '<span style="float: left;">HOT:</span>';
-		                       echo '<ul id="out">';
-							}
 							$i=count($links)-1;
 							while( $count <= $i){
 								$name = $links[$count]->link_name;
@@ -95,18 +91,14 @@ $template_path = get_bloginfo('template_directory');?>
 								}
 								$count++;
 							}  
-						
-                        if (count($links) != 0)
-						{
-						   echo '</ul>';
-						}
 						?>
+                        </ul>
                     </li>
                 </ul>
 
 			
 			<?php /*<div class="marquee main_article" id="rotate"> */ ?>
-			<?php echo '<div id="meta-rotate">'; ?>
+			<?php /*<div id="rotate">*/ ?>
 					<?php
 					
 					$url = get_option('siteurl');
@@ -119,8 +111,24 @@ $template_path = get_bloginfo('template_directory');?>
 					
 
 					?>
-			<?php echo '</div>'; ?><!-- End main article -->
+			<?php /*</div>*/ ?><!-- End main article -->
 			<?php 
+			
+			$categories =  get_categories('hide_empty=0');
+			$option = "";
+			$all = "";
+			foreach ($categories as $cate) {
+
+				if (get_option('comp_nav_categories_'.$cate->cat_ID)){
+			  	$option .= '<li><a href="'.$template_path.'/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
+				$all .= $cate->cat_ID.",";
+
+			}
+
+			  }
+			
+			
+			
 			
 			
 			$page = get_query_var('paged');
@@ -132,45 +140,13 @@ $template_path = get_bloginfo('template_directory');?>
 				$_SESSION['sort'] = "";
 				$_SESSION['all'] = $all;
 				
-			
-			$categories =  get_categories('hide_empty=0');
-			$option = "";
-			$all = "";
-		
-			if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld')) // custom setting for home
+			?>
+			<a name="top"></a>
+			<?php 
+			if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld'))
 			{
 			include(TEMPLATEPATH . '/layouts/custom_content.php');
-			
-			foreach ($categories as $cate) {
-				
-					if(in_array($cate->cat_ID,$sport_arr))
-					{
-						$option .= '<li><a href="'.$template_path.'/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
-						$all .= $cate->cat_ID.",";
-						
-					}
-				
-			}
-			
-			
-			}
-			else 
-			{
-				foreach ($categories as $cate) {
-						if (get_option('comp_nav_categories_'.$cate->cat_ID)){
-			  				$option .= '<li><a href="'.$template_path.'/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
-				$all .= $cate->cat_ID.",";
-
-				} //end if
-
-			  } // end for each
-			} // end else if
-			
-			
-			
-			
-			?>
-				<a name="top"></a>
+			} ?>
 				<div id="contentTabs" class="filters">
 			  	  <ul id="TopFeature" class="main">
 				        <li><a class="first active" href="<?= $template_path?>/layouts/default.php?all=<?= $all?>&sort=post_date<?= $paging ?>" title="feature">MOST RECENT</a></li>
