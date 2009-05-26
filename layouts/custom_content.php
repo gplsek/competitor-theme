@@ -29,6 +29,11 @@ else
 $sport_arr = array();	
 }
 
+$running = get_cat_ID("running");
+$cycling = get_cat_ID("cycling");
+$triathlon = get_cat_ID("triathlon");
+
+
 
 
 
@@ -40,9 +45,9 @@ $sport_arr = array();
 			<ul>
 			<strong>Sports:</strong>
 			<form method="post" action="<?php bloginfo('template_directory'); ?>/setpreferences.php">
-			<input type="checkbox" name="sport[]" value="14" <?php if (in_array('14',$sport_arr)) echo "checked"?>>Running<br />
-			<input type="checkbox" name="sport[]" value="16" <?php if (in_array('16',$sport_arr)) echo "checked"?>>Cycling<br />
-			<input type="checkbox" name="sport[]" value="15" <?php if (in_array('15',$sport_arr)) echo "checked"?>>Triathon<br />
+			<input type="checkbox" name="sport[]" value="<?= $running?>" <?php if (in_array($running,$sport_arr)) echo "checked"?>>Running<br />
+			<input type="checkbox" name="sport[]" value="<?= $cycling?>" <?php if (in_array($cycling,$sport_arr)) echo "checked"?>>Cycling<br />
+			<input type="checkbox" name="sport[]" value="<?= $triathlon?>" <?php if (in_array($triathlon,$sport_arr)) echo "checked"?>>Triathon<br />
 			<input type="submit" name="custom_form" value="SUBMIT">
 			</form>
 			</ul>
