@@ -8,6 +8,10 @@ global $user_ID, $wpdb, $post, $current_category;
 	include('../includes/version.php');
 	
 	
+	$url = get_option('siteurl');
+	
+	$magazine = get_mag($url);
+	
 	
 	$order = "&orderby=post_date";
 	$showposts = get_option('comp_other_entries');
@@ -77,10 +81,19 @@ global $user_ID, $wpdb, $post, $current_category;
 		<?php $counter2++; ?>
 				
 		<div class="article">
-		
+	
 			
 		    <?php echo get_avatar($authorID,$size = '64'); ?>
-			<h1 class="title"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+			<h1 class="title">
+				<?php
+				if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld')) // custom setting for home
+				{
+				?>
+				<a title="Permanent Link to <?php the_title(); ?>" href="<?php 	echo $post->guid; ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+				<?php }
+				else {?>
+					<a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+				<?php }?>
 			<h2 class="author"><?php the_author_posts_link(); ?></h2>
 			<ul class="options">
                          <?php
@@ -113,7 +126,14 @@ global $user_ID, $wpdb, $post, $current_category;
 			    <?php 
 				if (!($post->post_excerpt)){
 				//the_advanced_excerpt('length=125');
-				the_content('Read more...');
+						if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld')) // custom setting for home
+						{
+							the_content();
+						}
+						else
+						{
+							the_content('Read more...');
+						}
 				}
 				else 
 				{

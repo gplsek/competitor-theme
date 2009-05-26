@@ -20,8 +20,8 @@ jQuery.noConflict();
 
 //echo "COOKIE ".$_COOKIE['Sport'];
 
-if (isset($_COOKIE['Sport'])) {
-$sport_arr = explode("|", $_COOKIE['Sport']);
+if (isset($_COOKIE['Custom'])) {
+$sport_arr = explode("|", $_COOKIE['Custom']);
 //print_r($sport_arr);
 }
 else
@@ -32,6 +32,7 @@ $sport_arr = array();
 $running = get_cat_ID("running");
 $cycling = get_cat_ID("cycling");
 $triathlon = get_cat_ID("triathlon");
+$mountainbike = get_cat_ID("mountainbike");
 
 
 
@@ -48,6 +49,7 @@ $triathlon = get_cat_ID("triathlon");
 			<input type="checkbox" name="sport[]" value="<?= $running?>" <?php if (in_array($running,$sport_arr)) echo "checked"?>>Running<br />
 			<input type="checkbox" name="sport[]" value="<?= $cycling?>" <?php if (in_array($cycling,$sport_arr)) echo "checked"?>>Cycling<br />
 			<input type="checkbox" name="sport[]" value="<?= $triathlon?>" <?php if (in_array($triathlon,$sport_arr)) echo "checked"?>>Triathon<br />
+			<input type="checkbox" name="sport[]" value="<?= $mountainbike?>" <?php if (in_array($mountainbike,$sport_arr)) echo "checked"?>>Mountain Biking<br />
 			<input type="submit" name="custom_form" value="SUBMIT">
 			</form>
 			</ul>
