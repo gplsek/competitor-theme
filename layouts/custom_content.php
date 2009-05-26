@@ -20,8 +20,8 @@ jQuery.noConflict();
 
 //echo "COOKIE ".$_COOKIE['Sport'];
 
-if (isset($_COOKIE['Custom'])) {
-$sport_arr = explode("|", $_COOKIE['Custom']);
+if (isset($_COOKIE['Sport'])) {
+$sport_arr = explode("|", $_COOKIE['Sport']);
 //print_r($sport_arr);
 }
 else
