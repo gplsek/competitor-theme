@@ -1,4 +1,7 @@
-<?php function compthemes_admin_head() { ?>
+<?php 
+
+function compthemes_admin_head() 
+{ ?>
 <style>
 
 h2 { margin-bottom: 20px; }
@@ -17,7 +20,8 @@ h2 { margin-bottom: 20px; }
 .warning { background: #FFEBE8; border: 1px dotted #CC0000; padding: 10px; color: #333; font-weight: bold; }
 
 </style>
-<?php }
+<?php 
+}
 
 // VARIABLES
 

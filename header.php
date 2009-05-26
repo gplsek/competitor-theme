@@ -1,4 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php
+session_start();
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head profile="http://gmpg.org/xfn/11">
 
@@ -86,7 +88,7 @@ jQuery.noConflict();
     $kw = $magazine_name.','.$cat_name;
 
 
-    $_SESSION['kw'] = $kw;
+    $_SESSION['skw'] = $kw;
     ?>
 	<script type="text/javascript" language="JavaScript">
     aj_server = 'http://adj43.thruport.com/servlet/ajrotator/'; aj_tagver = '1.0';
