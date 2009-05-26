@@ -1,12 +1,10 @@
 <?php
-//setcookie("Custom","",time()+(-1),"http://tworld.com");
 $cookie_sport = "";
 foreach($_POST['sport'] as $key => $value){
-		$cookie_sport .= $value . "|";
-	}
+$cookie_sport .= $value . "|";}
 //trim the last | from the end
 $cookie_sport = substr($cookie_sport, 0, -1);
-setcookie("Custom",$cookie_sport,time()+(60*60*24*365),"http://tworld.com");
+setcookie("Sport", $cookie_sport,time()+(60*60*24*365),"/");
 
 if (isset($_COOKIE['Custom']))
 {
