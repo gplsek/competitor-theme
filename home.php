@@ -75,11 +75,15 @@ $template_path = get_bloginfo('template_directory');?>
                     <li><a href="#meta-rotate">FEATURED STORIES</a></li>
                     <li><a href="<?= $template_path?>/video.php">TOP VIDEOS</a></li>
                     <li id="out">
-                        <span style="float: left;">HOT:</span>
-                        <ul id="out">
+                        
                          <?php //wp_list_bookmarks('title_li=&categorize=0&category_name=Hot'); ?>
 						  <?php $links = get_bookmarks('category_name=Hot');
 							$count = 0;
+							if (count($links) != 0)
+							{
+							   echo '<span style="float: left;">HOT:</span>';
+		                       echo '<ul id="out">';
+							}
 							$i=count($links)-1;
 							while( $count <= $i){
 								$name = $links[$count]->link_name;
@@ -91,8 +95,12 @@ $template_path = get_bloginfo('template_directory');?>
 								}
 								$count++;
 							}  
+						
+                        if (count($links) != 0)
+						{
+						   echo '</ul>';
+						}
 						?>
-                        </ul>
                     </li>
                 </ul>
 
