@@ -141,8 +141,8 @@ jQuery.noConflict();
 				    <input type="hidden" name="cx" value="015459459567427136655:6whklon_3ea" />
 				    <input type="hidden" name="cof" value="FORID:10" />
 				    <input type="hidden" name="ie" value="UTF-8" />
-				    <input type="text" name="q" size="31" value="SEARCH" onfocus="this.value=''; this.onfocus=null;"/>
-                    <textarea rows="16" cols="20" name="clarence" onfocus="this.value=''">clearance</textarea>  
+				    <input type="text" name="q" size="31" id="q" value="SEARCH" onclick="if(this.value=='SEARCH')this.value='';" onfocus="if(this.value=='SEARCH')this.value='';" onblur="if(this.value!='SEARCH')this.value='SEARCH';" />
+                    <!--<textarea rows="16" cols="20" name="clarence" onfocus="this.value=''">clearance</textarea>  -->
 				    <!-- <input type="submit" name="sa" value="Search" /> -->
 
 				 </fieldset>
