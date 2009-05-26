@@ -5,7 +5,7 @@ function slideShow() {
 	jQuery('#rotate a').css({opacity: 0.0});
 	
 	//Get the first image and display it (set it to full opacity)
-	jQuery('#rotate a:first').css({opacity: 1.0});
+	jQuery('#rotate a:first').css({opacity: 0.7});
 	
 	//Set the caption background to semi-transparent
 	jQuery('#rotate .caption').css({opacity: 0.7});
@@ -13,12 +13,12 @@ function slideShow() {
 	//Resize the width of the caption according to the image width
 	jQuery('#rotate .caption').css({width: jQuery('#rotate a').find('img').css('width')});
 	
-	//Get the caption of the first image from REL attribute and display it
+	//Get the caption of the first image from REL attribute and display it (0.7 for made the text semitransparent)
 	jQuery('#rotate .content').html(jQuery('#rotate a:first').find('img').attr('rel'))
 	.animate({opacity: 0.7}, 400);
 	
 	//Call the rotate function to run the slideshow, 6000 = change to next image after 6 seconds
-	setInterval('rotate("x")',6000);
+	//setInterval('rotate("x")',6000); This show the images each 6 seconds
 	
 }
 
@@ -32,6 +32,7 @@ function rotate(idd) {
 	
 	if(idd!='x'){
 		next=jQuery(idd);
+		clearInterval(interv);
 		//alert (idd);
 	}
 	jQuery('#maqnav a').removeClass('border');
@@ -43,7 +44,7 @@ function rotate(idd) {
 	//Set the fade in effect for the next image, show class has higher z-index
 	next.css({opacity: 0.0})
 	.addClass('show')
-	.animate({opacity: 1.0}, 1000);
+	.animate({opacity: 0.7}, 1000);
 
 	//Hide the current image
 	current.animate({opacity: 0.0}, 1000)
@@ -54,9 +55,10 @@ function rotate(idd) {
 	
 	//Animate the caption, opacity to 0.7 and heigth to 100px, a slide up effect
 	jQuery('#rotate .caption').animate({opacity: 0.7},100 ).animate({height: '100px'},500 );
-	
+	jQuery('#rotate .caption .content').css('opacity','1.0');
 	//Display the content
 	jQuery('#rotate .content').html(caption);
 	
 	
 }
+var interv=setInterval('rotate("x")',6000);
