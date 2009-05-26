@@ -20,9 +20,9 @@ jQuery.noConflict();
 
 //echo "COOKIE ".$_COOKIE['Sport'];
 
-if (isset($_COOKIE['Sport'])) {
-$sport_arr = explode("|", $_COOKIE['Sport']);
-//print_r($sport_arr);
+if (isset($_COOKIE['Custom'])) {
+$sport_arr = explode("|", $_COOKIE['Custom']);
+print_r($sport_arr);
 }
 else
 {
@@ -40,9 +40,9 @@ $sport_arr = array();
 			<ul>
 			<strong>Sports:</strong>
 			<form method="post" action="<?php bloginfo('template_directory'); ?>/setpreferences.php">
-			<input type="checkbox" name="sport[]" value="1" <?php if (in_array('1',$sport_arr)) echo "checked"?>>Running<br />
-			<input type="checkbox" name="sport[]" value="2" <?php if (in_array('2',$sport_arr)) echo "checked"?>>Cycling<br />
-			<input type="checkbox" name="sport[]" value="3" <?php if (in_array('3',$sport_arr)) echo "checked"?>>Triathon<br />
+			<input type="checkbox" name="sport[]" value="14" <?php if (in_array('14',$sport_arr)) echo "checked"?>>Running<br />
+			<input type="checkbox" name="sport[]" value="16" <?php if (in_array('16',$sport_arr)) echo "checked"?>>Cycling<br />
+			<input type="checkbox" name="sport[]" value="15" <?php if (in_array('15',$sport_arr)) echo "checked"?>>Triathon<br />
 			<input type="submit" name="custom_form" value="SUBMIT">
 			</form>
 			</ul>

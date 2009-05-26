@@ -66,6 +66,14 @@ jQuery.noConflict();
     {
     $cat_name = 'home';
     }
+
+	if (is_page())
+    {
+	
+	//get_query_var('page_name')
+    $cat_name = get_query_var('pagename');
+	
+    }
     
     $parse_url_array 	= parse_url(get_option('siteurl'));
     $subdomain 				= explode('.', $parse_url_array['host']);
@@ -76,6 +84,8 @@ jQuery.noConflict();
     $magazine_name = $subdomain[0];
     
     $kw = $magazine_name.','.$cat_name;
+
+
     $_SESSION['kw'] = $kw;
     ?>
 	<script type="text/javascript" language="JavaScript">

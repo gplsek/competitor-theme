@@ -42,6 +42,9 @@ $comp_categories_obj = get_categories('hide_empty=0');
 $comp_categories = array();
 
 
+$comp_feature_categories_obj = get_categories('hide_empty=0');
+$comp_feature_categories = array();
+
 $comp_pages_obj = get_pages('sort_column=post_parent,menu_order');
 $comp_pages = array();
 
@@ -90,13 +93,17 @@ foreach ($comp_categories_obj as $comp_cat) {
 	$comp_categories[$comp_cat->cat_ID] = $comp_cat->cat_name;
 }
 
+foreach ($comp_feature_categories_obj as $comp_cat) {
+	$comp_feature_categories[$comp_cat->cat_ID] = $comp_cat->cat_name;
+}
+
 foreach ($comp_pages_obj as $comp_page) {
 	$comp_pages[$comp_page->ID] = $comp_page->post_name;
 }
 
 
 $other_entries = array("Select a number:","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19");
-//$categories_tmp = array_unshift($comp_categories, "Select a category:");
+$categories_tmp = array_unshift($comp_categories, "Select a category:");
 $comp_pages_tmp = array_unshift($comp_pages, "Select a page:");
 $alt_stylesheets_tmp = array_unshift($alt_stylesheets, "Select Style:");
 
@@ -171,7 +178,7 @@ $options = array (
 						"id" => $shortname."_nav_categories",
 						"std" => "Select a categories:",
 						"type" => "multicheck",
-						"options" => $comp_categories)
+						"options" => $comp_feature_categories)
 																														
 		  );
 
@@ -343,7 +350,7 @@ function compthemes_page (){
 				
 									} ?>
 									
-	            					<input type="checkbox" class="checkbox" name="<?php echo $comp_key; ?>" id="<?php echo $comp_key; ?>" value="true" <?php echo $checked; ?> /><label for="<?php echo $woo_key; ?>"><?php echo $option; ?></label><br />
+	            					<input type="checkbox" class="checkbox" name="<?php echo $comp_key; ?>" id="<?php echo $comp_key; ?>" value="true" <?php echo $checked; ?> /><label for="<?php echo $comp_key; ?>"><?php echo $option; ?></label><br />
 									
 									<?php }
 		 

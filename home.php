@@ -103,22 +103,6 @@ $template_path = get_bloginfo('template_directory');?>
 			</div><!-- End main article -->
 			<?php 
 			
-			$categories =  get_categories('hide_empty=0');
-			$option = "";
-			$all = "";
-			foreach ($categories as $cate) {
-
-				if (get_option('comp_nav_categories_'.$cate->cat_ID)){
-			  	$option .= '<li><a href="'.$template_path.'/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
-				$all .= $cate->cat_ID.",";
-
-			}
-
-			  }
-			
-			
-			
-			
 			
 			$page = get_query_var('paged');
 			if (!($page == "")){
@@ -129,13 +113,45 @@ $template_path = get_bloginfo('template_directory');?>
 				$_SESSION['sort'] = "";
 				$_SESSION['all'] = $all;
 				
-			?>
-			<a name="top"></a>
-			<?php 
-			if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld'))
+			
+			$categories =  get_categories('hide_empty=0');
+			$option = "";
+			$all = "";
+		
+			if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld')) // custom setting for home
 			{
 			include(TEMPLATEPATH . '/layouts/custom_content.php');
-			} ?>
+			
+			foreach ($categories as $cate) {
+				
+					if(in_array($cate->cat_ID,$sport_arr))
+					{
+						$option .= '<li><a href="'.$template_path.'/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
+						$all .= $cate->cat_ID.",";
+						
+					}
+				
+			}
+			
+			
+			}
+			else 
+			{
+				foreach ($categories as $cate) {
+						if (get_option('comp_nav_categories_'.$cate->cat_ID)){
+			  				$option .= '<li><a href="'.$template_path.'/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
+				$all .= $cate->cat_ID.",";
+
+				} //end if
+
+			  } // end for each
+			} // end else if
+			
+			
+			
+			
+			?>
+				<a name="top"></a>
 				<div id="contentTabs" class="filters">
 			  	  <ul id="TopFeature" class="main">
 				        <li><a class="first active" href="<?= $template_path?>/layouts/default.php?all=<?= $all?>&sort=post_date<?= $paging ?>" title="feature">MOST RECENT</a></li>
