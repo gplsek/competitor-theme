@@ -1,5 +1,9 @@
 
 body {
-	background: #292921 url(velo/background.jpg) center top no-repeat;
+	background: #000 url(velo/background.jpg) center top no-repeat;
 }
 
+#logo {
+background:transparent url(velo/velo-logo.png) no-repeat scroll 0px 4px;
+
+}

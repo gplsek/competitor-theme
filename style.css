@@ -8,16 +8,24 @@ Author URI: http://www.immersionmedia.com*/
 
 @media print  {
 /* Hide useless elements in print layouts... */
+body {
+background-image: none!important;
+}
 .ui-tabs-nav {
 display:none;
 }
+#top-bar, div .nav-bars, .right_column, .bottom, #comment {
+display:none
 }
+}
+
 
 @media projection,screen  {
 /* Caution! Ensure accessibility in print and other media types... 
 Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
 .ui-tabs-hide {
 display:none;
+
 }
 }
 
@@ -28,7 +36,7 @@ padding:0;
 }
 
 body {
-background: #002750 url(images/default-background.gif) center top no-repeat;
+background-color: #002750;
 font-family:Verdana,Arial,Helvetica,sans-serif;
 }
 
@@ -54,15 +62,20 @@ padding:0;
 }
 
 #container {
-width:1090px;
+ /* left:60px; */
 margin:0 auto;
+position:relative;
+top:0;
+width:1000px;
 }
+
+/*######################## Top Bar ##############################*/
 
 #top-bar {
 background:#000000 none repeat scroll 0 0;
 height:22px;
-width:1030px;
-margin: 0 auto;
+margin:0 0 5px;
+width:1000px;
 }
 
 #top-bar p {
@@ -102,40 +115,39 @@ color:#FF0000;
 }
 
 #logo {
-background:transparent url(images/header-logo.gif) no-repeat scroll 2px -18px;
-float:left;
-height:90px;
+background:transparent url(images/competitor-logo.png) no-repeat scroll 0 5px;
+height:100px;
+left:-26px;
 overflow:hidden;
+position:absolute;
 text-indent:-999em;
-width:337px;
-display:inline;
+width:330px;
 }
 
 #logo a {
+display:block;
 height:90px;
-width:337px;
+width:320px;
 }
 
 #banner {
-float:left;
-height:90px;
-width:730px;
 display:inline;
-padding: 10px 0 0 4px;
+float:right;
+height:90px;
+padding:5px 0 5px 10px;
+width:700px;
 }
 
-/* 
-* html #banner {
-margin:-10px 0;
+#banner img {
+width: 700px;
 }
-*/
 
 #content {
-float:right;
-width:1060px;
+background-color:#FFFFFF;
 display:inline;
-background:url(images/content-bg.png) repeat-y;
-margin:15px 7px 0 0;
+float:left;
+width:1000px;
+margin: 10px 0px;
 }
 
 #content .last a {
@@ -144,7 +156,7 @@ border:none !important;
 
 #content .nav_bars {
 height:90px;
-margin:5px 20px 0 18px;
+margin:5px 10px;
 }
 
 #content .nav_bars ul.main_nav {
@@ -169,8 +181,8 @@ background-color:#D4D4D4;
 float:left;
 height:18px;
 margin-top:3px;
-padding:8px 0 3px 15px;
-width:520px;
+padding:8px 0 3px 5px;
+width:489px;
 }
 
 #content .nav_bars ul.sec_nav li a {
@@ -240,7 +252,7 @@ color:#FFFFFF;
 float:left;
 font-family:georgia;
 font-size:14px;
-margin-right:10px;
+margin-left:10px;
 margin-top:2px;
 }
 
@@ -270,12 +282,12 @@ width:130px;
 }
 
 #content .border {
-background:url(images/border_bck.jpg) repeat-x;
+background:transparent url(images/border_bck.jpg) repeat-x scroll 0 0;
+display:inline;
 float:left;
 height:6px;
-display:inline;
-width:1022px;
-margin:0 0 0 18px;
+margin:0 10px;
+width:980px;
 }
 
 
@@ -287,8 +299,8 @@ margin:0 0 -10px 18px;
 #content .main_column {
 display:inline;
 float:left;
-margin:7px 0px 0 25px;
-width:650px;
+margin:7px 10px 0;
+width:630px;
 }
 
 #content .main_column h1 {
@@ -305,7 +317,7 @@ font-family:georgia;
 font-size:26px;
 font-weight:400;
 text-align:left;
-line-height: 20px;
+line-height: 27px;
 }
 
 #content .main_column h2, #content .main_column h2 a {
@@ -343,7 +355,7 @@ text-decoration:underline;
 #content .main_column ul.third_nav {
 float:left;
 margin-bottom:7px;
-width:650px;
+width:630px;
 }
 
 #content .main_column ul.third_nav li {
@@ -388,10 +400,8 @@ list-style:none;
 background:none !important;
 }
 
-#content .main_column ul.options li {
-float:none !important;
-display:inline;
-padding:5px 0;
+.first {
+border:none
 }
 
 .main_column .main_article {
@@ -455,6 +465,7 @@ background-color:#F3F3F3;
 border:1px solid #DDDDDD;
 padding-top:4px;
 text-align:center;
+margin:0 10px 0 10px;
 }
 
 #content .wp-caption p.wp-caption-text {
@@ -463,20 +474,22 @@ text-align:center;
 color:#333333;
 font-size:8pt;
 line-height:10pt;
+width:90%;
+margin:0 auto;
 }
 
 .main_column .filters {
-float: left;
 background-image:url(images/bg_1.jpg);
 background-repeat:repeat-x;
+float:left;
 font-family:georgia;
-height:100px;
 font-size:10px;
 font-weight:700;
+height:100px;
 margin-top:15px;
 overflow:hidden;
 text-align:center;
-width:660px;
+width:630px;
 }
 
 .main_column .filters ul.main {
@@ -535,13 +548,15 @@ text-decoration:none;
 padding:0 5px;
 }
 
+#breadcrumbs {font-size:12px; margin-bottom:10px; font-family:georgia!important}
+
 .main_column .article {
 background:transparent url(images/art_bck.jpg) repeat-x scroll 0 0;
 border-bottom:1px dashed #2E2E2E;
 float:left;
 overflow:hidden;
-width:640px;
-padding:30px 10px 20px;
+padding:25px 15px 20px;
+width:600px;
 }
 
 #content .full {
@@ -549,15 +564,16 @@ width:1030px;
 }
 
 .main_column .main_wide_column {
-width:95%;
+width:950px;
 }
 
 .main_column .article p {
 width:100%;
 display:block;
-font-size:12pt;
+font-size:14px;
 padding-bottom:10px;
 margin-top:5px;
+line-height:20px
 }
 
 .main_column .article img.profile_img,img.avatar,img.fb_profile_pic_rendered {
@@ -567,7 +583,7 @@ float:left;
 
 .main_column .article h2.author {
 float:left;
-margin-top:5px;
+margin-top:-3px;
 }
 .main_column .article h3{
 font-weight: normal;
@@ -598,11 +614,16 @@ float:none !important;
 padding:5px 5px 5px 15px;
 }
 
+#content .main_column ul.options li {
+float:none !important;
+display:inline;
+padding:0 0 0 0;
+}
+
 .main_column .article ul.options {
-float:right;
-margin:13px 0 4px;
 text-align:right;
-width:250px;
+width:600px;
+margin:0!important;
 }
 
 .main_column .article ul.options li a {
@@ -613,13 +634,13 @@ font-weight:700;
 text-decoration:none;
 padding:0 10px;
 }
-
 .main_column .article ul.article_info {
 display:block;
 font-size:10px;
 overflow:hidden;
-width:565px;
-margin:0;
+width:270px;
+margin:5px 0 0 0;
+padding-left:10px
 }
 
 .main_column .article ul.article_info li {
@@ -642,7 +663,16 @@ float:right;
 margin:10px 0 50px 10px;
 }
 
-/******************* Pagination & Breadcumbs ******************************/
+.main_column .article .more-link {
+float:right;
+font-weight:bold;
+font-size:12px}
+
+.main_column .article a.more-link {
+text-decoration:none!important;
+}
+
+/*######################## Pagination & Breadcumbs ##############################*/
 .main_column .pagination {
 overflow:hidden;
 padding:10px;
@@ -704,11 +734,9 @@ background-color:#000;
 color:#fff;
 }
 
-#breadcrumbs {font-size:12px; margin-bottom:20px; font-family:georgia!important}
-
 #content .right_column {
 float:left;
-padding:15px 0 0 20px;
+padding:15px 0 0 9px;
 text-align:center;
 width:330px;
 }
@@ -1059,7 +1087,6 @@ width:285px;
 
 .right_column .widget ul.sidebar_related li a {
 text-decoration:none;
-font-style:.8em;
 color:#185672;
 width:100%;
 }
@@ -1099,14 +1126,13 @@ border:none;
 margin:5px;
 }
 
-/* Skin */
+/*######################## Skin ##############################*/
 .ui-tabs-nav {
-/* float:left; */
 list-style-image:none;
 list-style-position:outside;
 list-style-type:none;
 margin:0;
-width:250px;
+width:220px;
 }
 
 #BottomFeature {
@@ -1125,11 +1151,9 @@ margin:0 5px 0 0;
 
 div.headline {
 float:right;
-width:380px;
-/* height: 150px; */
-margin:5px;
+margin:0px 30px 0px 0px;
+width:400px;
 }
-
 div.headline h3 a {
 color:#185672;
 font-family:georgia;
@@ -1153,7 +1177,7 @@ padding:0 30px;
 margin:10px 0 0;
 }
 
-/*Comment*/
+/*######################## Comment ##############################*/
 #comment {
 float:left;
 padding:10px 10px 10px 30px;
@@ -1189,26 +1213,33 @@ width:300px;
 }
 
 
-/* Ads */
+/*######################## Ads ##############################*/
 
-#inlinead {clear:left;width:640px; background-color:#e5e7e6; text-align:center;padding:15px 10px; border-bottom:1px dashed #2E2E2E;}
+#inlinead {
+background-color:#E5E7E6;
+border-bottom:1px dashed #2E2E2E;
+clear:left;
+padding:15px;
+text-align:center;
+width:600px;
+}
 
-#right_ad {}
+#right_ad {clear:left; margin-top:17px; padding-top:5px; padding-bottom:5px; margin-bottom:20px; background-color:#e5e7e6; width:330px}
 
 
 
 
 
 
-/*#####   FOOTER ######*/
+/*########################   FOOTER ##############################*/
 #footer {
-float:left;
-width:1005px;
+border-top:10px solid #000000;
 display:inline;
-border-top:10px solid #000;
+float:left;
+margin:15px 10px 0;
 overflow:hidden;
-margin:15px 0 0 26px;
 padding:0 0 20px;
+width:980px;
 }
 
 #footer div.logo {
@@ -1247,19 +1278,22 @@ margin:0 5px;
 #footer div.images {
 display:inline;
 float:left;
-margin:15px 0 0 140px;
+margin:15px 0 0 125px;
 overflow:hidden;
 text-indent:-999em;
 width:810px;
 }
 
-#footer div.images-two {
+#footer div.event-logos {
+margin:0 auto 0 200px;
+float:left
 display:inline;
+width:600px;
+}
+
+#footer div.event-logos img  {
 float:left;
-margin:0 0 0 335px;
-overflow:hidden;
-text-indent:-999em;
-width:810px;
+margin:0 10px
 }
 
 #footer a.image {
@@ -1268,6 +1302,7 @@ width:179px;
 height:98px;
 display:inline;
 margin:0 0 0 10px;
+text-indent:-999em;
 }
 
 #footer #image1 {
@@ -1294,17 +1329,6 @@ display:inline;
 margin:0 0 0 10px;
 }
 
-#footer #image-two1 {
-background:url(images/carlsbad-logo.jpg) top center no-repeat;
-}
-
-#footer #image-two2 {
-background:url(images/muddy-buddy-logo.jpg) top center no-repeat;
-}
-
-#footer #image-two3 {
-background:url(images/esa-logo.jpg) top center no-repeat;
-}
 
 #footer p {
 float:left;
@@ -1345,12 +1369,12 @@ color:#656b78;
 font-size:12px !important;
 border:1px solid #444;
 float:left;
-width:625px;
+width:600px;
 margin:10px;
 padding:5px 5px 5px 10px;
 }
 
-#top-bar ul li a,.main_column a {
+.main_column a {
 text-decoration:none;
 }
 
@@ -1358,7 +1382,7 @@ text-decoration:none;
 border:none;
 }
 
-#content .red,#content .main_column h1:hover,#content .main_column h1 a:hover {
+#content .main_column h1:hover,#content .main_column h1 a:hover {
 color:#C4161C;
 }
 
@@ -1418,10 +1442,133 @@ font-size: 12px;
 #comment #submit {
 margin: 10px 0 0 230px;
 }
+
+#rotate {
+height:395px;
+margin:25px 0;
+position:relative;
+}
+
+#rotate a {
+	float:left;
+	left:0;
+	position:absolute;
+}
+
+#rotate a img {
+border:medium none;
+width:630px;
+}
+
+#rotate a.show {
+	z-index:500
+}
+
+#rotate .caption {
+	z-index:600; 
+	background-color:#000; 
+	color:#ffffff; 
+	height:100px; 
+	width:100%; 
+	position:absolute;
+	bottom:0;
+}
+
+#rotate .caption .content {
+	margin:5px
+}
+
+#rotate .caption .content h3 {
+	margin:0;
+	padding:0;
+	color:#1DCCEF;
+}
+
 #rotate{
 	position: relative
 }
-#maqnav{
+#rotate img {
+	width: 100px;
+}
+#fragment-0 img, #fragment-1 img, #fragment-2 img, #fragment-3 img {
+	width: 630px;
+}
+#fragment-0 .headline img, #fragment-1 .headline img, #fragment-2 .headline img, #fragment-3 .headline img {
+	width: 11px;
+}
+/*#maqnav{
 	position: absolute;
-	top: 425px;
+	top: 405px;
+}*/
+#rotate-thumbs {
+height:100px;
+position:relative;
+}
+
+#rotate-thumbs #maqnav {
+float:left;
+height:100px;
+padding:0 15px;
+position:relative;
+width:630px;
+}
+
+#rotate-thumbs #maqnav li {
+height:90px;
+margin:0 10px;
+width:130px;
+}
+
+#rotate-thumbs #maqnav li a.border {
+background: none;
+display:inline;
+float:left;
+height:6px;
+margin:0px;
+width:auto;
+}
+
+#rotate-thumbs #maqnav li a.border img {
+border:5px solid #FF0000;
+}
+
+#rotate-thumbs #maqnav li a img {
+border:5px solid #FFFFFF;
+}
+
+/*######################## Sociable Plugin CSS ##############################*/
+div.sociable { margin: 16px 0;border: 1px solid #B7B7B7; clear:left; padding:5px; background-color:#f2efef }
+
+.sociable_tagline { position: relative; background-color:#000; color:#fff; padding:3px; margin-bottom:10px; font-family:georgia; font-size:16px }
+span.sociable_tagline span { display: none; width: 14em; }
+span.sociable_tagline:hover span {
+	position: absolute;
+	display: block;
+	top: -5em;
+	background: #ffe;
+	border: 1px solid #ccc;
+	color: black;
+	line-height: 1.25em;
+}
+.sociable span {
+	display: block;
+}
+.sociable img {
+	float: none;
+	width: 16px;
+	height: 16px;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.sociable-hovers {
+	opacity: .4;
+	-moz-opacity: .4;
+	filter: alpha(opacity=40);
+}
+.sociable-hovers:hover {
+	opacity: 1;
+	-moz-opacity: 1;
+	filter: alpha(opacity=100);
 }

@@ -3,3 +3,7 @@ body {
 	background: #472d0c url(mountian_bike/background.jpg) center top no-repeat;
 }
 
+#logo {
+background:transparent url(mountian_bike/mtb-logo.png) no-repeat scroll 0px 4px;
+
+}

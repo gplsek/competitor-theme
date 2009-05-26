@@ -3,3 +3,8 @@ body {
 	background: #14264c url(triathlon/background.jpg) center top no-repeat;
 }
 
+
+#logo {
+background:transparent url(triathlon/tri-logo.png) no-repeat scroll 0px 4px;
+
+}

@@ -12,7 +12,7 @@ Template Name: Search Template
 		<?php if (have_posts()) : ?>
 			
 			
-			<h2 class='pageheading'><?php the_title(); ?></h2> 
+			<h1 class='pageheading'><?php the_title(); ?></h1> 
 		
 		
         	
@@ -22,12 +22,12 @@ Template Name: Search Template
 
 				
 		
-					<div class="entry">
+					
 						<div id="cse-search-results"></div>
 						<script type="text/javascript">
 						  var googleSearchIframeName = "cse-search-results";
 						  var googleSearchFormName = "cse-search-box";
-						  var googleSearchFrameWidth = 600;
+						  var googleSearchFrameWidth = 800;
 						  var googleSearchDomain = "www.google.com";
 						  var googleSearchPath = "/cse";
 						</script>
@@ -36,7 +36,7 @@ Template Name: Search Template
 						
 					
 				
-				</div><!--/article-->
+				<!--/article-->
 
 			<?php endwhile; ?>
 
@@ -46,6 +46,6 @@ Template Name: Search Template
 
 			</div><!--/main column-->
 
-	<?php get_sidebar('home'); ?>
+	<?php //get_sidebar('home'); ?>
 
 	<?php get_footer(); ?>

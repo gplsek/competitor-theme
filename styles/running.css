@@ -3,3 +3,7 @@ body {
 	background: #000 url(running/background.jpg) center top no-repeat;
 }
 
+#logo {
+background:transparent url(running/running-logo.png) no-repeat scroll 0px 4px;
+
+}
