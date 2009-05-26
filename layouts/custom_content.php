@@ -40,19 +40,33 @@ $mountainbike = get_cat_ID("mountainbike");
 
 ?>
 <div id="custom">
+	<form method="post" action="<?php bloginfo('template_directory'); ?>/setpreferences.php">
 	<div>
 		<div class="title">Customize Content</div>
 		<div>
 			<ul>
 			<strong>Sports:</strong>
-			<form method="post" action="<?php bloginfo('template_directory'); ?>/setpreferences.php">
-			<input type="checkbox" name="sport[]" value="<?= $running?>" <?php if (in_array($running,$sport_arr)) echo "checked"?>>Running<br />
-			<input type="checkbox" name="sport[]" value="<?= $cycling?>" <?php if (in_array($cycling,$sport_arr)) echo "checked"?>>Cycling<br />
-			<input type="checkbox" name="sport[]" value="<?= $triathlon?>" <?php if (in_array($triathlon,$sport_arr)) echo "checked"?>>Triathon<br />
-			<input type="checkbox" name="sport[]" value="<?= $mountainbike?>" <?php if (in_array($mountainbike,$sport_arr)) echo "checked"?>>Mountain Biking<br />
-			<input type="submit" name="custom_form" value="SUBMIT">
-			</form>
+			
+			<li><input type="checkbox" name="sport[]" value="<?= $running?>" <?php if (in_array($running,$sport_arr)) echo "checked"?>>Running</li>
+			<li><input type="checkbox" name="sport[]" value="<?= $cycling?>" <?php if (in_array($cycling,$sport_arr)) echo "checked"?>>Cycling</li>
+			<li><input type="checkbox" name="sport[]" value="<?= $triathlon?>" <?php if (in_array($triathlon,$sport_arr)) echo "checked"?>>Triathon</li>
+			<li><input type="checkbox" name="sport[]" value="<?= $mountainbike?>" <?php if (in_array($mountainbike,$sport_arr)) echo "checked"?>>Mountain Biking</li>
+			
 			</ul>
+			<ul>
+				<strong>Choose your Region</strong>
+				<li><input type="checkbox" name="sport[]" value="<?= $northeast?>" <?php if (in_array($northeast,$sport_arr)) echo "checked"?>>NorthEast</li>
+				<li><input type="checkbox" name="sport[]" value="<?= $southeast?>" <?php if (in_array($southeast,$sport_arr)) echo "checked"?>>SouthEast</li>
+				<li><input type="checkbox" name="sport[]" value="<?= $midwest?>" <?php if (in_array($midwest,$sport_arr)) echo "checked"?>>Midwest</li>
+				<li><input type="checkbox" name="sport[]" value="<?= $southwest?>" <?php if (in_array($southwest,$sport_arr)) echo "checked"?>>SouthWest</li>
+				<li><input type="checkbox" name="sport[]" value="<?= $rockymnt?>" <?php if (in_array($rockymnt,$sport_arr)) echo "checked"?>>Rocky Mountains</li>
+				<li><input type="checkbox" name="sport[]" value="<?= $socal?>" <?php if (in_array($socal,$sport_arr)) echo "checked"?>>SoCal</li>
+				<li><input type="checkbox" name="sport[]" value="<?= $norcal?>" <?php if (in_array($norcal,$sport_arr)) echo "checked"?>>NorCal</li>
+				<li><input type="checkbox" name="sport[]" value="<?= $northwest?>" <?php if (in_array($northwest,$sport_arr)) echo "checked"?>>NorthWest</li>
+			</ul>
+				<input type="submit" name="custom_form" value="SUBMIT">
+			</form>
+			
 		</div>
 	</div>
 </div>
