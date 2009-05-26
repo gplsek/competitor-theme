@@ -75,7 +75,7 @@ width:1000px;
 background:#000000 none repeat scroll 0 0;
 height:22px;
 margin:0 0 5px;
-width:1000px;
+width:100%;
 }
 
 #top-bar p {
@@ -1484,22 +1484,13 @@ width:630px;
 	color:#1DCCEF;
 }
 
-#rotate{
-	position: relative
-}
-#rotate img {
-	width: 100px;
-}
 #fragment-0 img, #fragment-1 img, #fragment-2 img, #fragment-3 img {
 	width: 630px;
 }
 #fragment-0 .headline img, #fragment-1 .headline img, #fragment-2 .headline img, #fragment-3 .headline img {
 	width: 11px;
 }
-/*#maqnav{
-	position: absolute;
-	top: 405px;
-}*/
+
 #rotate-thumbs {
 height:100px;
 position:relative;

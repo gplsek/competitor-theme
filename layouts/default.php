@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 if (!function_exists('add_action')) {
 	require_once('../../../../wp-config.php');
 }
@@ -77,34 +79,37 @@ global $user_ID, $wpdb, $post, $current_category;
 		<?php $counter2++; ?>
 				
 		<div class="article">
-		
-			
-		    <?php echo get_avatar($authorID,$size = '64'); ?>
-			<h1 class="title"><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-			<h2 class="author"><?php the_author_posts_link(); ?></h2>
-			<ul class="options">
+		<ul class="options">
                          <?php
 								    $count = 1;
 									$catarray = get_the_category();
 									$limite = count($catarray);
 									foreach(($catarray) as $category) {
 									$linkcat = get_category_link($category->cat_ID);
-                                    if (($count < 2) AND ($count < $limite) AND ($limite > 1)) {									
+                                    if (($count < 3) AND ($count < $limite) AND ($limite > 1)) {									
 										echo '<li><a href="'.$linkcat .'">'.$category->cat_name . '</a></li>'; 
 									} 
-                                    if (($count == 2) OR ($limite == 1)){
+                                    if (($count == 3) OR ($limite == 1)){
 										echo '<li class="last"><a href="'.$linkcat .'">'.$category->cat_name . '</a></li>'; 
 									}
-									if ($count==3){
-										echo '<li>(...)</li>';
+									if ($count==4){
+										echo '<li>(&hellip;)</li>';
 									}
 									$count++;
 									} 
 								?>
 						<!--<li><?php the_category('</li><li> ') ?></li>-->
 						</ul>
+			
+		    <?php echo get_avatar($authorID,$size = '45'); ?>
+			<h1 class="title">
+            	<a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
+            </h1>
+			<h2 class="author"><?php the_author_posts_link(); ?></h2>
+			
+			
 			<ul class="article_info">
-				<li class="first red"><?php the_time('d F Y'); ?></li>
+				<li class="first"><?php the_time('F d Y'); ?></li>
                 <li><?php if(function_exists('the_views')) { the_views(); } ?></li>
                 <li><?php //comments_popup_link('Comments (0)', 'Comments (1)', 'Comments (%)'); ?>Comments: (<?= $post->comment_count; ?>)</li>
 			</ul>
@@ -113,14 +118,14 @@ global $user_ID, $wpdb, $post, $current_category;
 			    <?php 
 				if (!($post->post_excerpt)){
 				//the_advanced_excerpt('length=125');
-				the_content('Read more...');
+				the_content('&raquo; Read Full Story');
 				}
 				else 
 				{
 				//	echo $post->post_excerpt;
 				the_excerpt();
 				?>
-				<a class="more-link" href="<?php the_permalink() ?>">Read more...</a>
+				<a class="more-link" href="<?php the_permalink() ?>">&raquo; Read Full Story</a>
 				<?
 				} ?>
 		      
@@ -132,15 +137,14 @@ global $user_ID, $wpdb, $post, $current_category;
 		<?php 
 		if ($counter2 % 4 == 0) 
 		{ // start add
-		//echo session_id();	
 		?>
-	
-		<div id="inlinead"><iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619354&dim=317216&kw=<?= $_SESSION['skw']?>&pv=<?= session_id();?>"></iframe></div>
+		
+		<div id="inlinead"><iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619354&dim=317216&kw=<?= $_SESSION['kw']?>"></iframe></div>
 		<?php 
 		}else if ($counter2 % 8 == 0)
 		{
 			?>
-		<div id="inlinead"><iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619353&dim=317216&kw=<?= $_SESSION['skw']?>&pv=<?= session_id();?>"></iframe></div>
+		<div id="inlinead"><iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619353&dim=317216&kw=<?= $_SESSION['kw']?>"></iframe></div>
 			<?php //end add
 			
 		}

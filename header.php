@@ -1,6 +1,4 @@
-<?php
-session_start();
-?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head profile="http://gmpg.org/xfn/11">
 
@@ -38,12 +36,12 @@ jQuery.noConflict();
 	
 </script>
 </head>
-<body class="news">
+<body>
 <?php
 	$template_path = get_bloginfo('template_directory');
 	$GLOBALS['defaultgravatar'] = $template_path . '/images/gravatar.jpg';
 ?>
-<div id="container">
+
 <div id="top-bar">
 <a href="http://www.competitor.com"><p class="comp logo">Competitor.com</p></a>
     <ul>
@@ -55,6 +53,7 @@ jQuery.noConflict();
     </ul>
 </div>
 
+<div id="container">
 <div id="logo">
 	<a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a>
 </div>
@@ -68,14 +67,6 @@ jQuery.noConflict();
     {
     $cat_name = 'home';
     }
-
-	if (is_page())
-    {
-	
-	//get_query_var('page_name')
-    $cat_name = get_query_var('pagename');
-	
-    }
     
     $parse_url_array 	= parse_url(get_option('siteurl'));
     $subdomain 				= explode('.', $parse_url_array['host']);
@@ -86,9 +77,7 @@ jQuery.noConflict();
     $magazine_name = $subdomain[0];
     
     $kw = $magazine_name.','.$cat_name;
-
-
-    $_SESSION['skw'] = $kw;
+    $_SESSION['kw'] = $kw;
     ?>
 	<script type="text/javascript" language="JavaScript">
     aj_server = 'http://adj43.thruport.com/servlet/ajrotator/'; aj_tagver = '1.0';
@@ -141,8 +130,7 @@ jQuery.noConflict();
 				    <input type="hidden" name="cx" value="015459459567427136655:6whklon_3ea" />
 				    <input type="hidden" name="cof" value="FORID:10" />
 				    <input type="hidden" name="ie" value="UTF-8" />
-				    <input type="text" name="q" size="31" id="q" value="SEARCH" onclick="if(this.value=='SEARCH')this.value='';" onfocus="if(this.value=='SEARCH')this.value='';" onblur="if(this.value!='SEARCH')this.value='SEARCH';" />
-                    <!--<textarea rows="16" cols="20" name="clarence" onfocus="this.value=''">clearance</textarea>  -->
+				    <input type="text" name="q" size="31" value="SEARCH" onfocus="this.value=''; this.onfocus=null;"/>
 				    <!-- <input type="submit" name="sa" value="Search" /> -->
 
 				 </fieldset>
