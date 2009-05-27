@@ -29,7 +29,11 @@ else
 $sport_arr = array();	
 }
 
+echo 'sports cat: child_of='.get_cat_ID("sports");
+
 $sport_cats = get_categories('child_of='.get_cat_ID("sports"));
+
+
 
 $running = get_cat_ID("running");
 $cycling = get_cat_ID("cycling");
