@@ -69,7 +69,7 @@ $northwest = get_cat_ID("northwest");
                 
 				foreach ($categories as $cate) {
 					?>
-					<li><input type="checkbox" name="sport[]" value="<?= $cate->cat_ID?>" <?php if (in_array($cate->cat_ID,$sport_arr)) echo "checked"?>>$cate->cat_name</li>
+					<li><input type="checkbox" name="sport[]" value="<?= $cate->cat_ID?>" <?php if (in_array($cate->cat_ID,$sport_arr)) echo "checked"?>><?= $cate->cat_name?></li>
 					<?
 				}
                 ?>
