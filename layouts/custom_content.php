@@ -30,16 +30,11 @@ $sport_arr = array();
 }
 
 $category = get_cat_ID("sports");
-echo $category.'<br>';
+//echo $category.'<br>';
 $sport_cats = get_categories('hide_empty=0&child_of='.$category);
-print_r($sport_cats);
+//print_r($sport_cats);
 
 
-
-$running = get_cat_ID("running");
-$cycling = get_cat_ID("cycling");
-$triathlon = get_cat_ID("triathlon");
-$mountainbike = get_cat_ID("mountainbike");
 $northeast = get_cat_ID("northeast");
 $southeast = get_cat_ID("southeast");
 $midwest = get_cat_ID("midwest");

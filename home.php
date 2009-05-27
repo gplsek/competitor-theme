@@ -111,7 +111,7 @@ $template_path = get_bloginfo('template_directory');?>
 					
 
 					?>
-					<?php// echo '</div>'; ?><!-- End main article -->
+					
 					<?php 
 
 
