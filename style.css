@@ -75,7 +75,7 @@ width:1000px;
 background:#000000 none repeat scroll 0 0;
 height:22px;
 margin:0 0 5px;
-width:100%;
+width:1000px;
 }
 
 #top-bar p {
@@ -113,7 +113,83 @@ margin:0 3px;
 #top-bar ul li a:hover {
 color:#FF0000;
 }
+/*START MEGA DROP DOWN*/
+ul#menu li {
+/*display: inline;
+margin: 0.1em 1em;*/
+position: relative;
+}
 
+ul#menu h2, ul#menu h3 {
+font-size: 100%;
+font-weight: normal;
+display: inline;
+}
+
+
+ul#menu li a {
+/*color: #fff;
+text-decoration: none;
+padding: 0 0.4em;*/
+}
+
+ul#menu li a:hover {
+/*text-decoration: underline;*/
+}
+
+ul#menu li.mega a {
+/*background: transparent url(arrow.gif) center right no-repeat;
+padding: 0 1.2em;*/
+}
+
+ul#menu li.mega a:hover {
+/*text-decoration: underline;*/
+}
+
+ul#menu div {
+display: none;
+}
+
+ul#menu li.mega div {
+border: 1px solid #dda;
+width: 18em;
+position: absolute;
+top: 1.6em;
+left: 0em;
+padding: 1.3em;
+background: #ffc;
+color: #930;
+z-index: 999;
+}
+
+ul#menu li.hovering div {
+display: block;
+}
+
+ul#menu li.mega div a {
+color: #300;
+padding: 0;
+background-image: none;
+text-decoration: underline;
+}
+
+ul#menu li div a.more {
+color: #390;
+font-weight: bold;
+}
+
+
+ul#menu div h3 {
+color: #f70;
+font-weight: bold;
+font-size: 1.1em;
+}
+ul#menu div p {
+margin: 0 0 0.8em 0;
+padding: 0;
+}
+
+/*END MEGA DROP DOWN*/
 #logo {
 background:transparent url(images/competitor-logo.png) no-repeat scroll 0 5px;
 height:100px;
@@ -1445,7 +1521,7 @@ margin: 10px 0 0 230px;
 
 #rotate {
 height:395px;
-margin:25px 0;
+margin:25px 0 10px 0;
 position:relative;
 }
 
@@ -1481,16 +1557,31 @@ width:630px;
 #rotate .caption .content h3 {
 	margin:0;
 	padding:0;
-	color:#1DCCEF;
+	/*color:#1DCCEF;*/
+	color:#FFFFFF;
+	font-size: 30px;
+	font-family:arial,sans-serif;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
 }
 
+#rotate{
+	position: relative
+}
+#rotate img {
+	width: 100px;
+}
 #fragment-0 img, #fragment-1 img, #fragment-2 img, #fragment-3 img {
 	width: 630px;
 }
 #fragment-0 .headline img, #fragment-1 .headline img, #fragment-2 .headline img, #fragment-3 .headline img {
 	width: 11px;
 }
-
+/*#maqnav{
+	position: absolute;
+	top: 405px;
+}*/
 #rotate-thumbs {
 height:100px;
 position:relative;
@@ -1499,15 +1590,18 @@ position:relative;
 #rotate-thumbs #maqnav {
 float:left;
 height:100px;
-padding:0 15px;
+/*padding:0 15px;*/
 position:relative;
 width:630px;
 }
+#rotate-thumbs #maqnav li.first {
+margin:0 10px 0px 4px!important;
 
+}
 #rotate-thumbs #maqnav li {
 height:90px;
 margin:0 10px;
-width:130px;
+width:139px;
 }
 
 #rotate-thumbs #maqnav li a.border {

@@ -35,6 +35,38 @@ jQuery.noConflict();
 	})
 	
 </script>
+   <script src="<?php bloginfo('template_directory'); ?>/includes/js/jquery.hoverIntent.minified.js" type="text/javascript" charset="utf-8">
+
+</script>
+    <script type="text/javascript" charset="utf-8">
+jQuery.noConflict();
+    jQuery(document).ready(function() {
+      
+      function addMega(){
+        jQuery(this).addClass("hovering");
+        }
+
+      function removeMega(){
+        jQuery(this).removeClass("hovering");
+        }
+
+    var megaConfig = {
+         interval: 500,
+         sensitivity: 4,
+         over: addMega,
+         timeout: 500,
+         out: removeMega
+    };
+
+    jQuery("li.mega").hoverIntent(megaConfig)
+
+      
+    });
+
+
+
+    </script>
+
 </head>
 <body>
 <?php
@@ -88,8 +120,89 @@ jQuery.noConflict();
 	
 	 <div id="content">
             <div class="nav_bars">
-                <ul class="main_nav">
-                     <?php //wp_list_bookmarks('title_li=&categorize=0&category_name=MainNav'); ?>
+                <ul id="menu" class="main_nav">
+     <!--                <li>
+          <h2>
+            <a href="#">Home</a>
+          </h2>
+          <div>
+            Latest news, special deals, and more...
+          </div>
+        </li>
+
+        <li class="mega">
+          <h2>
+            <a href="#">Stuff for him</a>
+          </h2>
+          <div>
+            <h3>
+              Menswear
+            </h3>
+            <p>
+
+              <a href="#">Shirts</a>, <a href="#">T-shirts</a>, <a href="#">Accessories</a>, <a href="#">More...</a>
+            </p>
+            <h3>
+              Gifts
+            </h3>
+            <p>
+
+              <a href="#">Sporting goods</a>, <a href="#">Gadgets</a>, <a href="#">More...</a>
+            </p>
+            <h3>
+              Clearance!
+            </h3>
+            <p>
+              40% off all photo accessories this weekend only. <a href="#">Don't miss out!</a>
+
+            </p><a href="#" class="more">More stuff for him...</a>
+          </div>
+        </li>
+        <li class="mega">
+          <h2>
+            <a href="#">Stuff for her</a>
+          </h2>
+          <div>
+
+            <h3>
+              Ladieswear
+            </h3>
+            <p>
+              <a href="#">Tops</a>, <a href="#">Pants</a>, <a href="#">Skirts</a>, <a href="#">T-shirts</a>, <a href="#">More...</a>
+
+            </p>
+            <h3>
+              Gifts
+            </h3>
+            <p>
+              <a href="#">Sporting goods</a>, <a href="#">Gadgets</a>, <a href="#">More...</a>
+            </p>
+
+            <h3>
+              Shop Now for Mother's Day!
+            </h3>
+            <p>
+              Earlybird Mother's Day specials. <a href="#">Shop early, save on shipping!</a>
+            </p><a href="#" class="more">More stuff for her...</a>
+          </div>
+        </li>
+
+        <li class="mega">
+          <a href="#">Stuff for kids</a>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </li>
+        <li class="mega">
+          <a href="#">Stuff for pets</a>
+
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </li>
+-->
+					 
+					 <?php //wp_list_bookmarks('title_li=&categorize=0&category_name=MainNav'); ?>
 					  <?php $links = get_bookmarks('category_name=MainNav&orderby=order&category_orderby=order');
 							$count = 0;
 							$i=count($links)-1;
