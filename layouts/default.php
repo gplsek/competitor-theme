@@ -135,7 +135,7 @@ global $user_ID, $wpdb, $post, $current_category;
 
 						if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld')) // custom setting for home
 						{
-							the_content();
+							the_content('&raquo; Read Full Story');
 						}
 						else
 						{

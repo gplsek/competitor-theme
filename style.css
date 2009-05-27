@@ -74,7 +74,7 @@ width:1000px;
 #top-bar {
 background:#000000 none repeat scroll 0 0;
 height:22px;
-margin:0 0 5px;
+margin:0 auto 5px auto;
 width:1000px;
 }
 
@@ -1526,10 +1526,15 @@ position:relative;
 }
 
 #rotate a {
-	float:left;
-	left:0;
-	position:absolute;
+float:left;
+left:0;
+position:absolute;
 }
+#rotate div.content a {
+float:none;
+position:relative;
+}
+
 
 #rotate a img {
 border:medium none;
@@ -1537,50 +1542,54 @@ width:630px;
 }
 
 #rotate a.show {
-	z-index:500
+z-index:500
 }
 
 #rotate .caption {
-	z-index:600; 
-	background-color:#000; 
-	color:#ffffff; 
-	height:100px; 
-	width:100%; 
-	position:absolute;
-	bottom:0;
+z-index:600; 
+background-color:#000; 
+color:#ffffff; 
+height:100px; 
+width:100%; 
+position:absolute;
+bottom:0;
+display: none;
 }
 
 #rotate .caption .content {
-	margin:5px
+margin:5px 10px 0 10px;
+font-size:14px;
+
 }
 
 #rotate .caption .content h3 {
-	margin:0;
-	padding:0;
-	/*color:#1DCCEF;*/
-	color:#FFFFFF;
-	font-size: 30px;
-	font-family:arial,sans-serif;
-	font-stretch:normal;
-	font-style:normal;
-	font-variant:normal;
+margin:0;
+padding:0;
+/*color:#1DCCEF;*/
+color:#FFFFFF;
+font-size: 30px;
+font-family:arial,sans-serif;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal
 }
 
 #rotate{
-	position: relative
+position: relative
 }
 #rotate img {
-	width: 100px;
+width: 100px;
 }
 #fragment-0 img, #fragment-1 img, #fragment-2 img, #fragment-3 img {
-	width: 630px;
+width: 630px;
 }
 #fragment-0 .headline img, #fragment-1 .headline img, #fragment-2 .headline img, #fragment-3 .headline img {
-	width: 11px;
+width: 11px;
 }
 /*#maqnav{
-	position: absolute;
-	top: 405px;
+position: absolute;
+top: 405px;
 }*/
 #rotate-thumbs {
 height:100px;
@@ -1656,4 +1665,97 @@ span.sociable_tagline:hover span {
 	opacity: 1;
 	-moz-opacity: 1;
 	filter: alpha(opacity=100);
+}
+
+
+#custom .custom-title {
+	background-color:#E6E6E6;
+	height:30px;
+	text-align:left;
+	width:630px;
+}
+
+#custom .custom-title h2 {
+	background:#C4161C url(images/h2-back-custom-arrow.jpg) no-repeat scroll right center;
+	color:#FFFFFF;
+	float:left;
+	font-family:georgia;
+	font-size:20px;
+	font-weight:400;
+	padding:2px 30px 4px 10px;
+}
+
+#custom .custom-title h4.tags {
+	float:left;
+	font-size:9px;
+	font-weight:normal;
+	height:12px;
+	margin-left:10px;
+	padding-top:2px;
+	text-transform:uppercase;
+	width: 360px;
+}
+
+#custom .custom-title h4.tags a {
+	color:#0066CC;
+}
+
+#custom .custom-title h2 span.plus {
+	font-size:20px;
+	font-weight:bold;
+	margin-right:5px;
+}
+
+#custom .custom-content {
+	background-color:#FFFFFF;
+	background-image:url(images/custom-content-bg.jpg);
+	background-position:center bottom;
+	background-repeat:repeat-x;
+	margin-top:-1px;
+	padding:0 5px;
+	width:620px;
+	height: 338px;
+	position: relative;
+}
+
+#custom .custom-content p {
+	font-size:16px;
+	padding:20px;
+}
+
+#custom .custom-content input {
+	margin-right: 5px;
+}
+
+#custom .custom-content input.submit {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 75px;
+	height: 35px;
+}
+
+#custom .custom-content ul.custom-content-left {
+	float: left;
+	width: 200px;
+	padding: 10px;
+	margin-left: 20px;
+}
+
+#custom .custom-content ul.custom-content-right {
+	float: left;
+	width: 350px;
+	padding: 10px;
+}
+
+#custom .custom-content ul.custom-content-right .custom-content-right-block1,
+#custom .custom-content ul.custom-content-right .custom-content-right-block2 {
+	float: left;
+	width: 175px;
+}
+
+#custom .custom-content ul li {
+	float: left;
+	clear: left;
+	margin: 2px 0;
 }

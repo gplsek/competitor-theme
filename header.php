@@ -209,11 +209,22 @@ jQuery.noConflict();
 							while( $count <= $i){
 								$name = $links[$count]->link_name;
 								$url = $links[$count]->link_url;
-								if ($count == $i) {
-									echo '<li class="last"><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
+								if ($links[$count]->link_description==""){
+									if ($count == $i) {
+										echo '<li class="last"><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
+									} else {
+										echo '<li><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
+									}
 								} else {
-									echo '<li><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
+									if ($count == $i) {
+										echo '<li class="mega last"><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a><div>';
+									} else {
+										echo '<li class="mega"><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a><div>';
+									}
+									echo ''. $links[$count]->link_notes .'</div></li>';
+									
 								}
+								
 								$count++;
 							}  
 						?>
