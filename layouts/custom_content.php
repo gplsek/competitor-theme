@@ -30,18 +30,13 @@ $sport_arr = array();
 }
 
 $category = get_cat_ID("sports");
-//echo $category.'<br>';
 $sport_cats = get_categories('hide_empty=0&child_of='.$category);
-//print_r($sport_cats);
+
+$reg_category = get_cat_ID("regions");
+$regions_cats = get_categories('hide_empty=0&child_of='.$reg_category);
 
 
-$northeast = get_cat_ID("northeast");
-$southeast = get_cat_ID("southeast");
-$midwest = get_cat_ID("midwest");
-$southwest = get_cat_ID("southwest");
-$rockymnt = get_cat_ID("rocky mountains");
-$west = get_cat_ID("west");
-$northwest = get_cat_ID("northwest");
+
 
 
 
@@ -65,6 +60,7 @@ $northwest = get_cat_ID("northwest");
                 <ul class="custom-content-left">
                 
                 <strong>Sports</strong>
+				<div class="custom-content-left-block1">
                 <?php
                 
 				foreach ($sport_cats as $cate) {
@@ -82,17 +78,14 @@ $northwest = get_cat_ID("northwest");
                     
                     <div class="custom-content-right-block1">
                     
-                    <li><input type="checkbox" name="sport[]" value="<?= $northeast?>" <?php if (in_array($northeast,$sport_arr)) echo "checked"?>>NorthEast</li>
-                    <li><input type="checkbox" name="sport[]" value="<?= $southeast?>" <?php if (in_array($southeast,$sport_arr)) echo "checked"?>>SouthEast</li>
-                    <li><input type="checkbox" name="sport[]" value="<?= $midwest?>" <?php if (in_array($midwest,$sport_arr)) echo "checked"?>>Midwest</li>
-                    <li><input type="checkbox" name="sport[]" value="<?= $southwest?>" <?php if (in_array($southwest,$sport_arr)) echo "checked"?>>SouthWest</li>
-                    </div>
-                    <div class="custom-content-right-block2">
-                    
-                    <li><input type="checkbox" name="sport[]" value="<?= $rockymnt?>" <?php if (in_array($rockymnt,$sport_arr)) echo "checked"?>>Rocky Mountains</li>
-                    <li><input type="checkbox" name="sport[]" value="<?= $west?>" <?php if (in_array($west,$sport_arr)) echo "checked"?>>West</li>
-                    
-                    <li><input type="checkbox" name="sport[]" value="<?= $northwest?>" <?php if (in_array($northwest,$sport_arr)) echo "checked"?>>NorthWest</li>
+                    	<?php
+
+						foreach ($regions_cats as $cate) {
+							?>
+							<li><input type="checkbox" name="sport[]" value="<?= $cate->cat_ID?>" <?php if (in_array($cate->cat_ID,$sport_arr)) echo "checked"?>><?= $cate->cat_name?></li>
+							<?
+						}
+		                ?>
                     </div>
                 </ul>
                 
