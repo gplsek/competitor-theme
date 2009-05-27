@@ -176,7 +176,7 @@ $template_path = get_bloginfo('template_directory');?>
 					<ul id="BottomFeature" class="secondary">
 
 
-						<li><a href="<?= $template_path?>/layouts/default.php?cat=<?= $all?><?= $paging ?>" title="feature">All</a></li>
+						<li><a href="<?= $template_path?>/layouts/default.php?cat=<?= $select_all?><?= $paging ?>" title="feature">All</a></li>
 						<?= $option;?>
 
 
