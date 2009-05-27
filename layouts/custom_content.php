@@ -29,6 +29,8 @@ else
 $sport_arr = array();	
 }
 
+$sport_cats = get_categories('child_of='.get_cat_ID("sports"));
+
 $running = get_cat_ID("running");
 $cycling = get_cat_ID("cycling");
 $triathlon = get_cat_ID("triathlon");
@@ -63,11 +65,15 @@ $northwest = get_cat_ID("northwest");
                 <ul class="custom-content-left">
                 
                 <strong>Sports</strong>
+                <?php
                 
-                    <li><input type="checkbox" name="sport[]" value="<?= $running?>" <?php if (in_array($running,$sport_arr)) echo "checked"?>>Running</li>
-                    <li><input type="checkbox" name="sport[]" value="<?= $cycling?>" <?php if (in_array($cycling,$sport_arr)) echo "checked"?>>Cycling</li>
-                    <li><input type="checkbox" name="sport[]" value="<?= $triathlon?>" <?php if (in_array($triathlon,$sport_arr)) echo "checked"?>>Triathon</li>
-                    <li><input type="checkbox" name="sport[]" value="<?= $mountainbike?>" <?php if (in_array($mountainbike,$sport_arr)) echo "checked"?>>Mountain Biking</li>
+				foreach ($categories as $cate) {
+					?>
+					<li><input type="checkbox" name="sport[]" value="<?= $cate->cat_ID?>" <?php if (in_array($cate->cat_ID,$sport_arr)) echo "checked"?>>$cate->cat_name</li>
+					<?
+				}
+                ?>
+                    
                 
                 </ul>
                 <ul class="custom-content-right">
