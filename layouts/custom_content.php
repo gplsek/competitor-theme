@@ -37,7 +37,7 @@ $northeast = get_cat_ID("northeast");
 $southeast = get_cat_ID("southeast");
 $midwest = get_cat_ID("midwest");
 $southwest = get_cat_ID("southwest");
-$rockymnt = get_cat_ID("rocky-mountains");
+$rockymnt = get_cat_ID("rocky mountains");
 $west = get_cat_ID("west");
 $northwest = get_cat_ID("northwest");
 
