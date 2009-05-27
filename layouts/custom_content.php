@@ -29,9 +29,9 @@ else
 $sport_arr = array();	
 }
 
-echo 'sports cat: child_of='.get_cat_ID("sports");
-$query = "'child_of=".get_cat_ID("sports")."'";
-$sport_cats = get_categories('child_of=42');
+$category = get_cat_ID("sports");
+echo $category.'<br>';
+$sport_cats = get_categories('child_of='.$category);
 print_r($sport_cats);
 
 
