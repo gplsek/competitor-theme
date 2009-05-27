@@ -33,6 +33,13 @@ $running = get_cat_ID("running");
 $cycling = get_cat_ID("cycling");
 $triathlon = get_cat_ID("triathlon");
 $mountainbike = get_cat_ID("mountainbike");
+$northeast = get_cat_ID("northeast");
+$southeast = get_cat_ID("southeast");
+$midwest = get_cat_ID("midwest");
+$southwest = get_cat_ID("southwest");
+$rockymnt = get_cat_ID("rocky-mountains");
+$west = get_cat_ID("west");
+$northwest = get_cat_ID("northwest");
 
 
 
@@ -54,14 +61,13 @@ $mountainbike = get_cat_ID("mountainbike");
 			
 			</ul>
 			<ul>
-				<strong>Choose your Region</strong>
+				<strong>Choose your Region:</strong>
 				<li><input type="checkbox" name="sport[]" value="<?= $northeast?>" <?php if (in_array($northeast,$sport_arr)) echo "checked"?>>NorthEast</li>
 				<li><input type="checkbox" name="sport[]" value="<?= $southeast?>" <?php if (in_array($southeast,$sport_arr)) echo "checked"?>>SouthEast</li>
 				<li><input type="checkbox" name="sport[]" value="<?= $midwest?>" <?php if (in_array($midwest,$sport_arr)) echo "checked"?>>Midwest</li>
 				<li><input type="checkbox" name="sport[]" value="<?= $southwest?>" <?php if (in_array($southwest,$sport_arr)) echo "checked"?>>SouthWest</li>
 				<li><input type="checkbox" name="sport[]" value="<?= $rockymnt?>" <?php if (in_array($rockymnt,$sport_arr)) echo "checked"?>>Rocky Mountains</li>
-				<li><input type="checkbox" name="sport[]" value="<?= $socal?>" <?php if (in_array($socal,$sport_arr)) echo "checked"?>>SoCal</li>
-				<li><input type="checkbox" name="sport[]" value="<?= $norcal?>" <?php if (in_array($norcal,$sport_arr)) echo "checked"?>>NorCal</li>
+				<li><input type="checkbox" name="sport[]" value="<?= $west?>" <?php if (in_array($west,$sport_arr)) echo "checked"?>>West</li>
 				<li><input type="checkbox" name="sport[]" value="<?= $northwest?>" <?php if (in_array($northwest,$sport_arr)) echo "checked"?>>NorthWest</li>
 			</ul>
 				<input type="submit" name="custom_form" value="SUBMIT">
