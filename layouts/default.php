@@ -59,7 +59,7 @@ global $user_ID, $wpdb, $post, $current_category;
 		
 	if (($_GET['cat'] == "") && ($_SESSION['cat'] == ""))
 		{
-			$show_category = 'cat='.$_GET['all'] .'&';
+			$show_category = 'cat='.$_GET['select_all'] .'&';
 			//echo "Here we are".$_GET['all'];
 		}
 		

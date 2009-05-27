@@ -13,15 +13,7 @@
 		$GLOBALS['archives_id'] = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = '$archives'");
 		
 		
-		function get_mag($url){
-			$parse_url_array 	= parse_url($url);
-			$subdomain 				= explode('.', $parse_url_array['host']);
-			if ($subdomain[0] == "www")
-			{
-			   $subdomain[0] = "competitor";
-			}
-			return $subdomain[0];
-		}
+		
 		
 		
 		

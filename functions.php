@@ -539,6 +539,16 @@ function the_image($size = 'medium' , $class = ''){
  
 }
 
+function get_mag($url){
+	$parse_url_array 	= parse_url($url);
+	$subdomain 				= explode('.', $parse_url_array['host']);
+	if ($subdomain[0] == "www")
+	{
+	   $subdomain[0] = "competitor";
+	}
+	return $subdomain[0];
+}
+
 
 add_action( 'wp_print_scripts', 'add_javascript' );
 function add_javascript( ) {

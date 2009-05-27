@@ -122,12 +122,12 @@ $template_path = get_bloginfo('template_directory');?>
 
 						$_SESSION['cat'] = "";
 						$_SESSION['sort'] = "";
-						$_SESSION['all'] = $all;
+						$_SESSION['all'] = $select_all;
 
 
 					$categories =  get_categories('hide_empty=0');
 					$option = "";
-					$all = "";
+					$select_all = "";
 
 					if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld')) // custom setting for home
 					{
@@ -138,7 +138,7 @@ $template_path = get_bloginfo('template_directory');?>
 							if(in_array($cate->cat_ID,$sport_arr))
 							{
 								$option .= '<li><a href="'.$template_path.'/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
-								$all .= $cate->cat_ID.",";
+								$select_all .= $cate->cat_ID.",";
 
 							}
 
@@ -151,7 +151,7 @@ $template_path = get_bloginfo('template_directory');?>
 						foreach ($categories as $cate) {
 								if (get_option('comp_nav_categories_'.$cate->cat_ID)){
 					  				$option .= '<li><a href="'.$template_path.'/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
-						$all .= $cate->cat_ID.",";
+						$select_all .= $cate->cat_ID.",";
 
 						} //end if
 
@@ -165,9 +165,9 @@ $template_path = get_bloginfo('template_directory');?>
 						<a name="top"></a>
 				<div id="contentTabs" class="filters">
 			  	  <ul id="TopFeature" class="main">
-				        <li><a class="first active" href="<?= $template_path?>/layouts/default.php?all=<?= $all?>&sort=post_date<?= $paging ?>" title="feature">MOST RECENT</a></li>
-                        <li><a href="<?= $template_path?>/layouts/default.php?all=<?= $all?>&sort=views<?= $paging ?>" title="feature">MOST VIEWED</a></li>
-                        <li><a href="<?= $template_path?>/layouts/default.php?all=<?= $all?>&sort=comment_count<?= $paging ?>" title="feature">MOST COMMENTED</a></li>
+				        <li><a class="first active" href="<?= $template_path?>/layouts/default.php?select_all=<?= $select_all?>&sort=post_date<?= $paging ?>" title="feature">MOST RECENT</a></li>
+                        <li><a href="<?= $template_path?>/layouts/default.php?select_all=<?= $select_all?>&sort=views<?= $paging ?>" title="feature">MOST VIEWED</a></li>
+                        <li><a href="<?= $template_path?>/layouts/default.php?select_all=<?= $select_all?>&sort=comment_count<?= $paging ?>" title="feature">MOST COMMENTED</a></li>
                     </ul>
 			<!--	</div>-->
 			<!--	<div id="BottomFeature">-->
