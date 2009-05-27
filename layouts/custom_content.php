@@ -31,7 +31,7 @@ $sport_arr = array();
 
 $category = get_cat_ID("sports");
 echo $category.'<br>';
-$sport_cats = get_categories('child_of='.$category);
+$sport_cats = get_categories('hide_empty=0&child_of='.$category);
 print_r($sport_cats);
 
 
