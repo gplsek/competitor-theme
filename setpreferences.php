@@ -1,10 +1,16 @@
 <?php
 $cookie_sport = "";
 $cookie_event = "";
-foreach($_POST['sport'] as $key => $value){
-$cookie_sport .= $value . "|";}
-foreach($_POST['event'] as $key => $value){
-$cookie_event .= $value . ",";}
+if ($_POST['sport'] != "")
+{
+		foreach($_POST['sport'] as $key => $value){
+		$cookie_sport .= $value . "|";}
+}
+if ($_POST['event'] != "")
+{
+	foreach($_POST['event'] as $key => $value){
+		$cookie_event .= $value . ",";}
+}
 //trim the last | from the end
 $cookie_sport = substr($cookie_sport, 0, -1);
 $cookie_event = substr($cookie_event, 0, -1);
