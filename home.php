@@ -137,18 +137,29 @@ $template_path = get_bloginfo('template_directory');?>
 					{
 					include(TEMPLATEPATH . '/layouts/custom_content.php');
 
-					foreach ($categories as $cate) {
+						foreach ($categories as $cate) {
 
-							if(in_array($cate->cat_ID,$sport_arr))
-							{
-								$option .= '<li><a href="'.$template_path.'/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
+								if(in_array($cate->cat_ID,$sport_arr))
+								{
+									$option .= '<li><a href="'.$template_path.'/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
 								$select_all .= $cate->cat_ID.",";
+
+								}
 
 							}
 
-					}
-
-
+						if ($select_all == "")
+						{
+							$sport_category = get_cat_ID("sports");
+							$sport_cats = get_categories('hide_empty=0&child_of='.$sport_category);
+							
+							foreach ($sport_cats as $cate) {
+								
+								$select_all .= $cate->cat_ID . ",";
+								
+								}
+							$select_all = substr($select_all, 0, -1);
+						}
 					}
 					else 
 					{
