@@ -198,6 +198,7 @@ overflow:hidden;
 position:absolute;
 text-indent:-999em;
 width:330px;
+top:0px;
 }
 
 #logo a {

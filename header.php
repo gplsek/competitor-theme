@@ -221,7 +221,17 @@ jQuery.noConflict();
 									} else {
 										echo '<li class="mega"><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a><div>';
 									}
-									echo ''. $links[$count]->link_notes .'</div></li>';
+									//echo ''. $links[$count]->link_notes .'</div></li>';
+								    $recentPosts = new WP_Query();
+									$recentPosts->query('page_id='.$links[$count]->link_description);
+									while ($recentPosts->have_posts()) : $recentPosts->the_post(); 
+											the_content();
+									endwhile; 
+                                    echo '</div></li>';
+
+/*Read more: http://weblogtoolscollection.com/archives/2008/04/13/define-your-own-wordpress-loop-using-wp_query/#ixzz0GixXimJR&B*/
+
+
 									
 								}
 								
