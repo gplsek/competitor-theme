@@ -60,13 +60,14 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
 <div id="custom">
 	<form method="post" action="<?php bloginfo('template_directory'); ?>/setpreferences.php">
 	<div>
-		<div class="title">Customize Content</div>
-        <div>
-            <div class="custom-title">
+        <div class="title">
+			<div class="custom-title">
                 <h2 class="hl"><span class="plus">+</span>CUSTOMIZE PAGE</h2>
                 <h4 class="tags">Interests: <a href="#">Road</a> | <a href="#">Track</a> | <a href="#">Traingin</a></h4>
                 <h4 class="tags">Regions: <a href="#">Southeast</a></h4>
-            </div>
+			</div>
+        </div>
+        <div>
             <div class="custom-content">
             
             	<p>Misc text up here</p>
@@ -86,6 +87,7 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
                     
                 
                 </ul>
+                
                 <ul class="custom-content-right">
                     
                     <strong>Region</strong>
@@ -119,8 +121,8 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
                 </ul>   
                              
                     <input class="submit" type="submit" name="custom_form" value="SAVE">
-                </form>
             </div>	
 		</div>
 	</div>
+    </form>
 </div>
