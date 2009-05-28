@@ -22,7 +22,6 @@ jQuery.noConflict();
 
 if (isset($_COOKIE['Sport'])) {
 $sport_arr = explode("|", $_COOKIE['Sport']);
-//print_r($sport_arr);
 }
 else
 {
@@ -32,11 +31,21 @@ $sport_arr = array();
 
 if (isset($_COOKIE['Event'])) {
 $event_arr = explode(",", $_COOKIE['Event']);
-//print_r($sport_arr);
+
 }
 else
 {
-$event_arr = array();	
+$event_arr = array();
+	
+}
+
+if ((isset($_COOKIE['Event'])) || (isset($_COOKIE['Sport'])))
+{
+	$message = "Customize your homepage by selecting the type of content you prefer and the regions you're most interested in.";
+}
+else
+{
+	$message = "Add or remove the topics you prefer to customize your homepage.";
 }
 
 $category = get_cat_ID("sports");
@@ -63,16 +72,13 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
         <div class="title">
 			<div class="custom-title">
                 <h2 class="hl"><span class="plus">+</span>CUSTOMIZE PAGE</h2>
-                <h4 class="tags">Interests: <a href="#">Road</a> | <a href="#">Track</a> | <a href="#">Traingin</a></h4>
-                <h4 class="tags">Regions: <a href="#">Southeast</a></h4>
+                <h4 class="tags"><?= $message?></h4>
 			</div>
         </div>
         <div>
             <div class="custom-content">
             
-            	<p>Misc text up here</p>
-                
-                <ul class="custom-content-left">
+            	<ul class="custom-content-left">
                 
                 <strong>Sports</strong>
 				<div class="custom-content-left-block1">

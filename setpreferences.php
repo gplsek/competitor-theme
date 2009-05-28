@@ -8,7 +8,7 @@ if ($_POST['sport'] != "")
 }
 if ($_POST['event'] != "")
 {
-	foreach($_POST['event'] as $key => $value){
+		foreach($_POST['event'] as $key => $value){
 		$cookie_event .= $value . ",";}
 }
 //trim the last | from the end

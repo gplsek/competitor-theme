@@ -64,9 +64,6 @@ jQuery.noConflict();
     });
 
 
-
-    </script>
-
 </head>
 <body>
 <?php
@@ -110,12 +107,37 @@ jQuery.noConflict();
     
     $kw = $magazine_name.','.$cat_name;
     $_SESSION['kw'] = $kw;
+
+		if ($magazine_name == "runrocknroll")
+		{
+			
+						$links = get_bookmarks('category_name=runrnr&orderby=order&category_orderby=order');
+						$count = 0;
+						$i=count($links)-1;
+						while( $count <= $i){
+							$name = $links[$count]->link_name;
+							$url = $links[$count]->link_url;
+							if ($count == $i) {
+								echo '<li class="last"><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
+							} else {
+								echo '<li><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
+							}
+							$count++;
+						}  
+					
+			
+		}
+		else
+		{
     ?>
+
 	<script type="text/javascript" language="JavaScript">
     aj_server = 'http://adj43.thruport.com/servlet/ajrotator/'; aj_tagver = '1.0';
     aj_zone = 'inside'; aj_adspot = '619316'; aj_page = '0'; aj_dim ='317217'; aj_ch = ''; aj_ct = ''; aj_kw = '<?= $kw?>';
     aj_pv = true;aj_pv_rnd = '<?= session_id();?>'; aj_click = '';
     </script><script type="text/javascript" language="JavaScript" src="http://img1.cdn.adjuggler.com/banners/ajtg.js"></script>
+
+	<?php }?>
 </div>
 	
 	 <div id="content">
