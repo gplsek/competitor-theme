@@ -1531,9 +1531,13 @@ float:left;
 left:0;
 position:absolute;
 }
+#rotate h3 a{
+	float: none!important;
+	position: relative!important;
+}
 #rotate div.content a {
-float:none;
-position:relative;
+float:none!important;
+position:relative!important;
 }
 
 
