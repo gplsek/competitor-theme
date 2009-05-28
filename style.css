@@ -1534,10 +1534,12 @@ position:absolute;
 #rotate h3 a{
 	float: none!important;
 	position: relative!important;
+	color: #ffffff!important;
 }
 #rotate div.content a {
-float:none!important;
-position:relative!important;
+	float:none!important;
+	position:relative!important;
+	color: #669DD6;
 }
 
 
@@ -1687,7 +1689,7 @@ span.sociable_tagline:hover span {
 	font-family:georgia;
 	font-size:20px;
 	font-weight:400;
-	padding:2px 30px 4px 10px;
+	padding:2px 30px 3px 10px;
 }
 
 #custom .custom-title h4.tags {
