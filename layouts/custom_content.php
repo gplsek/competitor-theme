@@ -31,7 +31,7 @@ $sport_arr = array();
 
 
 if (isset($_COOKIE['Event'])) {
-$event_arr = explode("|", $_COOKIE['Event']);
+$event_arr = explode(",", $_COOKIE['Event']);
 //print_r($sport_arr);
 }
 else
