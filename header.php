@@ -114,7 +114,7 @@ jQuery.noConflict();
 	<script type="text/javascript" language="JavaScript">
     aj_server = 'http://adj43.thruport.com/servlet/ajrotator/'; aj_tagver = '1.0';
     aj_zone = 'inside'; aj_adspot = '619316'; aj_page = '0'; aj_dim ='317217'; aj_ch = ''; aj_ct = ''; aj_kw = '<?= $kw?>';
-    aj_pv = true; aj_click = '';
+    aj_pv = true;aj_pv_rnd = '<?= session_id();?>' aj_click = '';
     </script><script type="text/javascript" language="JavaScript" src="http://img1.cdn.adjuggler.com/banners/ajtg.js"></script>
 </div>
 	
