@@ -29,6 +29,16 @@ else
 $sport_arr = array();	
 }
 
+
+if (isset($_COOKIE['Event'])) {
+$event_arr = explode("|", $_COOKIE['Event']);
+//print_r($sport_arr);
+}
+else
+{
+$event_arr = array();	
+}
+
 $category = get_cat_ID("sports");
 $sport_cats = get_categories('hide_empty=0&child_of='.$category);
 
@@ -101,7 +111,7 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
 
 						foreach ($event_cats as $cate) {
 							?>
-							<li><input type="checkbox" name="sport[]" value="<?= $cate->cat_ID?>" <?php if (in_array($cate->cat_ID,$sport_arr)) echo "checked"?>><?= $cate->cat_name?></li>
+							<li><input type="checkbox" name="event[]" value="<?= $cate->cat_ID?>" <?php if (in_array($cate->cat_ID,$event_arr)) echo "checked"?>><?= $cate->cat_name?></li>
 							<?
 						}
 		                ?>

@@ -75,24 +75,28 @@ $template_path = get_bloginfo('template_directory');?>
                     <li><a href="#rotate">FEATURED STORIES</a></li>
                     <li><a href="<?= $template_path?>/video.php">TOP VIDEOS</a></li>
                     <li id="out">
-                        <span style="float: left;">HOT:</span>
-                        <ul id="out">
-                         <?php //wp_list_bookmarks('title_li=&categorize=0&category_name=Hot'); ?>
-						  <?php $links = get_bookmarks('category_name=Hot');
-							$count = 0;
-							$i=count($links)-1;
-							while( $count <= $i){
-								$name = $links[$count]->link_name;
-								$url = $links[$count]->link_url;
-								if ($count == $i) {
-									echo '<li id="out" class="last"><a id="out" rel="'.$url.'" href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
-								} else {
-									echo '<li id="out"><a id="out" href="'.$url.'" rel="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
-								}
-								$count++;
-							}  
+						<?php $links = get_bookmarks('category_name=Hot');
+						if (count($links) != 0)
+						{
 						?>
-                        </ul>
+                        	<span style="float: left;">HOT:</span>
+                        	<ul id="out">
+						  	<?php 
+								$count = 0;
+								$i=count($links)-1;
+								while( $count <= $i){
+									$name = $links[$count]->link_name;
+									$url = $links[$count]->link_url;
+									if ($count == $i) {
+										echo '<li id="out" class="last"><a id="out" rel="'.$url.'" href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
+									} else {
+										echo '<li id="out"><a id="out" href="'.$url.'" rel="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
+									}
+									$count++;
+								}  
+						?>
+                        	</ul>
+						<?} // end check for empty links?>
                     </li>
                 </ul>
 
