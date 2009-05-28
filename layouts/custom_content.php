@@ -36,6 +36,10 @@ $reg_category = get_cat_ID("regions");
 $regions_cats = get_categories('hide_empty=0&child_of='.$reg_category);
 
 
+$event_category = get_cat_ID("events");
+$event_cats = get_categories('hide_empty=0&child_of='.$event_category);
+
+
 
 
 
@@ -93,10 +97,14 @@ $regions_cats = get_categories('hide_empty=0&child_of='.$reg_category);
                 	
                     <strong>Events</strong>
                 
-                	<li><input type="checkbox" name="sport[]" value="<?= $northeast?>" <?php if (in_array($northeast,$sport_arr)) echo "checked"?>>NorthEast</li>
-                    <li><input type="checkbox" name="sport[]" value="<?= $southeast?>" <?php if (in_array($southeast,$sport_arr)) echo "checked"?>>SouthEast</li>
-                    <li><input type="checkbox" name="sport[]" value="<?= $midwest?>" <?php if (in_array($midwest,$sport_arr)) echo "checked"?>>Midwest</li>
-                    <li><input type="checkbox" name="sport[]" value="<?= $southwest?>" <?php if (in_array($southwest,$sport_arr)) echo "checked"?>>SouthWest</li>
+                		<?php
+
+						foreach ($event_cats as $cate) {
+							?>
+							<li><input type="checkbox" name="sport[]" value="<?= $cate->cat_ID?>" <?php if (in_array($cate->cat_ID,$sport_arr)) echo "checked"?>><?= $cate->cat_name?></li>
+							<?
+						}
+		                ?>
 
                 </ul>   
                              
