@@ -66,7 +66,7 @@ padding:0;
 margin:0 auto;
 position:relative;
 top:0;
-width:1000px;
+width:1028px;
 }
 
 /*######################## Top Bar ##############################*/
@@ -75,7 +75,7 @@ width:1000px;
 background:#000000 none repeat scroll 0 0;
 height:22px;
 margin:0 auto 5px auto;
-width:1000px;
+width:1028px;
 }
 
 #top-bar p {
@@ -212,7 +212,8 @@ display:inline;
 float:right;
 height:90px;
 padding:5px 0 5px 10px;
-width:700px;
+text-align:right;
+width:728px;
 }
 
 #banner img {
@@ -223,7 +224,7 @@ width: 700px;
 background-color:#FFFFFF;
 display:inline;
 float:left;
-width:1000px;
+width:1028px;
 margin: 10px 0px;
 }
 
@@ -281,8 +282,8 @@ background-color:#AFAFAF;
 background-image:url(images/nav_sep_3.png);
 background-repeat:no-repeat;
 float:left;
-height:28px;
-margin:2px 0 0;
+height:27px;
+margin:3px 0 0;
 padding:2px 0 0 15px;
 width:143px;
 }
@@ -305,6 +306,7 @@ color:#AFAFAF;
 border:none;
 font-size:1em;
 padding:1px 2px;
+background-image: none!important;
 }
 
 #content .signin {
@@ -315,7 +317,7 @@ float:left;
 height:26px;
 margin:3px 0 0;
 padding:3px 5px 0 15px;
-width:308px;
+width:336px;
 }
 
 #content .signin .dark {
@@ -364,7 +366,7 @@ display:inline;
 float:left;
 height:6px;
 margin:0 10px;
-width:980px;
+width:1008px;
 }
 
 
@@ -376,7 +378,7 @@ margin:0 0 -10px 18px;
 #content .main_column {
 display:inline;
 float:left;
-margin:7px 10px 0;
+margin:7px 15px 0;
 width:630px;
 }
 
@@ -1245,7 +1247,7 @@ position:relative;
 
 .blog_footer {
 height:322px;
-width:1000px;
+width:1028px;
 float:left;
 padding:0 30px;
 }
@@ -1553,11 +1555,11 @@ width:630px;
 }
 
 #rotate a.show {
-z-index:500
+z-index:100
 }
 
 #rotate .caption {
-z-index:600; 
+z-index:110; 
 /*background-color:#000; */
 background:transparent url(images/caption-bg.png) repeat scroll 0 0;
 color:#ffffff; 

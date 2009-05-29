@@ -22,7 +22,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 120;
   text-align: left;
 }
 
@@ -89,7 +89,7 @@
 
 .facebox_overlayBG {
   background-color: #000;
-  z-index: 99;
+  z-index: 119;
 }
 
 * html #facebox_overlay { /* ie6 hack */

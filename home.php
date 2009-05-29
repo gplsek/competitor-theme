@@ -72,7 +72,7 @@ $template_path = get_bloginfo('template_directory');?>
                 <ul class="third_nav">
 
 
-                    <li><a href="#rotate">FEATURED STORIES</a></li>
+                    <li><a href="#meta-rotate">FEATURED STORIES</a></li>
                     <li><a href="<?= $template_path?>/video.php">TOP VIDEOS</a></li>
                     <li id="out">
 						<?php $links = get_bookmarks('category_name=Hot');

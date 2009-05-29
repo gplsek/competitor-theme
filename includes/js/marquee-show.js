@@ -47,18 +47,31 @@ function rotate(idd) {
 	.addClass('show')
 	.animate({opacity: 1.0}, 1000);
 
+
+	
+	
 	//Hide the current image
 	current.animate({opacity: 0.0}, 1000)
 	.removeClass('show');
 	
 	//Set the opacity to 0 and height to 1px
-	jQuery('#rotate .caption').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '100px'}, { queue:true, duration:300 });	
+	//jQuery('#rotate .caption').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '100px'}, { queue:true, duration:300 });	
 	
 	//Animate the caption, opacity to 0.7 and heigth to 100px, a slide up effect
-	jQuery('#rotate .caption').animate({opacity: 1.0},100 ).animate({height: '100px'},1 );
+	//jQuery('#rotate .caption').animate({opacity: 1.0},100 ).animate({height: '100px'},1 );
+	//jQuery('#rotate .caption .content').css('opacity','1.0');
+	//Display the content
+	//jQuery('#rotate .content').html(caption);
+	
+	
+	jQuery('#rotate .caption').hide();
+	jQuery('#rotate .caption').slideDown('slow');
+	
 	jQuery('#rotate .caption .content').css('opacity','1.0');
 	//Display the content
 	jQuery('#rotate .content').html(caption);
+
+	
 	
 	jQuery('#maqnav a').removeClass('border');
 	document.getElementById('#'+next.attr('id')).className='border';

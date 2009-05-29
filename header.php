@@ -35,7 +35,7 @@ jQuery.noConflict();
 	})
 	
 </script>
-   <script src="<?php bloginfo('template_directory'); ?>/includes/js/jquery.hoverIntent.minified.js" type="text/javascript" charset="utf-8">
+   <script src="<?php bloginfo('template_directory'); ?>/includes/js/jquery.hoverIntent.minified.js" type="text/javascript">
 
 </script>
     <script type="text/javascript" charset="utf-8">
@@ -64,6 +64,16 @@ jQuery.noConflict();
     });
 
 </script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/jquery.hint.js"></script>
+
+<script type="text/javascript">
+jQuery.noConflict();
+			jQuery(function(){ 
+			    // find all the input elements with title attributes
+				jQuery('input[title!=""]').hint();
+			});
+		</script>
+
 </head>
 <body <?php
          if (get_option('background') != "") {
@@ -249,7 +259,8 @@ jQuery.noConflict();
 								    $recentPosts = new WP_Query();
 									$recentPosts->query('page_id='.$links[$count]->link_description);
 									 while ($recentPosts->have_posts()) : $recentPosts->the_post(); 
-									 											///the_content();  this pulls in post content in the header and breaks the posts
+													echo $links[$count]->link_description;
+												//	the_content(); /* this pulls in post content in the header and breaks the posts*/
 									 									endwhile; 
                                     echo '</div></li>';
 
@@ -288,7 +299,7 @@ jQuery.noConflict();
 				    <input type="hidden" name="cx" value="015459459567427136655:6whklon_3ea" />
 				    <input type="hidden" name="cof" value="FORID:10" />
 				    <input type="hidden" name="ie" value="UTF-8" />
-				    <input type="text" name="q" size="31" value="SEARCH" onfocus="this.value=''; this.onfocus=null;"/>
+				    <input type="text" name="q" size="31" value="" title="SEARCH" />
 				    <!-- <input type="submit" name="sa" value="Search" /> -->
 
 				 </fieldset>
