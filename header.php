@@ -65,7 +65,11 @@ jQuery.noConflict();
 
 </script>
 </head>
-<body>
+<body <?php
+         if (get_option('background') == "") {
+         echo 'style="background-image:url(' . get_option('compbackground') . ')"';
+       } 
+?>>
 <?php
 	$template_path = get_bloginfo('template_directory');
 	$GLOBALS['defaultgravatar'] = $template_path . '/images/gravatar.jpg';

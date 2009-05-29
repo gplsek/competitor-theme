@@ -107,6 +107,7 @@ foreach ($comp_pages_obj as $comp_page) {
 
 
 $other_entries = array("Select a number:","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19");
+$content_ads = array("On","Off");
 $categories_tmp = array_unshift($comp_categories, "Select a category:");
 $comp_pages_tmp = array_unshift($comp_pages, "Select a page:");
 $alt_stylesheets_tmp = array_unshift($alt_stylesheets, "Select Style:");
@@ -130,13 +131,36 @@ $options = array (
 					    "id" => $shortname."_alt_stylesheet",
 					    "std" => "Select Style:",
 					    "type" => "select",
-					    "options" => $alt_stylesheets),												    
+					    "options" => $alt_stylesheets),	
+					
+				array(	"name" => "Background Image URL",
+						"desc" => "Please enter the url of your background image.",
+						"id" => $shortname."background",
+						"std" => "",
+						"type" => "text"),											    
 
 				array(	"name" => "Google Analytics",
 						"desc" => "Please paste your Google Analytics (or other) tracking code here.",
 			    		"id" => $shortname."_google_analytics",
 			    		"std" => "",
-			    		"type" => "textarea"),		
+			    		"type" => "textarea"),	
+			
+				array(	"name" => "Content Well Adds",
+						"type" => "heading"),
+
+				array(	"name" => "Add #1 in the main conent area",
+						"desc" => "",
+					    "id" => $shortname."_content_ads",
+					    "std" => "",
+					    "type" => "radio",
+					    "options" => $content_ads),	
+					
+				array(	"name" => "Add #2 in the main conent area",
+						"desc" => "",
+						"id" => $shortname."_content_ads2",
+						"std" => "",
+						"type" => "radio",
+						"options" => $content_ads),
 			
 
 				array(	"name" => "Front Page Layout",

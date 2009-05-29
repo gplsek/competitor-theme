@@ -158,13 +158,13 @@ global $user_ID, $wpdb, $post, $current_category;
 		
 		
 		<?php 
-		if ($counter2 % 4 == 0) 
+		if (($counter2 % 4 == 0) && (get_option('comp_content_ads') == 0)) 
 		{ // start add
 		?>
 		
 		<div id="inlinead"><iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619354&dim=317216&kw=<?= $_SESSION['kw']?>&pv=<?= session_id(); ?>"></iframe></div>
 		<?php 
-		}else if ($counter2 % 8 == 0)
+		}else if (($counter2 % 8 == 0) && (get_option('comp_content_ads2') == 0))
 		{
 			?>
 		<div id="inlinead"><iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619353&dim=317216&kw=<?= $_SESSION['kw']?>&pv=<?= session_id(); ?>"></iframe></div>
