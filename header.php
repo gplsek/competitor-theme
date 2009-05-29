@@ -63,14 +63,14 @@ jQuery.noConflict();
       
     });
 
-
+</script>
 </head>
 <body>
 <?php
 	$template_path = get_bloginfo('template_directory');
 	$GLOBALS['defaultgravatar'] = $template_path . '/images/gravatar.jpg';
 ?>
-
+w
 <div id="top-bar">
 <a href="http://www.competitor.com"><p class="comp logo">Competitor.com</p></a>
     <ul>
@@ -108,27 +108,31 @@ jQuery.noConflict();
     $kw = $magazine_name.','.$cat_name;
     $_SESSION['kw'] = $kw;
 
-		if ($magazine_name == "runrocknroll")
-		{
-						echo "<ul class='event_list'>";
-						$links = get_bookmarks('category_name=runrnr&orderby=order&category_orderby=order');
-						$count = 0;
-						$i=count($links)-1;
-						while( $count <= $i){
-							$name = $links[$count]->link_name;
-							$url = $links[$count]->link_url;
-							if ($count == $i) {
-								echo '<li class="last"><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
-							} else {
-								echo '<li><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
-							}
-							$count++;
-						}  
-					echo "</ul>";
-			
-		}
-		else
-		{
+
+	if ($magazine_name == "runrocknroll")
+				{
+								echo "<ul class='event_list'>";
+								$links = get_bookmarks('category_name=runrnr&orderby=order&category_orderby=order');
+								$count = 0;
+								$i=count($links)-1;
+								while( $count <= $i){
+									$name = $links[$count]->link_name;
+									$url = $links[$count]->link_url;
+									if ($count == $i) {
+										echo '<li class="last"><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
+									} else {
+										echo '<li><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
+									}
+									$count++;
+								}  
+							echo "</ul>";
+					
+				}
+				else
+				{
+
+
+
     ?>
 
 	<script type="text/javascript" language="JavaScript">
