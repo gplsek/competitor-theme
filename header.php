@@ -110,7 +110,7 @@ jQuery.noConflict();
 
 		if ($magazine_name == "runrocknroll")
 		{
-			
+						echo "<ul class='event_list'>";
 						$links = get_bookmarks('category_name=runrnr&orderby=order&category_orderby=order');
 						$count = 0;
 						$i=count($links)-1;
@@ -124,7 +124,7 @@ jQuery.noConflict();
 							}
 							$count++;
 						}  
-					
+					echo "</ul>";
 			
 		}
 		else
