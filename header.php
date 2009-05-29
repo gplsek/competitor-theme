@@ -70,7 +70,6 @@ jQuery.noConflict();
 	$template_path = get_bloginfo('template_directory');
 	$GLOBALS['defaultgravatar'] = $template_path . '/images/gravatar.jpg';
 ?>
-w
 <div id="top-bar">
 <a href="http://www.competitor.com"><p class="comp logo">Competitor.com</p></a>
     <ul>
