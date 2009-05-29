@@ -438,11 +438,11 @@ function compthemes_wp_head() {
      } else { 
           $stylesheet = get_option('comp_alt_stylesheet');
 		  $sec_stylesheet = get_option('comp_secondary_stylesheet');
-		if(($sec_stylesheet != '') || ($sec_stylesheet != 'Select Style:')){
+		if(($sec_stylesheet != '') && ($sec_stylesheet != 'Select Style:')){
                ?><link href="<?php bloginfo('template_directory'); ?>/styles/<?php echo $sec_stylesheet; ?>" rel="stylesheet" type="text/css" /><?php         
           }
 
-          if(($stylesheet != '') || ($stylesheet != 'Select Style:')){
+          if(($stylesheet != '') && ($stylesheet != 'Select Style:')){
                ?><link href="<?php bloginfo('template_directory'); ?>/styles/<?php echo $stylesheet; ?>" rel="stylesheet" type="text/css" /><?php         
           }
      }     

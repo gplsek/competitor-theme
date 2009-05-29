@@ -66,7 +66,7 @@ jQuery.noConflict();
 </script>
 </head>
 <body <?php
-         if (get_option('background') == "") {
+         if (get_option('background') != "") {
          echo 'style="background-image:url(' . get_option('compbackground') . ')"';
        } 
 ?>>
@@ -249,7 +249,7 @@ jQuery.noConflict();
 								    $recentPosts = new WP_Query();
 									$recentPosts->query('page_id='.$links[$count]->link_description);
 									 while ($recentPosts->have_posts()) : $recentPosts->the_post(); 
-									 											the_content();
+									 											///the_content();  this pulls in post content in the header and breaks the posts
 									 									endwhile; 
                                     echo '</div></li>';
 
