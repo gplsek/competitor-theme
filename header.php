@@ -90,7 +90,7 @@ jQuery.noConflict();
 	<a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a>
 </div>
         
-<div id="banner">
+
 	<?php  // get add keywords   
     $cat = get_category_by_path(get_query_var('category_name'),false);
     $category = $cat->cat_ID;
@@ -100,13 +100,7 @@ jQuery.noConflict();
     $cat_name = 'home';
     }
     
-    $parse_url_array 	= parse_url(get_option('siteurl'));
-    $subdomain 				= explode('.', $parse_url_array['host']);
-    if ($subdomain[0] == "www")
-    {
-    $subdomain[0] = "competitor";
-    }
-    $magazine_name = $subdomain[0];
+    $magazine_name = get_mag(get_option('siteurl'));
     
     $kw = $magazine_name.','.$cat_name;
     $_SESSION['kw'] = $kw;
@@ -114,6 +108,7 @@ jQuery.noConflict();
 
 	if ($magazine_name == "runrocknroll")
 				{
+								echo '<div id="rnrcities">';
 								echo "<ul class='event_list'>";
 								$links = get_bookmarks('category_name=runrnr&orderby=order&category_orderby=order');
 								$count = 0;
@@ -137,7 +132,7 @@ jQuery.noConflict();
 
 
     ?>
-
+	<div id="banner">
 	<script type="text/javascript" language="JavaScript">
     aj_server = 'http://adj43.thruport.com/servlet/ajrotator/'; aj_tagver = '1.0';
     aj_zone = 'inside'; aj_adspot = '619316'; aj_page = '0'; aj_dim ='317217'; aj_ch = ''; aj_ct = ''; aj_kw = '<?= $kw?>';
