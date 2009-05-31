@@ -104,14 +104,14 @@ jQuery.noConflict();
 	<?php  // get add keywords   
     $cat = get_category_by_path(get_query_var('category_name'),false);
     $category = $cat->cat_ID;
-    $cat_name = $cat->cat_name;
+    $cat_name = $cat->category_nicename ;
     if (is_home())
     {
     $cat_name = 'home';
     }
     
     $magazine_name = get_mag(get_option('siteurl'));
-    
+    //$cat_name = str_replace('&','',$cat_name);
     $kw = $magazine_name.','.$cat_name;
     $_SESSION['kw'] = $kw;
 
@@ -212,7 +212,7 @@ jQuery.noConflict();
 
 				<form action="<?php bloginfo('url'); ?>/search" id="cse-search-box">
 				  <fieldset>
-				    <input type="hidden" name="cx" value="<?= (get_option('comp_google_search')?>" />
+				    <input type="hidden" name="cx" value="<?php echo get_option('comp_google_search');?>" />
 				    <input type="hidden" name="cof" value="FORID:10" />
 				    <input type="hidden" name="ie" value="UTF-8" />
 				    <input type="text" name="q" size="31" value="" title="SEARCH" />
