@@ -13,9 +13,11 @@ Template Name: Wide
 		<?php if (have_posts()) : ?>
 		
 	
-			<?php while (have_posts()) : the_post(); ?>		
+			<?php while (have_posts()) : the_post(); ?>
+                <?php edit_post_link('>> Edit this article','',''); ?>			
 
 				<div class="article main_wide_column">
+                	<h1 class="page-header"><?php the_title(); ?></h1> 
 						<?php the_content('<span class="continue">Continue Reading</span>'); ?> 
 					
 				</div>
