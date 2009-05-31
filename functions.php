@@ -143,7 +143,13 @@ $options = array (
 						"desc" => "Please paste your Google Analytics (or other) tracking code here.",
 			    		"id" => $shortname."_google_analytics",
 			    		"std" => "",
-			    		"type" => "textarea"),	
+			    		"type" => "textarea"),
+			
+				array(	"name" => "Google Search ID",
+						"desc" => "Please enter the google search ID/cx value here, like: 015459459567427136655:6whklon_3ea .",
+						 "id" => $shortname."_google_search",
+						 "std" => "",
+						 "type" => "text"),	
 			
 				array(	"name" => "Content Well Adds",
 						"type" => "heading"),

@@ -71,7 +71,7 @@ jQuery.noConflict();
 
 </head>
 <body <?php
-         if (get_option('background') != "") {
+         if (get_option('compbackground') != "") {
          echo 'style="background-image:url(' . get_option('compbackground') . ')"';
        } 
 ?>>
@@ -150,86 +150,6 @@ jQuery.noConflict();
 	 <div id="content">
             <div class="nav_bars">
                 <ul id="menu" class="main_nav">
-     <!--                <li>
-          <h2>
-            <a href="#">Home</a>
-          </h2>
-          <div>
-            Latest news, special deals, and more...
-          </div>
-        </li>
-
-        <li class="mega">
-          <h2>
-            <a href="#">Stuff for him</a>
-          </h2>
-          <div>
-            <h3>
-              Menswear
-            </h3>
-            <p>
-
-              <a href="#">Shirts</a>, <a href="#">T-shirts</a>, <a href="#">Accessories</a>, <a href="#">More...</a>
-            </p>
-            <h3>
-              Gifts
-            </h3>
-            <p>
-
-              <a href="#">Sporting goods</a>, <a href="#">Gadgets</a>, <a href="#">More...</a>
-            </p>
-            <h3>
-              Clearance!
-            </h3>
-            <p>
-              40% off all photo accessories this weekend only. <a href="#">Don't miss out!</a>
-
-            </p><a href="#" class="more">More stuff for him...</a>
-          </div>
-        </li>
-        <li class="mega">
-          <h2>
-            <a href="#">Stuff for her</a>
-          </h2>
-          <div>
-
-            <h3>
-              Ladieswear
-            </h3>
-            <p>
-              <a href="#">Tops</a>, <a href="#">Pants</a>, <a href="#">Skirts</a>, <a href="#">T-shirts</a>, <a href="#">More...</a>
-
-            </p>
-            <h3>
-              Gifts
-            </h3>
-            <p>
-              <a href="#">Sporting goods</a>, <a href="#">Gadgets</a>, <a href="#">More...</a>
-            </p>
-
-            <h3>
-              Shop Now for Mother's Day!
-            </h3>
-            <p>
-              Earlybird Mother's Day specials. <a href="#">Shop early, save on shipping!</a>
-            </p><a href="#" class="more">More stuff for her...</a>
-          </div>
-        </li>
-
-        <li class="mega">
-          <a href="#">Stuff for kids</a>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </div>
-        </li>
-        <li class="mega">
-          <a href="#">Stuff for pets</a>
-
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </div>
-        </li>
--->
 					 
 					 <?php //wp_list_bookmarks('title_li=&categorize=0&category_name=MainNav'); ?>
 					  <?php $links = get_bookmarks('category_name=MainNav&orderby=order&category_orderby=order');
@@ -260,10 +180,6 @@ jQuery.noConflict();
 									 									endwhile; 
                                     echo '</div></li>';
 
-/*Read more: http://weblogtoolscollection.com/archives/2008/04/13/define-your-own-wordpress-loop-using-wp_query/#ixzz0GixXimJR&B*/
-
-
-									
 								}
 								
 								$count++;
@@ -292,7 +208,7 @@ jQuery.noConflict();
 
 				<form action="<?php bloginfo('url'); ?>/search" id="cse-search-box">
 				  <fieldset>
-				    <input type="hidden" name="cx" value="015459459567427136655:6whklon_3ea" />
+				    <input type="hidden" name="cx" value="<?= (get_option('comp_google_search')?>" />
 				    <input type="hidden" name="cof" value="FORID:10" />
 				    <input type="hidden" name="ie" value="UTF-8" />
 				    <input type="text" name="q" size="31" value="" title="SEARCH" />
