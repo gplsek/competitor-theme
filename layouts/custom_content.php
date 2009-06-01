@@ -2,7 +2,7 @@
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/jquery.easing.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/jquery.dimensions.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/ui.accordion.js"></script>
-<script type="text/javascript">
+<?php /*<script type="text/javascript">
 jQuery.noConflict();
 	jQuery(function() {
 		jQuery('#custom').accordion({ 
@@ -14,6 +14,27 @@ jQuery.noConflict();
 		});
 
 	});
+</script>*/?>
+<script type="text/javascript">
+jQuery.noConflict();
+jQuery(document).ready(function() {
+
+// hides the slickbox as soon as the DOM is ready
+
+ // (a little sooner than page load)
+jQuery('#custom').hide();
+
+// toggles the slickbox on clicking the noted link  
+
+  jQuery('#slick-toggle').click(function() {
+
+    jQuery('#custom').toggle(400);
+
+    return false;
+
+  });
+
+});
 </script>
 <?php
 
@@ -66,22 +87,29 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
 
 
 ?>
-<div id="custom">
-	<form method="post" action="<?php bloginfo('template_directory'); ?>/setpreferences.php">
-	<div>
-        <div class="title">
+ 
+ <div id="slick-toggle" class="title">
 			<div class="custom-title">
                 <h2 class="hl"><span class="plus">+</span>CUSTOMIZE PAGE</h2>
                 <h4 class="tags"><?= $message?></h4>
 			</div>
         </div>
+<div id="custom">
+	
+	<div>
+		<form method="post" action="<?php bloginfo('template_directory'); ?>/setpreferences.php">
+        <!--<div class="title">
+			<div class="custom-title">
+                <h2 class="hl"><span class="plus">+</span>CUSTOMIZE PAGE</h2>
+                <h4 class="tags"><?= $message?></h4>
+			</div>
+        </div>-->
         <div>
             <div class="custom-content">
             
             	<ul class="custom-content-left">
                 
                 <strong>Sports</strong>
-				<div class="custom-content-left-block1">
                 <?php
                 
 				foreach ($sport_cats as $cate) {
@@ -98,8 +126,6 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
                     
                     <strong>Region</strong>
                     
-                    <div class="custom-content-right-block1">
-                    
                     	<?php
 
 						foreach ($regions_cats as $cate) {
@@ -108,10 +134,9 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
 							<?
 						}
 		                ?>
-                    </div>
                 </ul>
                 
-                <ul class="custom-content-left">
+                <ul class="custom-content-bottom">
                 	
                     <strong>Events</strong>
                 
@@ -129,6 +154,7 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
                     <input class="submit" type="submit" name="custom_form" value="SAVE">
             </div>	
 		</div>
+		 </form>
 	</div>
-    </form>
+   
 </div>
