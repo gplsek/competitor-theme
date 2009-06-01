@@ -13,17 +13,12 @@
 </title>
 
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php  echo get_bloginfo_rss('rss2_url');  ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <link rel="stylesheet" type="text/css"  href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 
-<!--[if IE 6]>
-<script src="<?php bloginfo('template_directory'); ?>/DD_belatedPNG.js"></script>
-<script type="text/javascript">
-DD_belatedPNG.fix('a, div, img');
-</script>
-<![endif]--> 
+<!--[if IE 6]><script src="<?php bloginfo('template_directory'); ?>/DD_belatedPNG.js"></script><script type="text/javascript">DD_belatedPNG.fix('a, div, img');</script><![endif]-->
+
 <?php wp_head(); ?>  
 	
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/includes/js/facebox/facebox.css" type="text/css" media="print, projection, screen">
@@ -89,7 +84,7 @@ jQuery.noConflict();
     <ul>
         <li><a href="http://www.competitor.com">Competitor</a>  &nbsp;|  </li>
         <li><a href="http://www.velonews.com/">Cycling</a> &nbsp;  |  </li>
-        <li><a href="http://triathlon.competitor.com/">Triathlon</a>  &nbsp; |  </li>
+        <li><a href="http://triathlete.competitor.com/">Triathlon</a>  &nbsp; |  </li>
         <li><a href="http://running.competitor.com">Running</a>  &nbsp; |  </li>
         <li><a href="http://runrocknroll.competitor.com">Rock 'n' Roll Marathons</a></li>
     </ul>
@@ -169,11 +164,12 @@ jQuery.noConflict();
 									} else {
 										echo '<li><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
 									}
+									
 								} else {
 									if ($count == $i) {
-										echo '<li class="mega last"><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a><div>';
+										echo '<li class="last"><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a><div>';
 									} else {
-										echo '<li class="mega"><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a><div>';
+										echo '<li><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a><div>';
 									}
 									//echo ''. $links[$count]->link_notes .'</div></li>';
 								    $recentPosts = new WP_Query();

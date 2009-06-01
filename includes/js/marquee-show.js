@@ -6,9 +6,8 @@ function slideShow() {
 	
 	//Get the first image and display it (set it to full opacity)
 	jQuery('#rotate a:first').css({opacity: 1.0});
-	
 	//Set the caption background to semi-transparent
-	jQuery('#rotate .caption').css({opacity: 1.0});
+
 
 	//Resize the width of the caption according to the image width
 	jQuery('#rotate .caption').css({width: jQuery('#rotate a').find('img').css('width')});

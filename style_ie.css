@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#rotate-thumbs #maqnav li {
+padding:0 6px!important
+}
+
+#content .alignleft, #content .alignright {
+display: inline
+}
+
+body {
+background-color: #ff0000;
+font-family:Verdana,Arial,Helvetica,sans-serif;
+}

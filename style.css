@@ -378,7 +378,7 @@ margin:0 0 -10px 18px;
 #content .main_column {
 display:inline;
 float:left;
-margin:7px 15px 0;
+padding:7px 5px 0 15px;
 width:630px;
 }
 
@@ -418,12 +418,12 @@ margin:5px;
 
 #content .alignleft {
 float:left;
+_float: left;
 margin:5px;
 }
 
 #content .main_column p {
 font-family:arial;
-text-align:justify;
 }
 
 #content .main_column p a {
@@ -647,8 +647,7 @@ width:950px;
 }
 
 .main_column .article p {
-width:100%;
-display:block;
+/* width:100%; */
 font-size:14px;
 padding-bottom:10px;
 margin-top:5px;
@@ -1035,8 +1034,20 @@ color: #FF0000;
 padding: 10px;	
 }
 
+.right_column .widget .content-widget .widget-ajax li {
+width: 100px;
+float:left;
+}
+
+.right_column .widget .content-widget .widget-ajax .lightbox {
+float: left;
+width: 100px;
+}
+
+
 .right_column .widget .content-widget .widget-ajax .lightbox a {
 width: 100px;
+float: left;
 }
 
 .right_column .widget .widget-title h2 {
@@ -1075,8 +1086,9 @@ width: auto;
 }
 
 .right_column .widget ul {
+float:left;
 font-size:12px;
-margin-top:-5px; 
+margin:-5px 0 0;
 }
 
 .right_column .widget ul li {
@@ -1085,7 +1097,7 @@ float:left;
 list-style-image:none;
 list-style-position:outside;
 list-style-type:none;
-margin-bottom:10px;
+padding-bottom:10px;
 margin-top:-1px;
 padding-top:9px;
 }
@@ -1094,8 +1106,8 @@ padding-top:9px;
 color:#185672;
 float:left;
 font-weight:700;
-width:310px;
 text-decoration:none;
+width:295px;
 }
 
 .right_column .widget ul li a:hover {
@@ -1123,6 +1135,7 @@ width:318px;
 margin:0;
 padding:0;
 margin-bottom: 10px;
+float: left;
 }
 
 .widget-ajax ul li {
@@ -1135,8 +1148,9 @@ border: none;
 }
 
 .widget-ajax ul li img {
-width:100px;
 height:100px;
+width:100px;
+float: left;
 }
 
 .right_column .widget .tab_content {
@@ -1260,7 +1274,7 @@ margin:10px 0 0;
 #comment {
 float:left;
 padding:10px 10px 10px 30px;
-width:620px;
+width:580px;
 }
 
 #comment ol.commentlist,#comment ul.commentlist {
@@ -1522,31 +1536,36 @@ font-size: 12px;
 margin: 10px 0 0 230px;
 }
 
+#meta-rotate {
+float: left;
+position: relative;
+}
+
 #rotate {
+float:left;
 height:395px;
-margin:25px 0 10px 0;
+margin:5px 0 10px;
 position:relative;
 }
 
 #rotate a {
-float:left;
 left:0;
+padding:0;
 position:absolute;
+top:0;
 }
 #rotate h3 a{
-	float: none!important;
-	position: relative!important;
-	color: #ffffff!important;
+position: relative!important;
+color: #ffffff!important;
 }
 #rotate div.content a {
-	float:none!important;
-	position:relative!important;
-	color:#2A88B2;
-	text-decoration: none;
+position:relative!important;
+color:#2A88B2;
+text-decoration: none;
 }
 #rotate div.content a.link-marquee {
-	font-weight: bolder;
-	font-size: 12px;
+font-weight: bolder;
+font-size: 12px;
 }
 
 #rotate a img {
@@ -1567,12 +1586,8 @@ height:100px;
 width:100%; 
 position:absolute;
 bottom:0;
-/*display: none;*/
-opacity: 1;
 }
-*html #rotate .caption{
-	filter: alpha(opacity=100);
-}
+
 
 #rotate .caption .content {
 margin:5px 10px 0 10px;
@@ -1583,19 +1598,15 @@ font-size:14px;
 #rotate .caption .content h3 {
 margin:0;
 padding:0;
-/*color:#1DCCEF;*/
 color:#FFFFFF;
 font-size: 30px;
 font-family:arial,sans-serif;
 font-stretch:normal;
 font-style:normal;
 font-variant:normal;
-font-weight:normal
+font-weight:normal;
 }
-
-#rotate{
-position: relative
-}
+/*
 #rotate img {
 width: 100px;
 }
@@ -1610,7 +1621,9 @@ position: absolute;
 top: 405px;
 }*/
 #rotate-thumbs {
-height:100px;
+float:left;
+height:110px;
+margin-top:410px;
 position:relative;
 }
 
@@ -1621,14 +1634,13 @@ height:100px;
 position:relative;
 width:630px;
 }
-#rotate-thumbs #maqnav li.first {
-margin:0 10px 0px 4px!important;
 
-}
 #rotate-thumbs #maqnav li {
+display:inline;
 height:90px;
-margin:0 10px;
-width:139px;
+width:130px;
+padding:0 11px;
+_padding: 0 6px;
 }
 
 #rotate-thumbs #maqnav li a.border {
@@ -1640,13 +1652,15 @@ margin:0px;
 width:auto;
 }
 
+#rotate-thumbs #maqnav li a img {
+border:5px solid #FFFFFF;
+width:130px;
+}
+
 #rotate-thumbs #maqnav li a.border img {
 border:5px solid #FF0000;
 }
 
-#rotate-thumbs #maqnav li a img {
-border:5px solid #FFFFFF;
-}
 
 /*######################## Sociable Plugin CSS ##############################*/
 div.sociable { margin: 16px 0;border: 1px solid #B7B7B7; clear:left; padding:5px; background-color:#f2efef }
@@ -1687,10 +1701,11 @@ span.sociable_tagline:hover span {
 
 
 #custom .custom-title {
-	background-color:#E6E6E6;
-	height:30px;
-	text-align:left;
-	width:630px;
+background-color:#E6E6E6;
+float:left;
+height:30px;
+text-align:left;
+width:630px;
 }
 
 #custom .custom-title h2 {
@@ -1725,15 +1740,16 @@ span.sociable_tagline:hover span {
 }
 
 #custom .custom-content {
-	background-color:#FFFFFF;
-	background-image:url(images/custom-content-bg.jpg);
-	background-position:center bottom;
-	background-repeat:repeat-x;
-	margin-top:-1px;
-	padding:0 5px;
-	width:620px;
-	height: 338px;
-	position: relative;
+background-color:#FFFFFF;
+background-image:url(images/custom-content-bg.jpg);
+background-position:center bottom;
+background-repeat:repeat-x;
+float:left;
+height:338px;
+margin-top:-1px;
+padding:0 5px;
+position:relative;
+width:620px;
 }
 
 #custom .custom-content p {
@@ -1777,3 +1793,10 @@ span.sociable_tagline:hover span {
 	clear: left;
 	margin: 2px 0;
 }
+
+#right_ad table {
+	padding-left: 15px;
+}
+
+.right_column .widget .wp-polls ul li { border:0px!Important; float:none!Important; }
+.wp-polls+div+ul li { border:none!Important; }
