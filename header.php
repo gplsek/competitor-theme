@@ -104,7 +104,7 @@ jQuery.noConflict();
 	<?php  // get add keywords   
     $cat = get_category_by_path(get_query_var('category_name'),false);
     $category = $cat->cat_ID;
-    $cat_name = $cat->category_nicename ;
+    $cat_name = $cat->category_nicename;
     if (is_home())
     {
     $cat_name = 'home';
