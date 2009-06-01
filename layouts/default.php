@@ -110,7 +110,7 @@ global $user_ID, $wpdb, $post, $current_category;
 		    <?php echo get_avatar($authorID,$size = '45'); ?>
 			<h1 class="title">
             		<?php
-					if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld')) // custom setting for home
+					if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld') || ($magazine == 'runrocknroll')) // custom setting for home
 					{
 					?>
 					<a title="Permanent Link to <?php the_title(); ?>" href="<?php 	echo $post->guid; ?>" rel="bookmark"><?php the_title(); ?></a></h1>
