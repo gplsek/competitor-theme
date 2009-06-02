@@ -77,7 +77,7 @@ jQuery.noConflict();
 </head>
 <body <?php
          if (get_option('compbackground') != "") {
-         echo 'style="background: '.get_option('comp_background_color').' url(' . get_option('compbackground') . ') center top no-repeat"';
+         echo 'style="position:relative; background: '.get_option('comp_background_color').' url(' . get_option('compbackground') . ') center top no-repeat"';
        } 
 ?>>
 
@@ -87,7 +87,18 @@ jQuery.noConflict();
 	$template_path = get_bloginfo('template_directory');
 	$GLOBALS['defaultgravatar'] = $template_path . '/images/gravatar.jpg';
 ?>
+
+
 <div id="top-bar">
+
+<!-- LINKS BG -->
+
+<a class="links-bg1" href="#"><div id="links-bg1"></div></a>
+
+<a class="links-bg2" href="#"><div id="links-bg2"></div></a>
+
+<!-- LINKS BG -->
+
 <a href="http://www.competitor.com"><p class="comp logo">Competitor.com</p></a>
     <ul>
         <li><a href="http://www.competitor.com">Competitor</a>  &nbsp;|  </li>
@@ -99,6 +110,7 @@ jQuery.noConflict();
 </div>
 
 <div id="container">
+
 <div id="logo">
 	<a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a>
 </div>
