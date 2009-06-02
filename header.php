@@ -24,7 +24,12 @@
 <!--[if IE 6]><script src="<?php bloginfo('template_directory'); ?>/DD_belatedPNG.js"></script><script type="text/javascript">DD_belatedPNG.fix('a, div, img');</script><![endif]-->
 
 <?php wp_head(); ?>  
-	
+<?php 
+$magazine_name = get_mag(get_option('siteurl'));
+if ($magazine_name == 'mountainbike'){
+	include("/var/www/vhosts/competitor.com/httpdocs/password_protect.php"); 
+	}
+	?>
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/includes/js/facebox/facebox.css" type="text/css" media="print, projection, screen">
 <script type="text/javascript">
 jQuery.noConflict();
@@ -76,9 +81,12 @@ jQuery.noConflict();
 </head>
 <body <?php
          if (get_option('compbackground') != "") {
-         echo 'style="background-image:url(' . get_option('compbackground') . ')"';
+         echo 'style="background: '.get_option('comp_background_color').' url(' . get_option('compbackground') . ') center top no-repeat"';
        } 
 ?>>
+
+
+
 <?php
 	$template_path = get_bloginfo('template_directory');
 	$GLOBALS['defaultgravatar'] = $template_path . '/images/gravatar.jpg';

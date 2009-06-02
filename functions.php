@@ -137,6 +137,12 @@ $options = array (
 						"desc" => "Please enter the url of your background image.",
 						"id" => $shortname."background",
 						"std" => "",
+						"type" => "text"),
+						
+				array(	"name" => "Background Color",
+						"desc" => "Please enter the hex value of the bgcolor.",
+						"id" => $shortname."_background_color",
+						"std" => "",
 						"type" => "text"),											    
 
 				array(	"name" => "Google Analytics",
