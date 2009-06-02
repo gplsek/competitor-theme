@@ -101,7 +101,7 @@ jQuery.noConflict();
     <ul>
         <li><a href="http://www.competitor.com">Competitor</a>  &nbsp;|  </li>
         <li><a href="http://www.velonews.com/">Cycling</a> &nbsp;  |  </li>
-        <li><a href="http://triathlete.competitor.com/">Triathlon</a>  &nbsp; |  </li>
+        <li><a href="http://triathlon.competitor.com/">Triathlon</a>  &nbsp; |  </li>
         <li><a href="http://running.competitor.com">Running</a>  &nbsp; |  </li>
         <li><a href="http://runrocknroll.competitor.com">Rock 'n' Roll Marathons</a></li>
     </ul>
