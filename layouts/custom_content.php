@@ -152,6 +152,7 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
                 </ul>   
                              
                     <input class="submit" type="submit" name="custom_form" value="SAVE">
+					
             </div>	
 		</div>
 		 </form>
