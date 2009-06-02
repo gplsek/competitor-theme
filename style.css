@@ -1774,11 +1774,19 @@ width:620px;
 }
 
 #custom .custom-content input.submit {
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
-	width: 75px;
-	height: 35px;
+bottom:10px;
+height:35px;
+position:absolute;
+right:120px;
+width:120px;
+}
+
+#custom .custom-content input.cancel {
+bottom:10px;
+height:35px;
+position:absolute;
+right:10px;
+width:100px;
 }
 
 #custom .custom-content ul.custom-content-left {

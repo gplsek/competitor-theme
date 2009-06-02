@@ -151,7 +151,10 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
 
                 </ul>   
                              
-                    <input class="submit" type="submit" name="custom_form" value="SAVE">
+                    <input class="submit" type="submit" name="custom_form" value="SAVE & CLOSE">
+
+                    <input class="cancel" type="button" onclick="jQuery('#custom').hide();" name="custom_form" value="CANCEL">
+                                        
             </div>	
 		</div>
 		 </form>
