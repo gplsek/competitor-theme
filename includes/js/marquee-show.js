@@ -75,4 +75,10 @@ function rotate(idd) {
 	jQuery('#maqnav a').removeClass('border');
 	document.getElementById('#'+next.attr('id')).className='border';
 }
-var interv=setInterval('rotate("x")',6000);
+
+
+jQuery(document).ready(function() {
+  var interv=setInterval('rotate("x")',6000);
+  // some code here
+
+});
