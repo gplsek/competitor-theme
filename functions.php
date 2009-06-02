@@ -143,7 +143,15 @@ $options = array (
 						"desc" => "Please enter the hex value of the bgcolor.",
 						"id" => $shortname."_background_color",
 						"std" => "",
-						"type" => "text"),											    
+						"type" => "text"),
+						
+				array(	"name" => "Background Styles for clickable area",
+						"desc" => "Please put in your custom clickable background code and styles here",
+					    "id" => $shortname."_background_styles",
+					    "std" => "",
+					    "type" => "textarea"),
+					
+																    
 
 				array(	"name" => "Google Analytics",
 						"desc" => "Please paste your Google Analytics (or other) tracking code here.",

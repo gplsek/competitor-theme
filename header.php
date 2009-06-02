@@ -92,10 +92,8 @@ jQuery.noConflict();
 <div id="top-bar">
 
 <!-- LINKS BG -->
+<?= get_option('comp_background_styles')?>
 
-<a class="links-bg1" href="#"><div id="links-bg1"></div></a>
-
-<a class="links-bg2" href="#"><div id="links-bg2"></div></a>
 
 <!-- LINKS BG -->
 
