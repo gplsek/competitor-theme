@@ -109,7 +109,7 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
             
             	<ul class="custom-content-left">
                 
-                <strong>Sports</strong>
+                <p><strong>Sports</strong></p>
                 <?php
                 
 				foreach ($sport_cats as $cate) {
@@ -124,7 +124,7 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
                 
                 <ul class="custom-content-right">
                     
-                    <strong>Region</strong>
+                    <p><strong>Region</strong></p>
                     
                     	<?php
 
@@ -138,7 +138,7 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
                 
                 <ul class="custom-content-bottom">
                 	
-                    <strong>Events</strong>
+                    <p><strong>Events</strong></p>
                 
                 		<?php
 

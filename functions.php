@@ -603,7 +603,7 @@ function add_javascript( ) {
 
 }
 
-add_cacheaction('wp_cache_get_cookies_values','Sport');
-add_cacheaction('wp_cache_get_cookies_values','Event');
+//add_cacheaction('wp_cache_get_cookies_values','Sport');
+//add_cacheaction('wp_cache_get_cookies_values','Event');
 
 ?>

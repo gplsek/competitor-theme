@@ -941,6 +941,10 @@ margin:-10px 0 0;
 margin:0 0 0 10px;
 }
 
+.right_column .tab_content ul.list1 a {
+
+}
+
 .right_column .tab_content ul li {
 border-top:1px dashed #CCCCCC;
 float:left;
@@ -1584,6 +1588,7 @@ font-size: 12px;
 
 #rotate a img {
 border:medium none;
+height:395px;
 width:630px;
 }
 
@@ -1715,6 +1720,7 @@ span.sociable_tagline:hover span {
 
 #slick-toggle .custom-title {
 background-color:#E6E6E6;
+cursor:pointer;
 float:left;
 height:30px;
 width:630px;
@@ -1731,16 +1737,15 @@ width:630px;
 }
 
 #slick-toggle .custom-title h4.tags {
-	float:left;
-	font-size:9px;
-	font-weight:normal;
-	height:12px;
-	margin-left:10px;
-	padding-top:2px;
-	text-transform:uppercase;
-	width: 360px;
+float:left;
+font-size:9px;
+font-weight:normal;
+height:12px;
+margin-left:5px;
+padding-top:2px;
+text-transform:uppercase;
+width:380px;
 }
-
 #slick-toggle .custom-title h4.tags a {
 	color:#0066CC;
 }
@@ -1756,17 +1761,18 @@ background-color:#FFFFFF;
 background-image:url(images/custom-content-bg.jpg);
 background-position:center bottom;
 background-repeat:repeat-x;
-height:338px;
+border:1px solid #999999;
+height:330px;
 margin-top:573px;
--margin-top: 0px;
 padding:0 5px;
 position:relative;
-width:620px;
+width:618px;
 }
 
 #custom .custom-content p {
-	font-size:16px;
-	padding:20px;
+font-size:16px;
+padding:0;
+width:100%;
 }
 
 #custom .custom-content input {
@@ -1774,10 +1780,10 @@ width:620px;
 }
 
 #custom .custom-content input.submit {
-bottom:10px;
+bottom:50px;
 height:35px;
 position:absolute;
-right:120px;
+right:10px;
 width:120px;
 }
 
@@ -1786,34 +1792,44 @@ bottom:10px;
 height:35px;
 position:absolute;
 right:10px;
-width:100px;
+width:120px;
 }
 
 #custom .custom-content ul.custom-content-left {
-	position: absolute;
-	top: 25px;
-	left: 50px;
-	width: 200px;
+border:1px solid #999999;
+float:left;
+left:15px;
+padding:5px;
+position:relative;
+top:5px;
+width:auto;
 }
 
 #custom .custom-content ul.custom-content-right {
-	position: absolute;
-	top: 25px;
-	left: 350px;
-	width: 200px;
+border:1px solid #999999;
+float:left;
+left:40px;
+padding:5px;
+position:relative;
+top:5px;
+width:auto;
 }
 
 #custom .custom-content ul.custom-content-bottom {
-	position: absolute;
-	top: 175px;
-	left: 50px;
-	width: 200px;
+border:1px solid #999999;
+float:left;
+left:65px;
+padding:5px;
+position:relative;
+top:5px;
+width:auto;
 }
 
 #custom .custom-content ul li {
 	float: left;
 	clear: left;
 	margin: 2px 0;
+	font-size: 13px;
 }
 
 #right_ad table {
