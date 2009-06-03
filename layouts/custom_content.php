@@ -107,7 +107,7 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
         <div>
             <div class="custom-content">
             
-            	<ul class="custom-content-left">
+            	<ul class="custom-content-top">
                 
                 <p><strong>Sports</strong></p>
                 <?php
@@ -122,7 +122,7 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
                 
                 </ul>
                 
-                <ul class="custom-content-right">
+                <ul class="custom-content-center">
                     
                     <p><strong>Region</strong></p>
                     

@@ -20,9 +20,13 @@ function slideShow() {
 	//setInterval('rotate("x")',6000); This show the images each 6 seconds
 	
 }
+jQuery(document).ready(function() {
+  var interv=setInterval('rotate("x")',6000);
+  // some code here
 
+});
 function rotate(idd) {
-	
+	var intervi=6000;
 	//if no IMGs have the show class, grab the first image
 	var current = (jQuery('#rotate a.show')?  jQuery('#rotate a.show') : jQuery('#rotate a:first'));
 
@@ -31,7 +35,8 @@ function rotate(idd) {
 	
 	if(idd!='x'){
 		next=jQuery(idd);
-		clearInterval(interv);
+		clearInterval(intervi);
+		invterv=0;
 		//alert (idd);
 	}
 	/*jQuery('#maqnav a').removeClass('border');
@@ -75,10 +80,3 @@ function rotate(idd) {
 	jQuery('#maqnav a').removeClass('border');
 	document.getElementById('#'+next.attr('id')).className='border';
 }
-
-
-jQuery(document).ready(function() {
-  var interv=setInterval('rotate("x")',6000);
-  // some code here
-
-});
