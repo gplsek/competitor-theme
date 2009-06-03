@@ -141,10 +141,12 @@
       $('#facebox .body').children().fadeIn('normal')
       $('#facebox').css('left', $(window).width() / 2 - ($('#facebox table').width() / 2))
       $(document).trigger('reveal.facebox').trigger('afterReveal.facebox')
+	  if ($.facebox.settings.hideFlash == true) noBleed();
     },
 
     close: function() {
       $(document).trigger('close.facebox')
+	  if ($.facebox.settings.hideFlash == true) resetFlash();
       return false
     }
   })
@@ -299,9 +301,38 @@
       $("#facebox_overlay").addClass("facebox_hide") 
       $("#facebox_overlay").remove()
     })
-    
+    if ($.facebox.settings.hideFlash == true) resetFlash();
     return false
   }
+
+/*
+   * Handle the Flash Bleed Throughs
+   */
+  function noBleed(){
+    var objects = document.getElementsByTagName('object');
+    for (i = 0; i != objects.length; i++) {
+     objects[i].style.visibility = 'hidden';
+    }
+    var embeds = document.getElementsByTagName('embed');
+    for (i = 0; i != embeds.length; i++) {
+     embeds[i].style.visibility = 'hidden';
+    }
+  }
+
+  /*
+   * Handle the Flash Bleed Throughs
+   */
+  function resetFlash(){
+    var objects = document.getElementsByTagName('object');
+    for (i = 0; i != objects.length; i++) {
+     objects[i].style.visibility = 'visible';
+    }
+    var embeds = document.getElementsByTagName('embed');
+    for (i = 0; i != embeds.length; i++) {
+     embeds[i].style.visibility = 'visible';
+    }
+  }
+
 
   /*
    * Bindings
