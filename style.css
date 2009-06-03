@@ -1765,6 +1765,10 @@ width:380px;
 	margin-right:5px;
 }
 
+#custom {
+float: left;
+}
+
 #custom .custom-content {
 background-color:#FFFFFF;
 background-image:url(images/custom-content-bg.jpg);
@@ -1772,42 +1776,48 @@ background-position:center bottom;
 background-repeat:repeat-x;
 border:1px solid #999999;
 height:330px;
-margin-top:573px;
 padding:0 5px;
 position:relative;
 width:618px;
+-margin-top:0px;
+_height:360px;
+*height:360px !important;
 }
 
 #custom .custom-content p {
-font-size:16px;
-padding:0;
+color:#FFFFFF;
+font-size:14px;
+padding:3px 0;
+text-transform:uppercase;
 width:100%;
 }
 
+#custom .custom-content span {
+width: 100%;
+color: #FFFFFF;
+font-size: 14px;
+}
+
+#custom .custom-content ul.custom-content-button {
+float:left;
+padding:10px 0;
+position:relative;
+width:600px;
+text-align:right;
+}
+
 #custom .custom-content input {
-	margin-right: 5px;
+margin-right: 5px;
 }
 
-#custom .custom-content input.submit {
-bottom:50px;
-height:35px;
-position:absolute;
-right:10px;
-width:120px;
-}
-
+#custom .custom-content input.submit,
 #custom .custom-content input.cancel {
-bottom:10px;
 height:35px;
-position:absolute;
-right:10px;
 width:120px;
 }
 
 #custom .custom-content ul.custom-content-top {
-border:1px solid #999999;
 float:left;
-left:15px;
 padding:5px;
 position:relative;
 top:5px;
@@ -1815,9 +1825,8 @@ width:auto;
 }
 
 #custom .custom-content ul.custom-content-center {
-border:1px solid #999999;
+border-top:1px solid #999999;
 float:left;
-left:40px;
 padding:5px;
 position:relative;
 top:5px;
@@ -1825,9 +1834,8 @@ width:auto;
 }
 
 #custom .custom-content ul.custom-content-bottom {
-border:1px solid #999999;
+border-top:1px solid #999999;
 float:left;
-left:65px;
 padding:5px;
 position:relative;
 top:5px;
@@ -1835,15 +1843,29 @@ width:auto;
 }
 
 #custom .custom-content ul li {
-	float: left;
-	clear: left;
-	margin: 2px 0;
-	font-size: 13px;
+float:left;
+font-size:13px;
+margin:2px 0;
+width:150px;
+color: #FFFFFF;
 }
 
 #right_ad table {
-	padding-left: 15px;
+padding-left: 15px;
 }
 
 .right_column .widget .wp-polls ul li { border:0px!Important; float:none!Important; }
 .wp-polls+div+ul li { border:none!Important; }
+
+
+#back_gallery{
+ position:relative;
+ height:360px;
+ width:580px;
+ overflow:hidden;
+}
+#back_gallery img{
+ width:100px;
+ height:100px;
+ margin:130px auto auto 240px;
+}

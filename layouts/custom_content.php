@@ -107,6 +107,8 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
         <div>
             <div class="custom-content">
             
+                <span>Customize your homepage by selecting the type of content you prefer and the regions you're most interested in.</span>
+
             	<ul class="custom-content-top">
                 
                 <p><strong>Sports</strong></p>
@@ -124,7 +126,7 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
                 
                 <ul class="custom-content-center">
                     
-                    <p><strong>Region</strong></p>
+                    <p><strong>Regions</strong></p>
                     
                     	<?php
 
@@ -149,12 +151,15 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
 						}
 		                ?>
 
-                </ul>   
-                             
+                </ul> 
+                
+				<ul class="custom-content-button">  
 
                     <input class="submit" type="submit" name="custom_form" value="SAVE & CLOSE">
 
                     <input class="cancel" type="button" onclick="jQuery('#custom').hide();" name="custom_form" value="CANCEL">
+                    
+				</ul>
                                         
             </div>	
 		</div>
