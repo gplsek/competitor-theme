@@ -87,6 +87,13 @@ global $user_ID, $wpdb, $post, $current_category;
 			<ul class="options">
 
                          <?php
+
+								if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld') || ($magazine == 'runrocknroll')) // custom setting for home
+								{
+									echo '<li class="last"><a href="http://'.get_mag($post->guid).'.competitor.com"> Competitor '.ucfirst  (get_mag($post->guid)). '</a></li>'; 
+								}
+								else
+								{
 								    $count = 1;
 									$catarray = get_the_category();
 									$limite = count($catarray);
@@ -102,7 +109,8 @@ global $user_ID, $wpdb, $post, $current_category;
 										echo '<li>(&hellip;)</li>';
 									}
 									$count++;
-									} 
+									}
+								} 
 								?>
 						<!--<li><?php the_category('</li><li> ') ?></li>-->
 						</ul>
@@ -135,7 +143,10 @@ global $user_ID, $wpdb, $post, $current_category;
 
 						if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld')) // custom setting for home
 						{
-							the_content('&raquo; Read Full Story');
+							the_content('');
+							?>
+							<a class="more-link" href="<?= $post->guid;?>">&raquo; Read Full Story</a>
+							<?
 						}
 						else
 						{

@@ -141,12 +141,12 @@
       $('#facebox .body').children().fadeIn('normal')
       $('#facebox').css('left', $(window).width() / 2 - ($('#facebox table').width() / 2))
       $(document).trigger('reveal.facebox').trigger('afterReveal.facebox')
-	  if ($.facebox.settings.hideFlash == true) noBleed();
+	  noBleed();
     },
 
     close: function() {
       $(document).trigger('close.facebox')
-	  if ($.facebox.settings.hideFlash == true) resetFlash();
+	  resetFlash();
       return false
     }
   })
@@ -301,7 +301,7 @@
       $("#facebox_overlay").addClass("facebox_hide") 
       $("#facebox_overlay").remove()
     })
-    if ($.facebox.settings.hideFlash == true) resetFlash();
+    resetFlash();
     return false
   }
 
