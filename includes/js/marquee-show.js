@@ -9,7 +9,7 @@ var interv='';
 function slideShow() {
 	jQuery('#back_gallery').hide();
 	jQuery('#rotate').show();
-	jQuery('#rotate_thumbs').show();
+	jQuery('#rotate-thumbs').show();
 	
 	
 	//Set the opacity of all images to 0
@@ -19,7 +19,7 @@ function slideShow() {
 	jQuery('#rotate a:first').css({opacity: 1.0});
 	
 	//Set the caption background to semi-transparent
-	jQuery('#rotate .caption').css({opacity: 0.7});
+	jQuery('#rotate .caption').css({opacity: 1.0});//0.7
 	jQuery('#rotate .caption').slideDown('slow');
 
 	//Resize the width of the caption according to the image width
@@ -27,7 +27,7 @@ function slideShow() {
 	
 	//Get the caption of the first image from REL attribute and display it
 	jQuery('#rotate .content').html(jQuery('#rotate a:first').find('img').attr('rel'))
-	.animate({opacity: 0.7}, 400);
+	.animate({opacity: 1.0}, 400);//0.7
 	
 	interv=setInterval('rotate("x")',6000);
 	//Call the gallery function to run the slideshow, 6000 = change to next image after 6 seconds
@@ -43,11 +43,11 @@ function rotate(idd) {
 	var next = ((current.next().length) ? ((current.next().hasClass('caption'))? jQuery('#rotate a:first') :current.next()) : jQuery('#rotate a:first'));	
 	
 	if(idd!='x'){
-		next=$(idd);
+		next=jQuery(idd);
 		clearInterval(interv);
 		//alert (idd);
 	}
-	jQuery('#rotate_thumbs a').removeClass('border');
+	jQuery('#rotate-thumbs a').removeClass('border');
 	document.getElementById('#'+next.attr('id')).className='border';
 	
 	//Get next image caption

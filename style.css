@@ -1775,13 +1775,11 @@ background-image:url(images/custom-content-bg.jpg);
 background-position:center bottom;
 background-repeat:repeat-x;
 border:1px solid #999999;
-height:330px;
+height:355px;
 padding:0 5px;
 position:relative;
 width:618px;
--margin-top:0px;
-_height:360px;
-*height:360px !important;
+margin-top:0px;
 }
 
 #custom .custom-content p {
@@ -1859,10 +1857,10 @@ padding-left: 15px;
 
 
 #back_gallery{
- position:relative;
- height:360px;
- width:580px;
- overflow:hidden;
+position:relative;
+height:395px;
+width:630px;
+overflow:hidden;
 }
 #back_gallery img{
  width:100px;
