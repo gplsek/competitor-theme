@@ -84,17 +84,60 @@ global $user_ID, $wpdb, $post, $current_category;
 				
 		<div class="article">
 	
-			<ul class="options">
+			
 
                          <?php
 
 								if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld') || ($magazine == 'runrocknroll')) // custom setting for home
 								{
-									echo '<li class="last"><a href="http://'.get_mag($post->guid).'.competitor.com"> Competitor '.ucfirst  (get_mag($post->guid)). '</a></li>'; 
-								}
+									echo '<ul class="options">';
+									echo '<li class="last"><a href="http://'.get_mag($post->guid).'.competitor.com"> Competitor '.ucfirst  (get_mag($post->guid)). '</a></li>';
+									
+									?>
+									</ul>
+									<?php echo get_avatar($authorID,$size = '45'); ?>
+									<h1 class="title">
+						           <a title="Permanent Link to <?php the_title(); ?>" href="<?php 	echo $post->guid; ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+						
+							</h1>
+							<h2 class="author">
+								<?
+								$authordata = get_userdata( $post->post_author );
+								
+								?>
+							<a href="http://<?= get_mag($post->guid);?>.competitor.com/author/<?= $authordata->user_login;?>"><?= $authordata->display_name;?></a><?php
+							
+							//the_author_posts_link(); ?></h2>
+							<ul class="article_info">
+								<li class="first"><?php the_time('F d Y'); ?></li>
+							</ul>
+							<p>
+							    <?php 
+								if (!($post->post_excerpt)){
+								
+											the_content('');
+											?>
+											<a class="more-link" href="<?= $post->guid;?>">&raquo; Read Full Story</a>
+											<?	
+										}
+								else 
+										{
+											//	echo $post->post_excerpt;
+											the_excerpt();
+											?>
+											<a class="more-link" href="<?php the_permalink() ?>">&raquo; Read Full Story</a>
+											<?
+										} ?>
+
+						   </p>
+									
+								<?	
+									 
+							} // end competitor and runrnr landing page
 								else
 								{
-								    $count = 1;
+								    echo '<ul class="options">';
+									$count = 1;
 									$catarray = get_the_category();
 									$limite = count($catarray);
 									foreach(($catarray) as $category) {
@@ -110,61 +153,39 @@ global $user_ID, $wpdb, $post, $current_category;
 									}
 									$count++;
 									}
-								} 
+								 
 								?>
-						<!--<li><?php the_category('</li><li> ') ?></li>-->
+						
 						</ul>
 			
 		    <?php echo get_avatar($authorID,$size = '45'); ?>
 			<h1 class="title">
-            		<?php
-					if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld') || ($magazine == 'runrocknroll')) // custom setting for home
-					{
-					?>
-					<a title="Permanent Link to <?php the_title(); ?>" href="<?php 	echo $post->guid; ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-					<?php }
-					else {?>
+            	
 						<a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-					<?php }?>
+
             </h1>
 			<h2 class="author"><?php the_author_posts_link(); ?></h2>
-			
-			
 			<ul class="article_info">
 				<li class="first"><?php the_time('F d Y'); ?></li>
                 <li><?php if(function_exists('the_views')) { the_views(); } ?></li>
-                <li><?php //comments_popup_link('Comments (0)', 'Comments (1)', 'Comments (%)'); ?>Comments: (<?= $post->comment_count; ?>)</li>
+                <li>Comments: (<?= $post->comment_count; ?>)</li>
 			</ul>
 			<p>
-		    	<?php //echo strip_tags(get_the_excerpt(), '<a><strong>'); ?>
 			    <?php 
 				if (!($post->post_excerpt)){
-				//the_advanced_excerpt('length=125');
-
-						if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld')) // custom setting for home
-						{
-							the_content('');
-							?>
-							<a class="more-link" href="<?= $post->guid;?>">&raquo; Read Full Story</a>
-							<?
-						}
-						else
-						{
-							the_content('&raquo; Read Full Story');
-						}
-
-				}
+						the_content('&raquo; Read Full Story');
+					}
 				else 
 				{
-				//	echo $post->post_excerpt;
-				the_excerpt();
-				?>
-				<a class="more-link" href="<?php the_permalink() ?>">&raquo; Read Full Story</a>
-				<?
+					//	echo $post->post_excerpt;
+					the_excerpt();
+					?>
+					<a class="more-link" href="<?php the_permalink() ?>">&raquo; Read Full Story</a>
+					<?
 				} ?>
 		      
 		   </p>
-			
+			<? } // end regular magazine ?>
 		</div><!--/article-->
 		
 		
@@ -173,12 +194,12 @@ global $user_ID, $wpdb, $post, $current_category;
 		{ // start add
 		?>
 		
-		<div id="inlinead"><iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619354&dim=317216&kw=<?= $_SESSION['kw']?>&pv=<?= session_id(); ?>"></iframe></div>
+		<div id="inlinead"><iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619354&dim=317216&kw=<?= $_SESSION['kw']?>&pv=<?= $_SESSION['rand_pv']; ?>"></iframe></div>
 		<?php 
 		}else if (($counter2 % 8 == 0) && (get_option('comp_content_ads2') == 0))
 		{
 			?>
-		<div id="inlinead"><iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619353&dim=317216&kw=<?= $_SESSION['kw']?>&pv=<?= session_id(); ?>"></iframe></div>
+		<div id="inlinead"><iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619353&dim=317216&kw=<?= $_SESSION['kw']?>&pv=<?= $_SESSION['rand_pv'];?>"></iframe></div>
 			<?php //end add
 			
 		}
