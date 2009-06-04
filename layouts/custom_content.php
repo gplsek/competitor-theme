@@ -2,19 +2,6 @@
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/jquery.easing.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/jquery.dimensions.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/ui.accordion.js"></script>
-<?php /*<script type="text/javascript">
-jQuery.noConflict();
-	jQuery(function() {
-		jQuery('#custom').accordion({ 
-		    header: 'div.title', 
-		    active: false, 
-		    alwaysOpen: false, 
-		    //animated: false, 
-		    //autoheight: false 
-		});
-
-	});
-</script>*/?>
 <script type="text/javascript">
 jQuery.noConflict();
 jQuery(document).ready(function() {
@@ -94,7 +81,7 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
                 <h4 class="tags"><?= $message?></h4>
 			</div>
         </div>
-<div id="custom">
+<div id="custom" style="display:none">
 	
 	<div>
 		<form method="post" action="<?php bloginfo('template_directory'); ?>/setpreferences.php">
