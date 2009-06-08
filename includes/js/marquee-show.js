@@ -19,7 +19,7 @@ function slideShow() {
 	jQuery('#rotate a:first').css({opacity: 1.0});
 	
 	//Set the caption background to semi-transparent
-	jQuery('#rotate .caption').css({opacity: 1.0});//0.7
+	//jQuery('#rotate .caption').css({opacity: 1.0});//0.7
 	jQuery('#rotate .caption').slideDown('slow');
 
 	//Resize the width of the caption according to the image width
