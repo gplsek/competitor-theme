@@ -85,12 +85,6 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
 	
 	<div>
 		<form method="post" action="<?php bloginfo('template_directory'); ?>/setpreferences.php">
-        <!--<div class="title">
-			<div class="custom-title">
-                <h2 class="hl"><span class="plus">+</span>CUSTOMIZE PAGE</h2>
-                <h4 class="tags"><?= $message?></h4>
-			</div>
-        </div>-->
         <div>
             <div class="custom-content">
             
@@ -127,7 +121,7 @@ $event_cats = get_categories('hide_empty=0&child_of='.$event_category);
                 
                 <ul class="custom-content-bottom">
                 	
-                    <p><strong>Events</strong></p>
+                    <p><strong>Rock 'n' Roll Marathon Events</strong></p>
                 
                 		<?php
 

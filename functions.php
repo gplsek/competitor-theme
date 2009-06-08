@@ -151,7 +151,14 @@ $options = array (
 					    "std" => "",
 					    "type" => "textarea"),
 					
-																    
+				array(	"name" => "Google Settings",
+						"type" => "heading"),
+						
+				array(	"name" => "Google Ads",
+						"desc" => "Please paste your Google Ad Code for the header here.",
+					    "id" => $shortname."_google_ads",
+					    "std" => "",
+					    "type" => "textarea"),												    
 
 				array(	"name" => "Google Analytics",
 						"desc" => "Please paste your Google Analytics (or other) tracking code here.",
@@ -174,6 +181,12 @@ $options = array (
 					    "std" => "",
 					    "type" => "radio",
 					    "options" => $content_ads),	
+				
+				array(	"name" => "Ad #1 code",
+						"desc" => "Please paste content well ad1 here.",
+					    "id" => $shortname."_content_well1",
+					    "std" => "",
+					    "type" => "textarea"),
 					
 				array(	"name" => "Add #2 in the main conent area",
 						"desc" => "",
@@ -181,6 +194,12 @@ $options = array (
 						"std" => "",
 						"type" => "radio",
 						"options" => $content_ads),
+						
+				array(	"name" => "Ad #2 code",
+						"desc" => "Please paste content well ad2 here.",
+						"id" => $shortname."_content_well2",
+						"std" => "",
+						"type" => "textarea"),
 			
 
 				array(	"name" => "Front Page Layout",

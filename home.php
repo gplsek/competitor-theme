@@ -1,3 +1,4 @@
+<?php echo "Server: ".$_SERVER['REQUEST_URI'];?> 
 <?php
 session_start();
 ?>

@@ -1,7 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head profile="http://gmpg.org/xfn/11">
+<?php
+header('Cache-Control: no-store, no-cache, must-revalidate');     // HTTP/1.1
+header('Cache-Control: pre-check=0, post-check=0, max-age=0');
+header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 
+?>
 <title>
 <?php if ( is_home() ) { ?><?php bloginfo('name'); ?>&nbsp;|&nbsp;<?php bloginfo('description'); ?><?php } ?>
 <?php if ( is_search() ) { ?><?php bloginfo('name'); ?>&nbsp;|&nbsp;Search Results<?php } ?>
@@ -11,7 +16,7 @@
 <?php if ( is_month() ) { ?><?php bloginfo('name'); ?>&nbsp;|&nbsp;Archive&nbsp;|&nbsp;<?php the_time('F'); ?><?php } ?>
 <?php if (function_exists('is_tag')) { if ( is_tag() ) { ?><?php bloginfo('name'); ?>&nbsp;|&nbsp;Tag Archive&nbsp;|&nbsp;<?php  single_tag_title("", true); } } ?>
 </title>
-  
+
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php  echo get_bloginfo_rss('rss2_url');  ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -19,13 +24,60 @@
 
 <!--[if IE 6]><script src="<?php bloginfo('template_directory'); ?>/DD_belatedPNG.js"></script><script type="text/javascript">DD_belatedPNG.fix('a, div, img');</script><![endif]-->
 
-<?php wp_head(); ?>  
+<?php wp_head(); ?> 
+  
 <?php 
 $magazine_name = get_mag(get_option('siteurl'));
 if ($magazine_name == 'mountainbike'){
 	include("/var/www/vhosts/competitor.com/httpdocs/password_protect.php"); 
 	}
 	?>
+	
+	<?php
+	
+	
+	$rand_pv = "";
+	$rand_pv = rand(1000000000,9999999999);
+	$_SESSION['rand_pv'] = $rand_pv;
+    $cat = get_category_by_path(get_query_var('category_name'),false);
+    $category = $cat->cat_ID;
+    $cat_name = $cat->category_nicename;
+    if (is_home())
+    {
+    $cat_name = 'home';
+    }
+    
+    $magazine_name = get_mag(get_option('siteurl'));
+	$kw_site = $magazine_name;
+    //$cat_name = str_replace('&','',$cat_name);
+    $kw = $magazine_name.','.$cat_name;
+    $_SESSION['kw'] = $kw;
+	$kw_keyword = $kw;
+	?>
+	
+	<!-- PUT THIS TAG IN THE head SECTION -->
+	<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js">
+	</script>
+	<script type="text/javascript">
+	  GS_googleAddAdSenseService("ca-pub-8426063251900991");
+	  GS_googleEnableAllServices();
+	</script>
+	<script type="text/javascript">
+	  GA_googleAddSlot("ca-pub-8426063251900991", "Running_300x250_ROS");
+	</script>
+	<script language="JavaScript">
+	    GA_googleAddAttr("keyword", "<?php echo $kw_keyword; ?>");
+	    GA_googleAddAttr("site", "<?php echo $kw_site; ?>");
+	</script>
+	<script type="text/javascript">
+	  GA_googleFetchAds();
+	</script>
+	<!-- END OF TAG FOR head SECTION -->
+	
+	
+	
+	
+	
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/includes/js/facebox/facebox.css" type="text/css" media="print, projection, screen">
 <script type="text/javascript">
 jQuery.noConflict();
@@ -115,21 +167,7 @@ jQuery.noConflict();
         
 
 	<?php  // get add keywords  and random number for ads 
-	$rand_pv = "";
-	$rand_pv = rand(1000000000,9999999999);
-	$_SESSION['rand_pv'] = $rand_pv;
-    $cat = get_category_by_path(get_query_var('category_name'),false);
-    $category = $cat->cat_ID;
-    $cat_name = $cat->category_nicename;
-    if (is_home())
-    {
-    $cat_name = 'home';
-    }
-    
-    $magazine_name = get_mag(get_option('siteurl'));
-    //$cat_name = str_replace('&','',$cat_name);
-    $kw = $magazine_name.','.$cat_name;
-    $_SESSION['kw'] = $kw;
+	
 
 
 	if ($magazine_name == "runrocknroll")
