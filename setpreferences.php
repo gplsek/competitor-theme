@@ -31,18 +31,6 @@ if ($_POST['sport'] != "")
 			}
 			
 		
-		
-		
-		}
-}
-if ($_POST['event'] != "")
-{
-		foreach($_POST['event'] as $key => $value){
-		$cookie_event .= $value . ",";
-		
-			$cat = get_category($value);
-			print_r($cat);
-			return;
 			switch ($cat->slug) {
 			    case "northeast":
 			        $cookie_area .= "NE,";
@@ -67,8 +55,13 @@ if ($_POST['event'] != "")
 					break;
 			}
 		
-		
 		}
+}
+if ($_POST['event'] != "")
+{
+		foreach($_POST['event'] as $key => $value){
+		$cookie_event .= $value . ",";
+				}
 }
 //trim the last | from the end
 $cookie_sport = substr($cookie_sport, 0, -1);
@@ -76,7 +69,7 @@ $cookie_event = substr($cookie_event, 0, -1);
 $cookie_activity = substr($cookie_activity, 0, -1);
 $cookie_area = substr($cookie_area, 0, -1);
 
-echo $cookie_area;
+
 
 //if ( SITECOOKIEPATH != COOKIEPATH )
 	//setcookie(TEST_COOKIE, 'WP Cookie check', 0, SITECOOKIEPATH, COOKIE_DOMAIN);
