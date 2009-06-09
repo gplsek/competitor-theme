@@ -1,8 +1,5 @@
 <?php
 
-if (!function_exists('add_action')) {
-	require_once('../../../wp-config.php');
-}
 global $wpdb, $current_site,$myerrors;
 
 $myerrors = new WP_Error();
@@ -73,10 +70,10 @@ $cookie_area = substr($cookie_area, 0, -1);
 
 //if ( SITECOOKIEPATH != COOKIEPATH )
 	//setcookie(TEST_COOKIE, 'WP Cookie check', 0, SITECOOKIEPATH, COOKIE_DOMAIN);
-setcookie("Sport", $cookie_sport,time()+(60*60*24*365),SITECOOKIEPATH, COOKIE_DOMAIN);
-setcookie("Event", $cookie_event,time()+(60*60*24*365),SITECOOKIEPATH, COOKIE_DOMAIN);
-setcookie("activity", $cookie_activity,time()+(60*60*24*365),SITECOOKIEPATH, COOKIE_DOMAIN);
-setcookie("area", $cookie_area,time()+(60*60*24*365),SITECOOKIEPATH, COOKIE_DOMAIN);
+setcookie("Sport", $cookie_sport,time()+(60*60*24*365),"/");
+setcookie("Event", $cookie_event,time()+(60*60*24*365),"/");
+setcookie("activity", $cookie_activity,time()+(60*60*24*365),"/");
+setcookie("area", $cookie_area,time()+(60*60*24*365),"/");
 //setcookie("Event", $cookie_event,time()+(60*60*24*365),"/");
 header("Location: http://{$_SERVER['SERVER_NAME']}/");
 
