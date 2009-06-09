@@ -1,10 +1,4 @@
 <?php
-
-global $wpdb, $current_site,$myerrors;
-
-$myerrors = new WP_Error();
-
-
 $category = get_cat_ID("sports");
 $sport_cats = get_categories('hide_empty=0&child_of='.$category);
 
