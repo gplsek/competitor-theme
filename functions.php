@@ -1,5 +1,4 @@
 <?php 
-
 function compthemes_admin_head() 
 { ?>
 <style>

@@ -77,6 +77,7 @@ setcookie("Sport", $cookie_sport,time()+(60*60*24*365),SITECOOKIEPATH, COOKIE_DO
 setcookie("Event", $cookie_event,time()+(60*60*24*365),SITECOOKIEPATH, COOKIE_DOMAIN);
 setcookie("activity", $cookie_activity,time()+(60*60*24*365),SITECOOKIEPATH, COOKIE_DOMAIN);
 setcookie("area", $cookie_area,time()+(60*60*24*365),SITECOOKIEPATH, COOKIE_DOMAIN);
+//setcookie("Event", $cookie_event,time()+(60*60*24*365),"/");
 header("Location: http://{$_SERVER['SERVER_NAME']}/");
 
 
