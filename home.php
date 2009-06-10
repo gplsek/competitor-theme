@@ -1,4 +1,3 @@
-<?php echo "Server: ".$_SERVER['REQUEST_URI'];?> 
 <?php
 session_start();
 ?>
@@ -31,7 +30,11 @@ jQuery.noConflict();
 <script type="text/javascript">
 jQuery.noConflict();
 	jQuery(function() {
-		jQuery("#contentTabs").tabs({ fx: { opacity: 'toggle' } });
+		jQuery("#contentTabs").tabs({ fx: { opacity: 'toggle' },
+		
+			ajaxOptions: { data: { pv: RN } }
+		
+		 });
 	
 	});
 </script>
@@ -50,7 +53,8 @@ jQuery.noConflict();
 	//jQuery().click(function(event) {
 		jQuery(function() {
 		jQuery("#BottomFeature").tabs({
-			fx: {opacity: 'toggle'}
+			fx: {opacity: 'toggle'},
+			ajaxOptions: { data: { pv: RN } }
 		});
 	//$("#BottomFeature").data('disabled.tabs', []); 
 	
