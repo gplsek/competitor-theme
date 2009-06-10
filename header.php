@@ -37,7 +37,7 @@ if ($magazine_name == 'mountainbike'){
 	
 	
 	$rand_pv = "";
-	$rand_pv = rand(1000000000,9999999999);
+	$rand_pv = rand(1000000000000000,9999999999999999);
 	$_SESSION['rand_pv'] = $rand_pv;
     $cat = get_category_by_path(get_query_var('category_name'),false);
     $category = $cat->cat_ID;
