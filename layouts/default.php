@@ -9,7 +9,7 @@ global $user_ID, $wpdb, $post, $current_category;
 
 	include('../includes/version.php');
 	
-	
+	$pv = $_GET['pv'];
 	$url = get_option('siteurl');
 	
 	$magazine = get_mag($url);
@@ -194,12 +194,18 @@ global $user_ID, $wpdb, $post, $current_category;
 		{ // start add
 		?>
 		
-		<div id="inlinead"><iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619354&dim=317216&kw=<?= $_SESSION['kw']?>&pv=<?= $_SESSION['rand_pv']; ?>"></iframe></div>
+		<div id="inlinead">
+			<iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619354&dim=317216&kw=<?= $_SESSION["kw"]?>&pv=<?= $pv?>"></iframe>
+		</div>
+		
+	
+		
+		</div>
 		<?php 
 		}else if (($counter2 % 8 == 0) && (get_option('comp_content_ads2') == 0))
 		{
 			?>
-		<div id="inlinead"><iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619353&dim=317216&kw=<?= $_SESSION['kw']?>&pv=<?= $_SESSION['rand_pv'];?>"></iframe></div>
+		<div id="inlinead"><iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/619348/0/vh?z=inside&ch=619353&dim=317216&kw=<?= $_SESSION['kw']?>&pv=<?= $pv;?>"></iframe></div>
 			<?php //end add
 			
 		}

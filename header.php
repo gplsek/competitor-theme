@@ -35,10 +35,6 @@ if ($magazine_name == 'mountainbike'){
 	
 	<?php
 	
-	
-	$rand_pv = "";
-	$rand_pv = rand(1000000000000000,9999999999999999);
-	$_SESSION['rand_pv'] = $rand_pv;
     $cat = get_category_by_path(get_query_var('category_name'),false);
     $category = $cat->cat_ID;
     $cat_name = $cat->category_nicename;
@@ -55,23 +51,29 @@ if ($magazine_name == 'mountainbike'){
 	$kw_keyword = $kw;
 	?>
 	
+	<script type="text/javascript" charset="utf-8">
+		var RN;
+		RN=Math.round( (Math.random() + "") * 10000000000000000 ) + 1;
+		//document.write(RN);
+	</script>
+	
 	<!-- PUT THIS TAG IN THE head SECTION -->
 	<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js">
-	</script>
-	<script type="text/javascript">
-	  GS_googleAddAdSenseService("ca-pub-8426063251900991");
-	  GS_googleEnableAllServices();
-	</script>
-	<script type="text/javascript">
-	  GA_googleAddSlot("ca-pub-8426063251900991", "Running_300x250_ROS");
-	</script>
-	<script language="JavaScript">
-	    GA_googleAddAttr("keyword", "<?php echo $kw_keyword; ?>");
-	    GA_googleAddAttr("site", "<?php echo $kw_site; ?>");
-	</script>
-	<script type="text/javascript">
-	  GA_googleFetchAds();
-	</script>
+		</script>
+		<script type="text/javascript">
+		  GS_googleAddAdSenseService("ca-pub-8426063251900991");
+		  GS_googleEnableAllServices();
+		</script>
+		<script type="text/javascript">
+		  GA_googleAddSlot("ca-pub-8426063251900991", "Running_300x250_ROS");
+		</script>
+		<script language="JavaScript">
+		    GA_googleAddAttr("keyword", "<?php echo $kw_keyword; ?>");
+		    GA_googleAddAttr("site", "<?php echo $kw_site; ?>");
+		</script>
+		<script type="text/javascript">
+		  GA_googleFetchAds();
+		</script>
 	<!-- END OF TAG FOR head SECTION -->
 	
 	
@@ -200,7 +202,7 @@ jQuery.noConflict();
 	<script type="text/javascript" language="JavaScript">
     aj_server = 'http://adj43.thruport.com/servlet/ajrotator/'; aj_tagver = '1.0';
     aj_zone = 'inside'; aj_adspot = '619316'; aj_page = '0'; aj_dim ='317217'; aj_ch = ''; aj_ct = ''; aj_kw = '<?= $kw?>';
-    aj_pv = true;aj_pv_rnd = '<?= $_SESSION['rand_pv'];?>'; aj_click = '';
+    aj_pv = true;aj_pv_rnd = RN; aj_click = '';
     </script><script type="text/javascript" language="JavaScript" src="http://img1.cdn.adjuggler.com/banners/ajtg.js"></script>
 
 	<?php }?>
