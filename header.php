@@ -245,6 +245,7 @@ jQuery.noConflict();
 							}  
 						?>
                 </ul>
+				<?php if (function_exists('pixopoint_menu')) {pixopoint_menu();} ?>
                 <ul class="sec_nav">
                 
                 <?php //wp_list_bookmarks('title_li=&categorize=0&category_name=Sub'); ?>
