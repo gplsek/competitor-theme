@@ -29,7 +29,7 @@ function slideShow() {
 	jQuery('#rotate .content').html(jQuery('#rotate a:first').find('img').attr('rel'))
 	.animate({opacity: 1.0}, 400);//0.7
 	
-	interv=setInterval('rotate("x")',6000);
+	interv=setInterval('rotate("x")',10000);
 	//Call the gallery function to run the slideshow, 6000 = change to next image after 6 seconds
 	
 }
