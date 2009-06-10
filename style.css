@@ -1131,16 +1131,28 @@ text-decoration:none;
 width:295px;
 }
 .right_column .widget .content-widget ul li a.blog-img {
-	width: 50px;
+	width: 75px;
 }
 .right_column .widget .content-widget ul li a.blog-link {
-	width: 225px;
-	margin-left: 15px;
+	float: none;
 }
 .right_column .widget .content-widget ul li h4.blog-headline {
 	width: 225px;
 	margin-left: 15px;
 	float: left;
+	font-size: 16px;
+}
+.right_column .widget .content-widget ul li p.blog-p {
+	width: 225px;
+	margin-left: 15px;
+	float: left;
+}
+.right_column .widget .content-widget span.right a{
+	width: 295px;
+	float: left;
+	text-align: right;
+	font-size: 18px;
+	text-decoration: underline;
 }
 
 .right_column .widget .content-widget ul li a:hover {
