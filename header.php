@@ -210,7 +210,7 @@ jQuery.noConflict();
 	
 	 <div id="content">
             <div class="nav_bars">
-                <ul id="menu" class="main_nav">
+             <!--   <ul id="menu" class="main_nav">
 					 
 					 <?php //wp_list_bookmarks('title_li=&categorize=0&category_name=MainNav'); ?>
 					  <?php $links = get_bookmarks('category_name=MainNav&orderby=order&category_orderby=order');
@@ -246,7 +246,7 @@ jQuery.noConflict();
 								$count++;
 							}  
 						?>
-                </ul>
+                </ul> -->
 				<?php if (function_exists('pixopoint_menu')) {pixopoint_menu();} ?>
                 <ul class="sec_nav">
                 
