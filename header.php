@@ -84,8 +84,8 @@ if ($magazine_name == 'mountainbike'){
 <script type="text/javascript">
 jQuery.noConflict();
 	jQuery(document).ready(function($) {
-	  $('a[rel*=facebox]').facebox();
-	   $.facebox.settings.opacity = 0.8; 
+	  jQuery('a[rel*=facebox]').facebox();
+	   jQuery.facebox.settings.opacity = 0.8; 
 	})
 	
 </script>
@@ -105,14 +105,14 @@ jQuery.noConflict();
         }
 
     var megaConfig = {
-         interval: 500,
+         interval: 10,
          sensitivity: 4,
          over: addMega,
-         timeout: 500,
+         timeout: 10,
          out: removeMega
     };
 
-    jQuery("li.mega").hoverIntent(megaConfig)
+    jQuery("li.mega").hoverIntent(megaConfig);
 
       
     });

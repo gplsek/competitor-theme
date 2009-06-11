@@ -176,7 +176,7 @@ ul#menu li.mega a:hover {
 }
 
 ul#menu div {
-display: none;
+
 }
 
 ul#menu li.mega div {
@@ -189,6 +189,7 @@ padding: 1.3em;
 background: #ffc;
 color: #930;
 z-index: 999;
+display: none;
 }
 
 ul#menu li.hovering div {

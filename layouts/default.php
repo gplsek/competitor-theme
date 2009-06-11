@@ -200,7 +200,7 @@ global $user_ID, $wpdb, $post, $current_category;
 		
 	
 		
-		</div>
+	<!--	</div>-->
 		<?php 
 		}else if (($counter2 % 8 == 0) && (get_option('comp_content_ads2') == 0))
 		{
