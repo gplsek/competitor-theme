@@ -14,7 +14,7 @@ function slideShow() {
 	
 	//Set the opacity of all images to 0
 	jQuery('#rotate a').css({opacity: 0.0});
-	
+	jQuery('#rotate-thumbs a').css({opacity: 1.0})
 	//Get the first image and display it (set it to full opacity)
 	jQuery('#rotate a:first').css({opacity: 1.0});
 	

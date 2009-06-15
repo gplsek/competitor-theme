@@ -356,7 +356,7 @@ border:none !important;
 
 #content .nav_bars {
 height:90px;
-margin:5px 10px;
+margin:10px 10px 0 10px;
 }
 
 #content .nav_bars ul.main_nav {
@@ -424,8 +424,9 @@ font-size:14px;
 width:135px;
 margin-top:1px;
 font-family:georgia;
-color:#AFAFAF;
-border:none;
+color:#fff;
+background-color:#9c9c9c!important;
+border:1px solid #cdcdcd;
 font-size:1em;
 padding:1px 2px;
 background-image: none!important;
@@ -555,26 +556,28 @@ text-decoration:underline;
 
 #content .main_column ul.third_nav {
 float:left;
-margin-bottom:7px;
 width:630px;
+background-color:#636363;
+color:#fff;
 }
 
 #content .main_column ul.third_nav li {
-background:transparent url(images/arrow.jpg) no-repeat scroll 0 4px;
+background:transparent url(images/arrow.png)  no-repeat scroll 0 -3px;
 font-family:Verdana;
 font-size:14px;
-margin-right:20px;
-padding-left:13px;
+height:22px;
+padding:4px 0 0 26px;
+margin-right:5px;
 list-style:none;
 }
 
 #content .main_column ul.third_nav li a {
-color:#8e8e8e;
+color:#fff;
 text-decoration:none;
 }
 
 #content .main_column ul.third_nav li a:hover {
-color:#666;
+color:#000;
 }
 
 #content .main_column ul.third_nav ul {
@@ -1683,12 +1686,13 @@ margin: 10px 0 0 230px;
 #meta-rotate {
 float: left;
 position: relative;
+background-color:#000
 }
 
 #rotate {
 float:left;
 height:395px;
-margin:5px 0 10px;
+margin:0 0 10px;
 position:relative;
 background: url(images/loading.gif) center center no-repeat;
 }
