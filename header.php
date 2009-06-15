@@ -210,7 +210,7 @@ jQuery.noConflict();
 	
 	 <div id="content">
             <div class="nav_bars">
-             <!--   <ul id="menu" class="main_nav">
+             <ul id="menu" class="main_nav">
 					 
 					 <?php //wp_list_bookmarks('title_li=&categorize=0&category_name=MainNav'); ?>
 					  <?php $links = get_bookmarks('category_name=MainNav&orderby=order&category_orderby=order');
@@ -228,26 +228,26 @@ jQuery.noConflict();
 									
 								} else {
 									if ($count == $i) {
-										echo '<li class="last"><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a><div>';
+										echo '<li class="last"><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
 									} else {
-										echo '<li><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a><div>';
+										echo '<li><a href="'.$url.'" target="'.$links[$count]->link_target.'">'.$name.'</a></li>';
 									}
 									//echo ''. $links[$count]->link_notes .'</div></li>';
 								    $recentPosts = new WP_Query();
 									$recentPosts->query('page_id='.$links[$count]->link_description);
 									 while ($recentPosts->have_posts()) : $recentPosts->the_post(); 
-													echo $links[$count]->link_description;
+													//echo $links[$count]->link_description;
 												//	the_content(); /* this pulls in post content in the header and breaks the posts*/
 									 									endwhile; 
-                                    echo '</div></li>';
+                                    //echo '</div></li>';
 
 								}
 								
 								$count++;
 							}  
 						?>
-                </ul> -->
-				<?php if (function_exists('pixopoint_menu')) {pixopoint_menu();} ?>
+                </ul> 
+				<?php //if (function_exists('pixopoint_menu')) {pixopoint_menu();} ?>
                 <ul class="sec_nav">
                 
                 <?php //wp_list_bookmarks('title_li=&categorize=0&category_name=Sub'); ?>

@@ -12,7 +12,7 @@ jQuery.noConflict();
 </script>*/
 ?>			
 
-<script type='text/javascript' src='http://hotparks.com/wp-content/themes/pandemia-news/includes/js/marquee-show.js'></script>
+<script type='text/javascript' src='<?php bloginfo('template_directory'); ?>/includes/js/marquee-show.js'></script>
 
 <script type="text/javascript">
 jQuery.noConflict();
