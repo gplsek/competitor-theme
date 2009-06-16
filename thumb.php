@@ -256,7 +256,7 @@ function show_cache_file ( $cache_dir, $mime_type ) {
 	echo "$cache_file";
 	if( file_exists( $cache_file ) ) {
     	
-	    if( isset( $_SERVER[ "HTTP_IF_MODIFIED_SINCE" ] ) ) {
+	    //if( isset( $_SERVER[ "HTTP_IF_MODIFIED_SINCE" ] ) ) {
 	    	    		
 	    	    			// // check for updates
 	    	    			//     	    			$if_modified_since = preg_replace( '/;.*$/', '', $_SERVER[ "HTTP_IF_MODIFIED_SINCE" ] );					
