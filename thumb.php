@@ -273,6 +273,8 @@ function show_cache_file ( $cache_dir, $mime_type ) {
 
 		}
 		
+		echo "thumb does not exists";
+		
 		$fileSize = filesize( $cache_file );
 		
 		// send headers then display image
