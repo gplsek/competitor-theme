@@ -153,7 +153,9 @@ function show_image ( $mime_type, $image_resized, $quality, $cache_dir ) {
 	elseif( stristr( $mime_type, 'png' ) ) {
 		imagepng( $image_resized, $cache_file_name, ceil( $quality / 10 ) );
 	}
-	if( $is_writable ) { show_cache_file( $cache_dir, $mime_type ); }
+	if( $is_writable ) { 
+		echo "is writable";
+		show_cache_file( $cache_dir, $mime_type ); }
 	exit;
 
 }
@@ -270,10 +272,12 @@ function show_cache_file ( $cache_dir, $mime_type ) {
 			//}
 			
 			echo "thumb exists";
+			return;
 
 		}
 		
 		echo "thumb does not exists";
+		return;
 		
 		$fileSize = filesize( $cache_file );
 		
