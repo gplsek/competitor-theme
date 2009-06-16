@@ -9,7 +9,7 @@ global $user_ID, $wpdb, $post, $current_category;
 
 	include('../includes/version.php');
 	
-	$pv = $_GET['pv'];
+	//$pv = $_GET['pv'];
 	$url = get_option('siteurl');
 	
 	$magazine = get_mag($url);
@@ -97,7 +97,7 @@ global $user_ID, $wpdb, $post, $current_category;
 									</ul>
 									<?php echo get_avatar($authorID,$size = '45'); ?>
 									<h1 class="title">
-						           <a title="Permanent Link to <?php the_title(); ?>" href="<?php 	echo $post->guid; ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+						           <a title="Permanent Link to <?php the_title(); ?>" href="<?php 	echo $post->guid; ?>" rel="bookmark"><?php the_title(); ?></a>
 						
 							</h1>
 							<h2 class="author">
@@ -161,7 +161,7 @@ global $user_ID, $wpdb, $post, $current_category;
 		    <?php echo get_avatar($authorID,$size = '45'); ?>
 			<h1 class="title">
             	
-						<a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+						<a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
 
             </h1>
 			<h2 class="author"><?php the_author_posts_link(); ?></h2>

@@ -1703,6 +1703,12 @@ padding:0;
 position:absolute;
 top:0;
 }
+#meta-rotate{
+	position: absolute;
+}
+#slick-toggle {
+margin-top: 420px;
+}
 #rotate h3 a{
 position: relative!important;
 color: #ffffff!important;
@@ -1733,7 +1739,7 @@ z-index:110;
 /*background-color:#000; */
 background: url(images/caption-bg.png) repeat scroll 0 0;
 color:#ffffff; 
-height:100px; 
+height:180px; 
 width:630px; 
 position:absolute;
 bottom:0;
@@ -1802,14 +1808,17 @@ top: 405px;
 }*/
 #rotate-thumbs {
 float:left;
-height:110px;
-margin-top:410px;
-position:relative;
+height:80px;
+/*margin-top:410px;*/
+/*position:relative;*/
+position: absolute;
+bottom: 10px;
+z-index: 200;
 }
 
 #rotate-thumbs #maqnav {
 float:left;
-height:100px;
+height:80px;
 /*padding:0 15px;*/
 position:relative;
 width:630px;
@@ -1817,12 +1826,16 @@ width:630px;
 
 #rotate-thumbs #maqnav li {
 display:inline;
-height:90px;
-width:130px;
+height:70px;
+width:100px;
 padding:0 11px;
 _padding: 0 6px;
 }
-
+#rotate-thumbs #maqnav li a{
+	position: relative;
+	/*padding: 0px;*/
+	
+}
 #rotate-thumbs #maqnav li a.border {
 background: none;
 display:inline;
@@ -1834,7 +1847,8 @@ width:auto;
 
 #rotate-thumbs #maqnav li a img {
 border:5px solid #FFFFFF;
-width:130px;
+width:100px;
+height: 62px;
 }
 
 #rotate-thumbs #maqnav li a.border img {
