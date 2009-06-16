@@ -257,26 +257,26 @@ function show_cache_file ( $cache_dir, $mime_type ) {
 	if( file_exists( $cache_file ) ) {
     	
 	    if( isset( $_SERVER[ "HTTP_IF_MODIFIED_SINCE" ] ) ) {
+	    	    		
+	    	    			// // check for updates
+	    	    			//     	    			$if_modified_since = preg_replace( '/;.*$/', '', $_SERVER[ "HTTP_IF_MODIFIED_SINCE" ] );					
+	    	    			//     	    			$gmdate_mod = gmdate( 'D, d M Y H:i:s', filemtime( $cache_file ) );
+	    	    			//     	    			
+	    	    			//     	    			if( strstr( $gmdate_mod, 'GMT' ) ) {
+	    	    			//     	    				$gmdate_mod .= " GMT";
+	    	    			//     	    			}
+	    	    			//     	    			
+	    	    			//     	    			if ( $if_modified_since == $gmdate_mod ) {
+	    	    			//     	    				header( "HTTP/1.1 304 Not Modified" );
+	    	    			//     	    				//exit;
+	    	    			//     	    			}
+	    	    			//     	    			
+	    	    			//     	    			echo "thumb exists";
+	    	    			//     	    			return;
+	    	    			//     	    
+	    	    			//     	    		}
 		
-			// check for updates
-			$if_modified_since = preg_replace( '/;.*$/', '', $_SERVER[ "HTTP_IF_MODIFIED_SINCE" ] );					
-			$gmdate_mod = gmdate( 'D, d M Y H:i:s', filemtime( $cache_file ) );
-			
-			if( strstr( $gmdate_mod, 'GMT' ) ) {
-				$gmdate_mod .= " GMT";
-			}
-			
-			//if ( $if_modified_since == $gmdate_mod ) {
-				header( "HTTP/1.1 304 Not Modified" );
-				//exit;
-			//}
-			
-			echo "thumb exists";
-			return;
-
-		}
-		
-		echo "thumb does not exists";
+		echo "thumb exists";
 		return;
 		
 		$fileSize = filesize( $cache_file );
@@ -284,9 +284,9 @@ function show_cache_file ( $cache_dir, $mime_type ) {
 		// send headers then display image
 		header( "Content-Type: " . $mime_type );
 		header( "Accept-Ranges: bytes" );
-		header( "Last-Modified: " . gmdate( 'D, d M Y H:i:s', filemtime( $cache_file ) ) . " GMT" );
+	//	header( "Last-Modified: " . gmdate( 'D, d M Y H:i:s', filemtime( $cache_file ) ) . " GMT" );
 		header( "Content-Length: " . $fileSize );
-		header( "Cache-Control: max-age=9999, must-revalidate" );
+		//header( "Cache-Control: max-age=9999, must-revalidate" );
 		header( "Etag: " . md5($fileSize . $gmdate_mod) );						   		
 		header( "Expires: " . gmdate( "D, d M Y H:i:s", time() + 9999 ) . "GMT" );
 		readfile( $cache_file );
