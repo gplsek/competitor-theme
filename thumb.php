@@ -306,7 +306,7 @@ function get_cache_file () {
 		$frags = split( "\.", $_REQUEST['src'] );
 		$ext = strtolower( $frags[ count( $frags ) - 1 ] );
 		if(!valid_extension($ext)) { $ext = 'jpg'; }
-		$cachename = get_request( 'src', 'timthumb' ) . get_request( 'w', 100 ) . get_request( 'h', 100 ) . get_request( 'zc', 1 ) . get_request( '9', 80 );
+		$cachename = get_request( 'src', 'thumb' ) . get_request( 'w', 100 ) . get_request( 'h', 100 ) . get_request( 'zc', 1 ) . get_request( '9', 80 );
 		$cache_file = md5( $cachename ) . '.' . $ext;
 	}
 	return $cache_file;
