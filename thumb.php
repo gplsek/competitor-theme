@@ -290,6 +290,7 @@ function show_cache_file ( $cache_dir, $mime_type ) {
 		header( "Etag: " . md5($fileSize . $gmdate_mod) );						   		
 		header( "Expires: " . gmdate( "D, d M Y H:i:s", time() + 9999 ) . "GMT" );
 		readfile( $cache_file );
+		echo "cached file";
 		exit;
 
 	}
