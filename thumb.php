@@ -264,10 +264,12 @@ function show_cache_file ( $cache_dir, $mime_type ) {
 				$gmdate_mod .= " GMT";
 			}
 			
-			if ( $if_modified_since == $gmdate_mod ) {
+			//if ( $if_modified_since == $gmdate_mod ) {
 				header( "HTTP/1.1 304 Not Modified" );
-				exit;
-			}
+				//exit;
+			//}
+			
+			echo "thumb exists";
 
 		}
 		
