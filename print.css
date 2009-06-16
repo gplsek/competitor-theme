@@ -1,7 +1,59 @@
-body,
-a,a:link,a:visited,a:active,a:hover,
-h1,h2,h3,h4,h5,h6,
-p,span, {
-color: #000000;
-background-color: #FFFFFF;
+/* Defaults */
+body {background:none;width:100% !important;margin:0 !important;padding:0 !important;line-height:1.4;word-spacing:1.1pt;letter-spacing:0.2pt;font: 12pt Garamond,"Times New Roman", serif;color:#000}
+h1,h2,h3,h4,h5,h6 {font-family:Helvetica, Arial, sans-serif; list-style:none}
+h1{font-size:19pt}
+h2{font-size:17pt}
+h3{font-size:15pt}
+h4,h5,h6{font-size:12pt}
+code {font:10pt Courier, monospace} 
+blockquote {margin:1.3em;padding:1em;font-size:10pt}
+hr {background:#CCC}
+
+/* Images */
+img {float:left;margin:1em 1.5em 1.5em 0}
+a img {border:none}
+
+/* Links */
+a:link, a:visited {background:transparent;font-weight:700;text-decoration:none;color:#333}
+
+/* Things to Not Display */
+#top-bar, .nav_bars, #footer, #content .right_column, #meta-rotate, #banner, #slick-toggle, #contentTabs, .carousel-gallery, .ngg-galleryoverview,
+.more-link, #inlinead, .pagination, .third_nav
+{display:none}
+
+
+/* Styles */
+
+#feature .article {
+border-bottom: 1px dashed #CCCCCC;
+float: left;
+width: 100%;
+}
+
+#content .alignleft {
+float:left;
+margin:5px;
+}
+
+#content .alignright {
+float:right;
+margin:5px;
+}
+
+#content .wp-caption {
+background-color:#F3F3F3;
+border:1px solid #DDDDDD;
+margin:0 10px;
+padding:4px;
+text-align:center;
+}
+
+#content .wp-caption p.wp-caption-text {
+color:#333333;
+font-family:georgia;
+font-size:8pt;
+line-height:10pt;
+margin:0 auto;
+text-align:center;
+width:90%;
 }
