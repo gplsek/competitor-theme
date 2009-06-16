@@ -12,7 +12,7 @@ jQuery.noConflict();
 </script>*/
 ?>			
 
-<script type='text/javascript' src='<?php bloginfo('template_directory'); ?>/includes/js/marquee-show.js'></script>
+
 
 <script type="text/javascript">
 jQuery.noConflict();
@@ -31,22 +31,13 @@ jQuery.noConflict();
 jQuery.noConflict();
 	jQuery(function() {
 		jQuery("#contentTabs").tabs({ fx: { opacity: 'toggle' },
-		
 			ajaxOptions: { data: { pv: RN } }
 		
 		 });
 	
 	});
 </script>
-<script type="text/javascript">
-jQuery.noConflict();
-jQuery(document).ready(function() {		
-	
-	//Execute the slideShow
-	slideShow();
 
-});
-</script>
 
 <script type="text/javascript">
 jQuery.noConflict();
@@ -111,10 +102,24 @@ $template_path = get_bloginfo('template_directory');?>
 					<?php
 					
 					$url = get_option('siteurl');
-					$m = new Marquee;
-					$magazine = $m->get_magazine_name($url);
-					//sleep(2);
-					echo $m->to_tabs($magazine);
+					if(function_exists('wp_marquee_plugin')){
+						?>
+						<script type='text/javascript' src='<?php bloginfo('template_directory'); ?>/includes/js/marquee-show.js'></script>
+						<script type="text/javascript">
+						jQuery.noConflict();
+						jQuery(document).ready(function() {		
+
+							//Execute the slideShow
+							slideShow();
+
+						});
+						</script>
+						<?
+						$m = new Marquee;
+						$magazine = $m->get_magazine_name($url);
+						//sleep(2);
+						echo $m->to_tabs($magazine);
+					}
 					
 					
 					
