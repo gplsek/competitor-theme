@@ -15,9 +15,45 @@ a img {border:none}
 
 /* Links */
 a:link, a:visited {background:transparent;font-weight:700;text-decoration:none;color:#333}
-a:link[href^="http://"]:after, a[href^="http://"]:visited:after { content: " (" attr(href) ") ";font-size: 90%}
-a[href^="http://"] {color:#000}
 
 /* Things to Not Display */
-#footer, #content .right_column, #meta-rotate, #banner, #cse-search-box, .signin, #slick-toggle, #contentTabs
+#top-bar, .nav_bars, #footer, #content .right_column, #meta-rotate, #banner, #slick-toggle, #contentTabs, .carousel-gallery, .ngg-galleryoverview,
+.more-link, #inlinead, .pagination, .third_nav
 {display:none}
+
+
+/* Styles */
+
+#feature .article {
+border-bottom: 1px dashed #CCCCCC;
+float: left;
+width: 100%;
+}
+
+#content .alignleft {
+float:left;
+margin:5px;
+}
+
+#content .alignright {
+float:right;
+margin:5px;
+}
+
+#content .wp-caption {
+background-color:#F3F3F3;
+border:1px solid #DDDDDD;
+margin:0 10px;
+padding:4px;
+text-align:center;
+}
+
+#content .wp-caption p.wp-caption-text {
+color:#333333;
+font-family:georgia;
+font-size:8pt;
+line-height:10pt;
+margin:0 auto;
+text-align:center;
+width:90%;
+}

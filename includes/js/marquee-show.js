@@ -27,7 +27,7 @@ function slideShow() {
 	
 	//Get the caption of the first image from REL attribute and display it
 	jQuery('#rotate .content').html(jQuery('#rotate a:first').find('img').attr('rel'))
-	.animate({opacity: 1.0}, 1000);//0.7
+	.animate({opacity: 1.0}, 1000);	//0.7
 	
 	interv=setInterval('rotate("x")',10000);
 	//Call the gallery function to run the slideshow, 6000 = change to next image after 6 seconds
@@ -77,13 +77,21 @@ function rotate(idd) {
 	
 	//Get next image caption
 	var caption = next.find('img').attr('rel');	
+	//var currentcaption = current.find('img').attr('rel');
+	//jQuery('#rotate .caption .content').css('opacity','0.0');
+	//jQuery('#rotate .caption .content').animate({opacity:0.0},1000);
 	
-	//jQuery('#rotate .caption .content').css('opacity','1.0');
+	//jQuery('#rotate .caption').hide(500);
+	jQuery('#rotate .caption').slideUp(1500, function () {
+											jQuery('#rotate .content').html(caption);
+											return true;
+													   });
+	//jQuery('#rotate .caption .content').animate({opacity:0.0},0);
+	//currentcaption.animate({opacity: 0.0},1000);
+	//jQuery('#rotate .content').html(caption);
 	
-	
-	jQuery('#rotate .caption').hide(1500);
+	//jQuery('#rotate .content').html(caption);
 	jQuery('#rotate .caption').slideDown(1500);
-	jQuery('#rotate .caption .content').animate({opacity:0.0},1000);
-	jQuery('#rotate .content').html(caption);
-	jQuery('#rotate .caption .content').animate({opacity:1.0},1000)
+	//jQuery('#rotate .caption .content').animate({opacity:1.0},1500);
+	
 }

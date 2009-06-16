@@ -381,8 +381,8 @@ background-color:#D4D4D4;
 float:left;
 height:18px;
 margin-top:3px;
-padding:8px 0 3px 5px;
-width:489px;
+padding:8px 0 3px 30px;
+width:464px;
 }
 
 #content .nav_bars ul.sec_nav li a {
@@ -1705,6 +1705,7 @@ top:0;
 }
 #meta-rotate{
 	position: absolute;
+	top: 250px;
 }
 #slick-toggle {
 margin-top: 420px;
@@ -1739,7 +1740,7 @@ z-index:110;
 /*background-color:#000; */
 background: url(images/caption-bg.png) repeat scroll 0 0;
 color:#ffffff; 
-height:180px; 
+height:200px; 
 width:630px; 
 position:absolute;
 bottom:0;
@@ -1808,7 +1809,7 @@ top: 405px;
 }*/
 #rotate-thumbs {
 float:left;
-height:80px;
+height:100px;
 /*margin-top:410px;*/
 /*position:relative;*/
 position: absolute;
@@ -1818,7 +1819,7 @@ z-index: 200;
 
 #rotate-thumbs #maqnav {
 float:left;
-height:80px;
+height:100px;
 /*padding:0 15px;*/
 position:relative;
 width:630px;
@@ -1826,20 +1827,30 @@ width:630px;
 
 #rotate-thumbs #maqnav li {
 display:inline;
-height:70px;
+height:100px;
+padding:0 8px;
+width:110px;
+/*display:inline;
+height:100px;
 width:100px;
 padding:0 11px;
-_padding: 0 6px;
+_padding: 0 6px;*/
 }
 #rotate-thumbs #maqnav li a{
 	position: relative;
 	/*padding: 0px;*/
 	
 }
+#rotate-thumbs #maqnav li p{
+	color:#FFFFFF;
+	font-size:8pt;
+	text-align:center;
+	width:100%;
+}
 #rotate-thumbs #maqnav li a.border {
 background: none;
 display:inline;
-float:left;
+float:none;
 height:6px;
 margin:0px;
 width:auto;
