@@ -132,7 +132,7 @@ function show_image ( $mime_type, $image_resized, $quality, $cache_dir ) {
 	// check to see if we can write to the cache directory
 	$is_writable = 0;
 	$cache_file_name = $cache_dir . '/' . get_cache_file();        	
-
+	echo $cache_file_name;
 	if( touch( $cache_file_name ) ) {
 		// give 666 permissions so that the developer 
 		// can overwrite web server user
@@ -253,7 +253,7 @@ function check_cache ( $cache_dir, $mime_type ) {
 function show_cache_file ( $cache_dir, $mime_type ) {
 
 	$cache_file = $cache_dir . '/' . get_cache_file();
-
+	echo "$cache_file";
 	if( file_exists( $cache_file ) ) {
     	
 	    if( isset( $_SERVER[ "HTTP_IF_MODIFIED_SINCE" ] ) ) {
