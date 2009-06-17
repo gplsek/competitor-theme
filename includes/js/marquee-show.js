@@ -82,7 +82,7 @@ function rotate(idd) {
 	//jQuery('#rotate .caption .content').animate({opacity:0.0},1000);
 	
 	//jQuery('#rotate .caption').hide(500);
-	jQuery('#rotate .caption').slideUp(1500, function () {
+	jQuery('#rotate .caption').slideUp(1, function () {
 											jQuery('#rotate .content').html(caption);
 											return true;
 													   });
@@ -91,7 +91,7 @@ function rotate(idd) {
 	//jQuery('#rotate .content').html(caption);
 	
 	//jQuery('#rotate .content').html(caption);
-	jQuery('#rotate .caption').slideDown(1500);
+	jQuery('#rotate .caption').slideDown(1);
 	//jQuery('#rotate .caption .content').animate({opacity:1.0},1500);
 	
 }
