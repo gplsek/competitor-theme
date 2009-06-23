@@ -51,6 +51,7 @@ if ($magazine_name == 'mountainbike'){
     
     $magazine_name = get_mag(get_option('siteurl'));
 	$kw_site = $magazine_name;
+	$_SESSION['kw'] = "";
     //$cat_name = str_replace('&','',$cat_name);
     $kw = $magazine_name.','.$cat_name;
     $_SESSION['kw'] = $kw;

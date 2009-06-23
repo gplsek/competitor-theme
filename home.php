@@ -12,8 +12,6 @@ jQuery.noConflict();
 </script>*/
 ?>			
 
-
-
 <script type="text/javascript">
 jQuery.noConflict();
 	jQuery(function() {
@@ -31,7 +29,7 @@ jQuery.noConflict();
 jQuery.noConflict();
 	jQuery(function() {
 		jQuery("#contentTabs").tabs({ fx: { opacity: 'toggle' },
-			ajaxOptions: { data: { pv: RN } }
+			ajaxOptions: { data: { pv: RN, kw: '<?php echo $_SESSION['kw'];?>' } }
 		
 		 });
 	
@@ -45,7 +43,7 @@ jQuery.noConflict();
 		jQuery(function() {
 		jQuery("#BottomFeature").tabs({
 			fx: {opacity: 'toggle'},
-			ajaxOptions: { data: { pv: RN } }
+			ajaxOptions: { data: { pv: RN ,kw: '<?php echo $_SESSION['kw'];?>' } }
 		});
 	//$("#BottomFeature").data('disabled.tabs', []); 
 	
