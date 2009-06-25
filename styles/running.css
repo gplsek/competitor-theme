@@ -7,3 +7,27 @@ body {
 background:transparent url(running/running-logo.png) no-repeat scroll 0px 4px;
 
 }
+
+#content .signin
+{background-color: #009aff;
+}
+
+.main_column .article ul.options li a {
+border-right:1px solid #0072c7;
+color:#0072c7;
+}
+
+#content .main_column h1:hover,#content .main_column h1 a:hover {
+color:#0072c7;
+}
+
+/* need to change as items in navigation changes*/
+.nav_bars ul.main_nav li a {
+font-size:22px;
+}
+
+#content .nav_bars ul.sec_nav li a {
+font-size:14px;
+margin-top:-2px;
+text-decoration:none;
+}

@@ -191,8 +191,9 @@ global $user_ID, $wpdb, $post, $current_category;
 		
 		
 		<?php 
-		if (($counter2 % 4 == 0) && (get_option('comp_content_ads') == 0)) 
-		{ // start add
+		if (($counter2 == 4) && (get_option('comp_content_ads') == 0)) 
+		{ // start add % 4 == 0
+			//echo $counter2;
 		?>
 		
 		<div id="inlinead">
@@ -203,8 +204,8 @@ global $user_ID, $wpdb, $post, $current_category;
 		
 	<!--	</div>-->
 		<?php 
-		}else if (($counter2 % 8 == 0) && (get_option('comp_content_ads2') == 0))
-		{
+		}else if (($counter2 == 8) && (get_option('comp_content_ads2') == 0))
+		{ //echo $counter2; //% 8 == 0
 			?>
 		<div id="inlinead"><iframe width="468" height="60" noresize scrolling=No frameborder=0 marginheight=0 marginwidth=0 src="http://adj43.thruport.com/servlet/ajrotator/625256/0/vh?z=inside&dim=317216&kw=<?= $kw?>&pv=<?= $pv;?>"></iframe>
 			</div>

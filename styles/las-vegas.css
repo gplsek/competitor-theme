@@ -1,3 +1,6 @@
 body {
-	background: #856230 url(las-vegas/lv_background.jpg) center top no-repeat;
+	background-color: #856230;
+	background-image: url(las-vegas/lv_background_v2.jpg);
+	background-repeat: repeat-y;
+	background-position: center top;
 }

@@ -1,13 +1,10 @@
 
 body {
-	background: #fff url(rocknroll/background.jpg) center top no-repeat;
+	background-color: #000000;
+	background-image: url(rocknroll/background.jpg);
+	background-repeat: repeat-x;
+	background-position: center top;
 }
 
-#content {
-	margin-top: 100px;
-}
 
-
-#banner {
-display:none
-}
+#content { margin-top: 50px; }
