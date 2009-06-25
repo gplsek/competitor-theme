@@ -1517,7 +1517,7 @@ width: 630px; /*new*/
 
 #rotate {
 float:left;
-height:320px;
+height:318px;
 margin:0 0 10px;
 position:relative;
 background: url(images/loading.gif) center center no-repeat;
@@ -1568,7 +1568,7 @@ z-index:110;
 /*background-color:#000; */
 background: #000; /*url(images/caption-bg.png) repeat scroll 0 0;*/
 color:#ffffff; 
-height:70px;/*200px; */
+height:68px;/*200px; */
 width:504px;/*630px!important; */
 position:absolute;
 bottom:0;
