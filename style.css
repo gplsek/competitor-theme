@@ -1550,11 +1550,12 @@ text-decoration: none;
 #rotate div.content a.link-marquee {
 font-weight: bolder;
 font-size: 12px;
-/*float: right;
-margin-top: -16px;*/
+float: right;
+/*margin-top: -16px;*/
 position: absolute!important;
 top: 35px;
 left: 400px;
+width:95px;
 }
 
 #rotate a img {
@@ -1609,9 +1610,9 @@ font-stretch:normal;
 font-style:normal;
 font-variant:normal;
 font-weight:bolder;/*normal;*/
+line-height:15px;
 }
 #rotate .caption .content p {
-	bottom:2px;
 font-size:12px;
 position:absolute;
 right:5px;
@@ -1636,14 +1637,13 @@ z-index: 120;
 }			
 
 #rotate-thumbs {
-float:left;
+float:right;
 /*height:100px;*/
 /*margin-top:410px;*/
 /*position:relative;*/
 /*position: absolute;*/
 /*bottom: 10px;*/
-z-index: 200;
-width: 125px;
+width: 110px;
 padding-left: 5px;
 background: white;
 height: 303px;
