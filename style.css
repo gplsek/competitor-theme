@@ -1549,6 +1549,8 @@ text-decoration: none;
 #rotate div.content a.link-marquee {
 font-weight: bolder;
 font-size: 12px;
+float: right;
+margin-top: -16px;
 }
 
 #rotate a img {
@@ -1605,7 +1607,11 @@ font-variant:normal;
 font-weight:bolder;/*normal;*/
 }
 #rotate .caption .content p {
-	font-size: 12px;
+	bottom:2px;
+font-size:12px;
+position:absolute;
+right:5px;
+width: 490px;
 }
 *:first-child+html #rotate .caption .content h3 a{
 zoom: 1;
