@@ -1507,6 +1507,7 @@ margin: 10px 0 0 230px;
 float: left;
 position: relative;
 width: 630px;
+height: 320px;
 }
 #meta-rotate {
 float: left;
@@ -1683,7 +1684,7 @@ display: none;
 background: none;
 display:inline;
 float:none;
-height:70px;
+height:75px;
 margin:0px;
 width:auto;
 }
@@ -1751,7 +1752,7 @@ float:left;
 font-family:georgia;
 font-size:20px;
 font-weight:400;
-padding:2px 30px 3px 10px;
+padding:0px 30px 2px 10px;
 }
 
 #slick-toggle .custom-title h4.tags {
