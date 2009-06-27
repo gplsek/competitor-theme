@@ -638,7 +638,7 @@ font-size:12px;
 }
 
 .main_column .article ul li {
-float:none !important;
+float:none;
 background:url(images/red-arrow.jpg) 0 7px no-repeat;
 padding:5px 5px 5px 15px;
 }
@@ -1637,12 +1637,13 @@ z-index: 120;
 }			
 
 #rotate-thumbs {
-float:right;
+float:left;
 /*height:100px;*/
 /*margin-top:410px;*/
 /*position:relative;*/
 /*position: absolute;*/
 /*bottom: 10px;*/
+z-index: 200;
 width: 110px;
 padding-left: 5px;
 background: white;
@@ -1880,3 +1881,10 @@ width:32px;
 height:32px;
 margin:150px auto auto 260px;
 }
+
+.jcarousel-skin-tango li{
+    background:none !important;
+    float:left !important;
+    padding: 0 !importamt;
+}
+
