@@ -395,7 +395,7 @@ color:#fff;
 }
 
 #content .main_column ul.third_nav li {
-background:transparent url(images/arrow.png)  no-repeat scroll 0 -3px;
+background:transparent url(images/arrow.png)  no-repeat scroll 0 -3px !important;
 font-family:Verdana;
 font-size:14px;
 height:22px;
@@ -424,6 +424,11 @@ border-right:1px solid #8E8E8E;
 margin-right:0;
 list-style:none;
 padding:0 10px;
+}
+
+#content .main_column ul.third_nav li.last{
+background:none !important;
+
 }
 
 #content .main_column ul.third_nav ul li a {
@@ -1550,12 +1555,12 @@ text-decoration: none;
 #rotate div.content a.link-marquee {
 font-weight: bolder;
 font-size: 12px;
-float: right;
+/*float: right;     */
 /*margin-top: -16px;*/
 position: absolute!important;
 top: 35px;
 left: 400px;
-width:95px;
+/*width:95px;  */
 }
 
 #rotate a img {
