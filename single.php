@@ -43,10 +43,14 @@
                 <li><?php comments_popup_link('Comments (0)', 'Comments (1)', 'Comments (%)'); ?></li>
             </ul>
             <p>
-            <?php the_content('<span class="continue">&raquo;Continue Reading</span>'); ?> 
-    		</p>  
+            	<?php the_content('<span class="continue">&raquo;Continue Reading</span>'); ?> 
+			</p> 
+				
+    		 <?php wp_link_pages('before=<div class="pagination"><ul><li>Pages:</li>&after=</ul></div>&link_before=<li>&link_after=</li>'); ?>
+			
+			
             </div>	
-			<?php wp_link_pages('before=<div class="pagination"><ul><li>Pages:</li>&after=</ul></div>&link_before=<li>&link_after=</li>'); ?>
+			<div style="clear:all;"></div>
          
 			
                 
