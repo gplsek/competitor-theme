@@ -1,0 +1,38 @@
+body {
+/*background: #14264c url(triathlon-uk/background.jpg) center top no-repeat;*/
+background-color: #14264c;
+
+}
+
+#logo {
+background:transparent url(triathlon-uk/tri-logo.png) no-repeat scroll 0px 4px;
+}
+
+#content .signin
+{background-color: #993399;
+}
+
+.main_column .article ul.options li a {
+border-right:1px solid #993399;
+color:#993399;
+}
+
+#content .main_column h1:hover,#content .main_column h1 a:hover {
+color:#993399;
+}
+
+
+#rotate-thumbs #maqnav li a.border img {
+border:5px solid #993399;
+}
+
+/* need to change as items in navigation changes*/
+.nav_bars ul.main_nav li a {
+font-size:22px;
+}
+
+#content .nav_bars ul.sec_nav li a {
+font-size:14px;
+margin-top:-2px;
+text-decoration:none;
+}
