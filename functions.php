@@ -621,9 +621,9 @@ function get_mag($url){
 add_action( 'wp_print_scripts', 'add_javascript' );
 function add_javascript( ) {
 	wp_enqueue_script('jquery');
-	wp_enqueue_script('ui-core','\''. TEMPLATEPATH . '/includes/js/ui.core.js', array('jquery'));
-	wp_enqueue_script('jquery-ui-pesonalized','\''. TEMPLATEPATH .'/includes/js/jquery-ui-personalized-1.6rc6.js', array('jquery'));
-	wp_enqueue_script('facebox','\''. TEMPLATEPATH .'/includes/js/facebox/facebox.js', array('jquery'));
+	wp_enqueue_script('ui-core','\''. get_bloginfo('template_directory') . '/includes/js/ui.core.js', array('jquery'));
+	wp_enqueue_script('jquery-ui-pesonalized','\''. get_bloginfo('template_directory') .'/includes/js/jquery-ui-personalized-1.6rc6.js', array('jquery'));
+	wp_enqueue_script('facebox','\''. get_bloginfo('template_directory') .'/includes/js/facebox/facebox.js', array('jquery'));
 
 }
 
