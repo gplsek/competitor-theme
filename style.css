@@ -1,4 +1,4 @@
-/*
+	/*
 Theme Name: Competitor Master Theme
 Description: This theme should be used for Competitor's main sites. Theme can be customized by clicking the CompTheme Options button in lower left. Create a custom look by creating a new CSS file and uploading it to server. 
 Version: .5
@@ -59,6 +59,10 @@ font-family:georgia !important;
 font-style:italic;
 margin:0;
 padding:0;
+}
+
+ul, li {
+list-style:none;
 }
 
 #container {
@@ -598,7 +602,7 @@ border-bottom:1px dashed #2E2E2E;
 float:left;
 overflow:hidden;
 padding:10px 15px 20px;
-width:600px;
+width:610px;
 }
 
 #content .full {
@@ -645,7 +649,7 @@ font-size:12px;
 .main_column .article ul li {
 float:none;
 background:url(images/red-arrow.jpg) 0 7px no-repeat;
-padding:5px 5px 5px 15px;
+padding:6px 5px 5px 15px;
 }
 
 .main_column .article ol li {
@@ -1287,7 +1291,7 @@ border-bottom:1px dashed #2E2E2E;
 clear:left;
 padding:15px;
 text-align:center;
-width:600px;
+width:610px;
 }
 
 #right_ad {clear:left; margin-top:17px; padding-top:5px; padding-bottom:5px; margin-bottom:20px; background-color:#e5e7e6; width:330px}
@@ -1452,7 +1456,7 @@ border:none;
 color:#C4161C;
 }
 
-#content .nav_bars ul li,#content .main_column ul li {
+#content .nav_bars ul li {
 float:left;
 list-style-image:none;
 list-style-position:outside;
@@ -1647,14 +1651,14 @@ z-index:200;
 
 #rotate-thumbs #maqnav {
 float:right;
-/*height:100px;*/
-/*padding:0 15px;*/
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
 position:relative;
-width:125px;/*640px;*/
+width:125px;
 }
 
 #rotate-thumbs #maqnav li {
-float:right;
 height:75px;
 margin-bottom:4px;
 margin-left:2px;
@@ -1664,9 +1668,8 @@ width:113px;
 
 #rotate-thumbs #maqnav li a{
 position: relative;
-/*padding: 0px;*/
-
 }
+
 #rotate-thumbs #maqnav li p{
 color:#FFFFFF;
 font-size:8pt;
@@ -1685,8 +1688,8 @@ width:auto;
 
 #rotate-thumbs #maqnav li a img {
 border:5px solid #FFFFFF;
-width:103px;/*100px;*/
-height: 65px;/*62px;*/
+width:113px;
+height: 65px;
 }
 
 #rotate-thumbs #maqnav li a.border img {
@@ -1782,7 +1785,7 @@ border:1px solid #999999;
 height:355px;
 padding:0 5px;
 position:relative;
-width:618px;
+width:628px;
 margin-top:0px;
 }
 

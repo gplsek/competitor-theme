@@ -87,35 +87,7 @@ jQuery.noConflict();
 	})
 	
 </script>
-   <script src="<?php bloginfo('template_directory'); ?>/includes/js/jquery.hoverIntent.minified.js" type="text/javascript">
 
-</script>
-    <script type="text/javascript" charset="utf-8">
-jQuery.noConflict();
-    jQuery(document).ready(function() {
-      
-      function addMega(){
-        jQuery(this).addClass("hovering");
-        }
-
-      function removeMega(){
-        jQuery(this).removeClass("hovering");
-        }
-
-    var megaConfig = {
-         interval: 10,
-         sensitivity: 4,
-         over: addMega,
-         timeout: 10,
-         out: removeMega
-    };
-
-    jQuery("li.mega").hoverIntent(megaConfig);
-
-      
-    });
-
-</script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/includes/js/jquery.hint.js"></script>
 
 <script type="text/javascript">
