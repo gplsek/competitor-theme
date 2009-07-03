@@ -3,7 +3,7 @@
 if (!function_exists('add_action')) {
 	require_once('../../../wp-config.php');
 }
-global $wpdb, $current_site;
+//global $wpdb, $current_site;
 
 
 

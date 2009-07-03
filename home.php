@@ -83,7 +83,7 @@ $template_path = get_bloginfo('template_directory');?>
 
 						});
 						</script>
-						<?
+						<?php
 						$m = new Marquee;
 						$magazine = $m->get_magazine_name($url);
 						//sleep(2);
@@ -93,11 +93,11 @@ $template_path = get_bloginfo('template_directory');?>
 					
 					if (get_mag(get_option('siteurl')) == "velonews")
 					{
-						include(TEMPLATEPATH . '/layouts/widget_layout.php');
+						include_once(TEMPLATEPATH . '/layouts/widget_layout.php');
 					}
 					else
 					{
-						include(TEMPLATEPATH . '/layouts/blog_layout.php');
+						include_once(TEMPLATEPATH . '/layouts/blog_layout.php');
 					}
 
 					?>

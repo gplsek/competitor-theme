@@ -718,28 +718,35 @@ text-decoration:none!important;
 }
 
 /*######################## Pagination & Breadcumbs ##############################*/
-.main_column .pagination {
+#content .main_column .pagination {
 overflow:hidden;
 padding:10px;
 float: left;
+width:620px;
 }
 
 #content .main_column .pagination p {
 border:1px solid #666;
-color:#8E8E8E;
+background-color:#fff;
+color:#000;
 float:left;
 font-size:12px;
 margin-right:5px;
-padding:3px 5px;
+padding:6px 7px;
 }
 
-.main_column .pagination ul {
+#content .main_column .pagination ul {
 float:left;
 overflow:hidden;
 list-style:none;
+width: 500px;
+}
+#content .main_column .pagination ul li {
+color:#fff;
+line-height:10px;
 }
 
-.main_column .pagination ul li a {
+#content .main_column .pagination ul li a {
 border:1px solid #666;
 color:#000;
 font-family:arial;
@@ -750,12 +757,14 @@ display:inline;
 height:18px;
 text-decoration:none;
 margin:0 5px;
-padding:3px 7px 0;
+padding:8px 7px 0;
+background-color:#fff;
 }
 
-.main_column .pagination ul li a:hover,#content .main_column .pagination p.link:hover {
+#content .main_column .pagination ul li a:hover,
+#content .main_column .pagination p.link:hover {
 border:1px solid #000;
-background-color:#000;
+background-color:#ff0000;
 color:#fff;
 }
 
@@ -764,7 +773,7 @@ color:#000;
 text-decoration:none;
 }
 
-#content .pagination ul li.current{
+#content .main_column .pagination ul li.current{
 font-family:arial;
 font-size:12px;
 width:auto;
@@ -773,9 +782,9 @@ display:inline;
 height:18px;
 text-decoration:none;
 margin:0 5px;
-padding:3px 7px 0;
+padding:8px 7px 0;
 border:1px solid #000;
-background-color:#000;
+background-color:#333;
 color:#fff;
 }
 
@@ -1206,7 +1215,11 @@ width:220px;
 }
 
 #BottomFeature {
-width:560px;
+width:550px;
+}
+
+#BottomFeature li {
+float: left;
 }
 
 .right_column .ui-tabs-nav {
@@ -1516,7 +1529,7 @@ margin: 10px 0 0 230px;
 float: left;
 position: relative;
 width: 640px;
-height: 320px;
+/*height: 320px;*/
 }
 #meta-rotate {
 float: left;

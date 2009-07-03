@@ -22,6 +22,8 @@ h2 { margin-bottom: 20px; }
 <?php 
 }
 
+
+
 // VARIABLES
 
 $themename = "CompTheme";
@@ -296,7 +298,7 @@ add_menu_page($themename." Options", $themename." Options", 'edit_themes', basen
 
 }
 
-function compthemes_page (){
+function compthemes_page(){
 
 		global $options, $themename, $manualurl;
 		
