@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head profile="http://gmpg.org/xfn/11">
 <?php
-header('Cache-Control: no-store, no-cache, must-revalidate');     // HTTP/1.1
-header('Cache-Control: pre-check=0, post-check=0, max-age=0');
-header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
+//header('Cache-Control: no-store, no-cache, must-revalidate');     // HTTP/1.1
+//header('Cache-Control: pre-check=0, post-check=0, max-age=0');
+//header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 
 ?>
 <title>
@@ -18,8 +18,11 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 <link rel="stylesheet" type="text/css"  href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/print.css" media="print" />
 
-
-
+<?php if (get_mag(get_option('siteurl')) == "velonews")
+					{?>
+						<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles/velonews.css" media="screen" />
+				<?php	}
+?>
 
 <!--[if IE 6]><script src="<?php bloginfo('template_directory'); ?>/DD_belatedPNG.js"></script><script type="text/javascript">DD_belatedPNG.fix('a, div, img');</script><![endif]-->
 
