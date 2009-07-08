@@ -16,6 +16,7 @@ global $user_ID, $wpdb, $post, $current_category;
 				    $featcat = 'tech';
 					//$the_query = new WP_Query('category_name='.$featcat.'&showposts=5&orderby=post_date&order=desc');	
 					$stick = get_option("sticky_posts");
+					echo $stick;
 					query_posts(array(
 					'category_name' => $featcat, 
 					'posts__in' => $stick,
