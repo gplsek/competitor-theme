@@ -40,7 +40,7 @@ global $user_ID, $wpdb, $post, $current_category;
 					
 					query_posts(array(
 					'category_name' => 'news', 
-					'posts__in' => get_option("sticky_posts");
+					'posts__in' => get_option("sticky_posts"),
 					'order'=>'desc',
 					));
 					
