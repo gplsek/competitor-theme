@@ -36,14 +36,26 @@ global $user_ID, $wpdb, $post, $current_category;
 			<ul class="list1">
 				<?php 
 				    $featcat = 'news';
-					$the_query = new WP_Query('category_name='.$featcat.'&showposts=5&orderby=post_date&order=desc');		
-					while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
+					//$the_query = new WP_Query('category_name='.$featcat.'&showposts=5&orderby=post_date&order=desc');	
+					
+					query_posts(array(
+					'category_name' => 'news', 
+					'posts__in' => get_option("sticky_posts");
+					'order'=>'desc',
+					));
+					
+					
+						
+					//while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
+					if ( have_posts() ) : while ( have_posts() ) : the_post();
+					
+				
 				?>
 
 					<li><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
 					<label class="date"><?php the_date('M j'); ?></label><?php //the_advanced_excerpt(); ?></li>
 
-				<?php endwhile; ?>	
+				<?php endwhile; endif; ?>	
 				<li><a href="/category/<?= $featcat;?>/">+ More</a>	</li>
 			</ul>
 		</div>
