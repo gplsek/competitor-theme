@@ -29,13 +29,16 @@ global $user_ID, $wpdb, $post, $current_category;
 					//while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
 					if ( have_posts() ) : while ( have_posts() ) : the_post();$do_not_duplicate = $post->ID;	
 
-
+						if (in_array($post_ID,$stick,true)){
+							
+							
+						
 				?>
 
 					<li><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
 					<label class="date"><?php the_date('M j'); ?></label><?php //the_advanced_excerpt(); ?></li>
 
-				<?php endwhile;endif; ?>	
+				<?php } endwhile;endif; ?>	
 				<li><a href="/category/<?= $featcat;?>/">+ More</a>	</li>
 			</ul>
 		</div>
