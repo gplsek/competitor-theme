@@ -27,7 +27,8 @@ global $user_ID, $wpdb, $post, $current_category;
 						
 					//while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
 					if ( have_posts() ) : while ( have_posts() ) : the_post();$do_not_duplicate = $post->ID;	
-					while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
+
+
 				?>
 
 					<li><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
