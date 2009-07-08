@@ -14,7 +14,19 @@ global $user_ID, $wpdb, $post, $current_category;
 			<ul class="list1">
 				<?php 
 				    $featcat = 'tech';
-					$the_query = new WP_Query('category_name='.$featcat.'&showposts=5&orderby=post_date&order=desc');		
+					//$the_query = new WP_Query('category_name='.$featcat.'&showposts=5&orderby=post_date&order=desc');	
+					$stick = get_option("sticky_posts");
+					query_posts(array(
+					'category_name' => $featcat, 
+					'posts__in' => $stick,
+					'orderby'=>'post_date',
+					'order'=>'desc',
+					));
+					
+					
+						
+					//while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
+					if ( have_posts() ) : while ( have_posts() ) : the_post();$do_not_duplicate = $post->ID;	
 					while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
 				?>
 
@@ -39,15 +51,16 @@ global $user_ID, $wpdb, $post, $current_category;
 					//$the_query = new WP_Query('category_name='.$featcat.'&showposts=5&orderby=post_date&order=desc');	
 					
 					query_posts(array(
-					'category_name' => 'news', 
-					'posts__in' => get_option("sticky_posts"),
+					'category_name' => $featcat, 
+					'posts__in' => $stick,
+					'orderby'=>'post_date',
 					'order'=>'desc',
 					));
 					
 					
 						
 					//while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
-					if ( have_posts() ) : while ( have_posts() ) : the_post();
+					if ( have_posts() ) : while ( have_posts() ) : the_post();$do_not_duplicate = $post->ID;
 					
 				
 				?>
