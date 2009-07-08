@@ -20,8 +20,10 @@ global $user_ID, $wpdb, $post, $current_category;
 
 					<li><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
 					<label class="date"><?php the_date('M j'); ?></label><?php //the_advanced_excerpt(); ?></li>
-					
-					
+
+				<?php endwhile; ?>	
+				<li><a href="/category/<?= $featcat;?>/">+ More</a>	</li>
+			</ul>
 		</div>
 		<div class="ad-velonews">
 			<h3>Ad</h3>
