@@ -28,7 +28,7 @@ global $user_ID, $wpdb, $post, $current_category;
 						
 					//while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
 					if ( have_posts() ) : while ( have_posts() ) : the_post();$do_not_duplicate = $post->ID;	
-
+						echo "POSTID:".$post->ID;
 						if (in_array($post->ID,$stick,true)){
 							
 							
