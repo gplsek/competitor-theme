@@ -14,22 +14,20 @@ global $user_ID, $wpdb, $post, $current_category;
 			<ul class="list1">
 				<?php 
 				    $featcat = 'tech';
-					//$the_query = new WP_Query('category_name='.$featcat.'&showposts=5&orderby=post_date&order=desc');	
-					$stick = get_option("sticky_posts");
-					print_r($stick);
-					query_posts(array(
-					'category_name' => $featcat, 
-					'posts__in' => $stick,
-					'orderby'=>'post_date',
-					'order'=>'desc',
-					));
+					$the_query = new WP_Query('category_name='.$featcat.'&showposts=5&orderby=post_date&order=desc');	
+					// $stick = get_option("sticky_posts");
+					// 					print_r($stick);
+					// 					query_posts(array(
+					// 					'category_name' => $featcat, 
+					// 					'posts__in' => $stick,
+					// 					'orderby'=>'post_date',
+					// 					'order'=>'desc',
+					// 					));
 					
 					
 						
-					//while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
-					if ( have_posts() ) : while ( have_posts() ) : the_post();$do_not_duplicate = $post->ID;	
-						echo "POSTID:".$post->ID;
-						if (in_array($post->ID,$stick,true)){
+					while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
+					
 							
 							
 						
@@ -38,7 +36,7 @@ global $user_ID, $wpdb, $post, $current_category;
 					<li><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
 					<label class="date"><?php the_date('M j'); ?></label><?php //the_advanced_excerpt(); ?></li>
 
-				<?php } endwhile;endif; ?>	
+				<?php endwhile;?>	
 				<li><a href="/category/<?= $featcat;?>/">+ More</a>	</li>
 			</ul>
 		</div>
@@ -53,19 +51,19 @@ global $user_ID, $wpdb, $post, $current_category;
 			<ul class="list1">
 				<?php 
 				    $featcat = 'news';
-					//$the_query = new WP_Query('category_name='.$featcat.'&showposts=5&orderby=post_date&order=desc');	
+					$the_query = new WP_Query('category_name='.$featcat.'&showposts=5&orderby=post_date&order=desc');	
 					
-					query_posts(array(
-					'category_name' => $featcat, 
-					'posts__in' => $stick,
-					'orderby'=>'post_date',
-					'order'=>'desc',
-					));
-					
+					// query_posts(array(
+					// 					'category_name' => $featcat, 
+					// 					'posts__in' => $stick,
+					// 					'orderby'=>'post_date',
+					// 					'order'=>'desc',
+					// 					));
+					// 					
 					
 						
-					//while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
-					if ( have_posts() ) : while ( have_posts() ) : the_post();$do_not_duplicate = $post->ID;
+					while ($the_query->have_posts()) : $the_query->the_post(); $do_not_duplicate = $post->ID;
+					
 					
 				
 				?>
@@ -73,7 +71,7 @@ global $user_ID, $wpdb, $post, $current_category;
 					<li><a title="Permanent Link to <?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
 					<label class="date"><?php the_date('M j'); ?></label><?php //the_advanced_excerpt(); ?></li>
 
-				<?php endwhile; endif; ?>	
+				<?php endwhile;?>	
 				<li><a href="/category/<?= $featcat;?>/">+ More</a>	</li>
 			</ul>
 		</div>
