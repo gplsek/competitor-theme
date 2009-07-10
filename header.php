@@ -18,11 +18,7 @@
 <link rel="stylesheet" type="text/css"  href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/print.css" media="print" />
 
-<?php if (get_mag(get_option('siteurl')) == "velonews")
-					{?>
-						<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles/velonews.css" media="screen" />
-				<?php	}
-?>
+
 
 <!--[if IE 6]><script src="<?php bloginfo('template_directory'); ?>/DD_belatedPNG.js"></script><script type="text/javascript">DD_belatedPNG.fix('a, div, img');</script><![endif]-->
 
