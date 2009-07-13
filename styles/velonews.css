@@ -1,0 +1,38 @@
+#velonews-content {
+	display:inline;
+	float:left;
+	padding:7px 5px 0 15px;
+	width:640px;
+}
+#velonews-content h3 {
+	margin-top:10px;
+}
+#velonews-content #left-velonews{
+	width: 300px;
+	float: left;
+}
+#left-velonews div.latest-tech{
+	float: left;
+	width: 300px;
+}
+#left-velonews div.ad-velonews{
+	float: left;
+	width: 300px;
+}
+#velonews-content #right-velonews{
+	width: 300px;
+	float: right;
+}
+#right-velonews div.latest-news{
+	float: left;
+}
+#velonews-widget {
+	display:inline;
+	float:left;
+	padding:7px 5px 0 15px;
+	width:640px;
+}
+#velonews-widget div.velo-widget{
+	float: left;
+	width: 300px;
+}
