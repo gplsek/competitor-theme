@@ -505,8 +505,8 @@ if ( function_exists('register_sidebar') ){
         	'after_title' => '</h2></div><div class="content-widget">'),
 
 		array('name' => 'content',
-	          'before_widget' => '<div class="velo-widget">',
-	          'after_widget' => '</div></div><!--/velo-widget-->',
+	          'before_widget' => '<div class="widget">',
+	          'after_widget' => '</div></div><!--/widget-->',
 	          'before_title' => '<div class="widget-title"><h2 class="hl">',
 	          'after_title' => '</h2></div><div class="content-widget">'),
 
