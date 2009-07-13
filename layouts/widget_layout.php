@@ -42,6 +42,12 @@ global $user_ID, $wpdb, $post, $current_category;
 		</div>
 		<div class="ad-velonews">
 			<h3>Ad</h3>
+																													<script type="text/javascript" language="JavaScript">
+			  aj_server = 'http://adj43.thruport.com/servlet/ajrotator/'; aj_tagver = '1.0';
+			  aj_zone = 'inside'; aj_adspot = '619341'; aj_page = '0'; aj_dim ='317220'; aj_ch = '619342'; aj_ct = ''; aj_kw = '<?php echo $kw;?>';
+			  aj_pv = true; aj_click = '';
+			</script>
+			<script type="text/javascript" language="JavaScript" src="http://img1.cdn.adjuggler.com/banners/ajtg.js"></script>
 		</div>
 	</div>
 	<div id="right-velonews">
