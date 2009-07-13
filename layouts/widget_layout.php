@@ -13,7 +13,7 @@ global $user_ID, $wpdb, $post, $current_category;
 			
 			<ul class="list1">
 				<?php 
-				    $featcat = 'tech';
+				    $featcat = 'events';
 					$the_query = new WP_Query('category_name='.$featcat.'&showposts=5&orderby=post_date&order=desc');	
 					// $stick = get_option("sticky_posts");
 					// 					print_r($stick);
@@ -50,7 +50,7 @@ global $user_ID, $wpdb, $post, $current_category;
 			
 			<ul class="list1">
 				<?php 
-				    $featcat = 'news';
+				    $featcat = 'sports';
 					$the_query = new WP_Query('category_name='.$featcat.'&showposts=5&orderby=post_date&order=desc');	
 					
 					// query_posts(array(
