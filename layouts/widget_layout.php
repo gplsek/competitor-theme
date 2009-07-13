@@ -57,7 +57,7 @@ global $user_ID, $wpdb, $post, $current_category;
 			<ul class="list1">
 				<?php 
 				    $featcat = 'sports';
-					$the_query = new WP_Query('category_name='.$featcat.'&showposts=5&orderby=post_date&order=desc');	
+					$the_query = new WP_Query('category_name='.$featcat.'&showposts=15&orderby=post_date&order=desc');	
 					
 					// query_posts(array(
 					// 					'category_name' => $featcat, 
