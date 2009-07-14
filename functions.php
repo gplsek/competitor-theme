@@ -504,11 +504,17 @@ if ( function_exists('register_sidebar') ){
         	'before_title' => '<div class="widget-title"><h2 class="hl">',
         	'after_title' => '</h2></div><div class="content-widget">'),
 
-		array('name' => 'content',
-	          'before_widget' => '<div class="widget">',
-	          'after_widget' => '</div></div><!--/widget-->',
-	          'before_title' => '<div class="widget-title"><h2 class="hl">',
-	          'after_title' => '</h2></div><div class="content-widget">'),
+		array('name' => 'content_left',
+	         'before_widget' => '<div class="widget">',
+	         'after_widget' => '</div></div><!--/widget-->',
+	         'before_title' => '<div class="widget-title"><h2 class="hl">',
+	         'after_title' => '</h2></div><div class="content-widget">'),
+	
+		array('name' => 'content_right',
+		       'before_widget' => '<div class="widget">',
+		       'after_widget' => '</div></div><!--/widget-->',
+		       'before_title' => '<div class="widget-title"><h2 class="hl">',
+		       'after_title' => '</h2></div><div class="content-widget">'),
 
 		array('name' => 'category',
 	    	'before_widget' => '<div class="widget">',
