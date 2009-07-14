@@ -8,7 +8,7 @@
 	margin-top:10px;
 }
 #velonews-content #left-velonews{
-	width: 300px;
+width: 300px;
 	float: left;
 }
 #left-velonews div.latest-tech{
@@ -19,6 +19,16 @@
 	float: left;
 	width: 300px;
 }
+
+#velonews-content h3 {
+	background:#FFFFFF none repeat scroll 0 0;
+	color:#CC3300;
+	font-family:arial;
+	font-weight:bold;
+	padding:0;
+	margin: 10px 0;
+}
+
 #velonews-content #right-velonews{
 	width: 300px;
 	float: right;
@@ -35,4 +45,125 @@
 #velonews-widget div.velo-widget{
 	float: left;
 	width: 300px;
+}
+
+
+
+.latest-news ul,
+.latest-tech ul {
+	float:left;
+	font-size:12px;
+	width: 300px;
+}
+
+.latest-news ul li,
+.latest-tech ul li {
+	border-bottom:1px solid #CCCCCC;
+	float:left;
+	padding:8px 0;
+	width:300px;
+}
+
+.latest-news ul li a,
+.latest-tech ul li a {
+	color:#185672;
+	float:left;
+	font-weight:700;
+	text-decoration:none;
+}
+
+.latest-news ul li label.date,
+.latest-tech ul li label.date {
+	float: right;
+}
+
+
+
+
+
+#velonews-widget {
+	font-size: 12px;
+}
+
+#velonews-widget .widget {
+float: left;
+width: 640px;
+}
+
+#velonews-widget .widget .widget-title h2 {
+	background:#FFFFFF none repeat scroll 0 0;
+	color:#CC3300;
+	font-family:arial;
+	font-weight:bold;
+	padding:0;
+	font-size: 19px;
+	margin: 10px 0;
+}
+
+
+.widget-blogs ul li {
+float: left;
+width: 640px;
+}
+
+.widget-blogs .blog-img {
+float: left;
+width: 90px;
+}
+
+.widget-blogs .blog-headline {
+float: left;
+font-size: 16px;
+}
+
+.widget-blogs .blog-p {
+float: right;
+width: 550px;
+}
+
+.widget-blogs .blog-p strong {
+font-weight:normal;
+}
+
+.widget-blogs .blog-p .blog-link {
+
+}
+
+/* Right column */
+
+#right_ad {
+	background-color:#FFFFFF;
+}
+
+.right_column .widget {
+	border-bottom:1px solid #CCCCCC;
+	border-top:1px solid #CCCCCC;
+	width:320px;
+}
+
+.right_column .widget .widget-title {
+	background-color:#FFFFFF;
+}
+
+.right_column .widget .widget-title h2 {
+	background:#FFFFFF none repeat scroll 0 0;
+	color:#CC3300;
+	font-family:arial;
+	font-weight:bold;
+	padding:0;
+}
+
+.right_column .widget .content-widget {
+	background:#FFFFFF;
+	border:none;
+	margin-top:0;
+}
+
+.right_column .widget .content-widget ul {
+	margin:0;
+}
+
+.right_column .widget .content-widget ul li {
+	border-top:1px solid #CCCCCC;
+	margin-top:0;
 }
