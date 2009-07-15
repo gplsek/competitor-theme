@@ -1,5 +1,5 @@
 <?php 
-function compthemes_admin_head() 
+function custom_admin_head() 
 { ?>
 <style>
 
@@ -490,7 +490,7 @@ function compthemes_wp_head() {
 
 add_action('wp_head', 'compthemes_wp_head');
 add_action('admin_menu', 'compthemes_add_admin');
-add_action('admin_head', 'compthemes_admin_head');	
+add_action('admin_head', 'custom_admin_head');	
 
 // OTHER FUNCTIONS
 
