@@ -1,17 +1,19 @@
 <script type="text/javascript">
 jQuery.noConflict();
 	//jQuery().click(function(event) {
-	jQuery(function() {	
-	jQuery("#BottomFeature").tabs({
-		fx: {opacity: 'toggle'},
-		ajaxOptions: { data: { pv: RN ,kw: '<?php echo $_SESSION['kw'];?>' } }
-	});
 	
-});
+	
+	
+//});
 
 jQuery(function() {
 	jQuery("#contentTabs").tabs({ fx: { opacity: 'toggle' },
 		ajaxOptions: { data: { pv: RN, kw: '<?php echo $_SESSION['kw'];?>' } }
+		,
+		jQuery("#BottomFeature").tabs({
+			fx: {opacity: 'toggle'},
+			ajaxOptions: { data: { pv: RN ,kw: '<?php echo $_SESSION['kw'];?>' } }
+		
 	
 	 });
 </script>
