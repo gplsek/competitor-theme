@@ -9,7 +9,7 @@ jQuery.noConflict();
 jQuery(function() {
 	jQuery("#contentTabs").tabs({ fx: { opacity: 'toggle' },
 		ajaxOptions: { data: { pv: RN, kw: '<?php echo $_SESSION['kw'];?>' } }
-		,
+		
 		jQuery("#BottomFeature").tabs({
 			fx: {opacity: 'toggle'},
 			ajaxOptions: { data: { pv: RN ,kw: '<?php echo $_SESSION['kw'];?>' } }
