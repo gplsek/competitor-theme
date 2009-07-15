@@ -1,6 +1,6 @@
 <script type="text/javascript">
 jQuery.noConflict();
-	jQuery().click(function(event) {	
+	jQuery("#BottomFeature ul").click(function(event) {	
 	jQuery("#BottomFeature").tabs({
 		fx: {opacity: 'toggle'},
 		ajaxOptions: { data: { pv: RN ,kw: '<?php echo $_SESSION['kw'];?>' } }
@@ -90,7 +90,7 @@ else
 <ul id="BottomFeature" class="secondary">
 
 
-	<li><a href="#" title="feature">All</a></li>
+	<li><a href="<?= $template_path?>/layouts/default.php?cat=<?= $select_all?><?= $paging ?>" title="feature">All</a></li>
 	<?= $option;?>
 
 
