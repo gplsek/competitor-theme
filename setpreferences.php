@@ -1,8 +1,5 @@
 <?php
-
-if (!function_exists('add_action')) {
-	require_once('../../../wp-config.php');
-}
+require_once('../../../wp-config.php');
 //global $wpdb, $current_site;
 
 
