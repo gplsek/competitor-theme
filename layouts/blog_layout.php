@@ -78,9 +78,9 @@ else
 	<a name="top"></a>
 <div id="contentTabs" class="filters">
 <ul id="TopFeature" class="main">
-    <li><a class="first active" href="<?= $template_path?>/layouts/default.php?cat=<?= $select_all?>&sort=post_date<?= $paging ?>" title="feature">MOST RECENT</a></li>
-    <li><a href="<?= $template_path?>/layouts/default.php?cat=<?= $select_all?>&sort=views<?= $paging ?>" title="feature">MOST VIEWED</a></li>
-    <li><a href="<?= $template_path?>/layouts/default.php?cat=<?= $select_all?>&sort=comment_count<?= $paging ?>" title="feature">MOST COMMENTED</a></li>
+    <li><a class="first active" href="<?= $template_path?>/layouts/default.php?select_all=<?= $select_all?>&sort=post_date<?= $paging ?>" title="feature">MOST RECENT</a></li>
+    <li><a href="<?= $template_path?>/layouts/default.php?select_all=<?= $select_all?>&sort=views<?= $paging ?>" title="feature">MOST VIEWED</a></li>
+    <li><a href="<?= $template_path?>/layouts/default.php?select_all=<?= $select_all?>&sort=comment_count<?= $paging ?>" title="feature">MOST COMMENTED</a></li>
 </ul>
 <!--	</div>-->
 <!--	<div id="BottomFeature">-->
@@ -89,7 +89,7 @@ else
 <ul id="BottomFeature" class="secondary">
 
 
-	<li><a href="#" title="feature">All</a></li>
+	<li><a href="<?= $template_path?>/layouts/default.php?cat=<?= $select_all?><?= $paging ?>" title="feature">All</a></li>
 	<?= $option;?>
 
 
