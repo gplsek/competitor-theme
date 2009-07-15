@@ -866,6 +866,7 @@ font-size:11px;
 margin:-3px 0 10px;
 overflow:hidden;
 text-align:left;
+width: 330px;
 }
 
 .right_column .tab_content ul {
@@ -961,15 +962,6 @@ width:60px;
 float:left;
 }
 
-.right_column .widget {
-margin-top:5px;
-text-align:left;
-
-float:left;
-width:340px;
-margin-bottom:15px;
-}
-
 
 .right_column {
 float:left;
@@ -978,6 +970,13 @@ text-align:center;
 width:330px;
 }
 
+.right_column .widget {
+margin-top:5px;
+text-align:left;
+float:left;
+width:340px;
+margin-bottom:15px;
+}
 
 .right_column .widget .widget-title {
 background-color:#D6D6D6;
