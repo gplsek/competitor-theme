@@ -13,6 +13,7 @@ jQuery(function() {
 		ajaxOptions: { data: { pv: RN, kw: '<?php echo $_SESSION['kw'];?>' } }
 	
 	 });
+	});
 </script>
 <?php 
 
