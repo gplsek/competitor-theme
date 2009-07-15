@@ -1,6 +1,6 @@
 <script type="text/javascript">
 jQuery.noConflict();
-	jQuery("#BottomFeature ul").click(function(event) {	
+	jQuery().click(function(event) {	
 	jQuery("#BottomFeature").tabs({
 		fx: {opacity: 'toggle'},
 		ajaxOptions: { data: { pv: RN ,kw: '<?php echo $_SESSION['kw'];?>' } }
