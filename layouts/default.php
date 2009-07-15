@@ -212,7 +212,10 @@ global $user_ID, $wpdb, $post, $current_category;
 			<?php //end add
 			
 		}
-		if ( !($counter2 == $showposts) && ($counter == 0) ) { echo '<div class="hl-full"></div>'; ?> <div style="clear:both;"></div> <?php } ?>
+		/*
+		if ( !($counter2 == $showposts) && ($counter == 0) ) { echo '<div class="hl-full"></div>'; ?> <div style="clear:both;"></div> <?php } 
+		*/
+		?>
 	
 	<?php endwhile; ?>
 	

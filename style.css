@@ -1300,7 +1300,7 @@ width:300px;
 #inlinead {
 background-color:#E5E7E6;
 border-bottom:1px dashed #2E2E2E;
-clear:left;
+float:left;
 padding:15px;
 text-align:center;
 width:610px;
