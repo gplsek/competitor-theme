@@ -1,6 +1,8 @@
 <script type="text/javascript">
 jQuery.noConflict();
-	jQuery().click(function(event) {	
+	//jQuery().click(function(event) {	
+	jQuery(function() {
+	jQuery('#feature1').hide();
 	jQuery("#BottomFeature").tabs({
 		fx: {opacity: 'toggle'},
 		ajaxOptions: { data: { pv: RN ,kw: '<?php echo $_SESSION['kw'];?>' } }
@@ -15,8 +17,9 @@ jQuery(function() {
 	 });
 	});
 	
-	jQuery("#BottomFeature").click(function(){
-	jQuery('#feature').hide('slow');
+	jQuery("#BottomFeature a").click(function(){
+	jQuery('#feature').hide();
+	jQuery('#feature1').show('slow');
 	});
 	
 	
@@ -70,7 +73,7 @@ else
 {
 	foreach ($categories as $cate) {
 			if (get_option('comp_nav_categories_'.$cate->cat_ID)){
-  				$option .= '<li><a href="'.$template_path.'/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
+  				$option .= '<li><a href="'.$template_path.'/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature1">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
 	$select_all .= $cate->cat_ID.",";
 
 	} //end if
@@ -96,7 +99,7 @@ else
 <ul id="BottomFeature" class="secondary">
 
 
-	<li><a href="<?= $template_path?>/layouts/default.php?cat=<?= $select_all?><?= $paging ?>" title="feature">All</a></li>
+	<li><a href="<?= $template_path?>/layouts/default.php?cat=<?= $select_all?><?= $paging ?>" title="feature1">All</a></li>
 	<?= $option;?>
 
 
@@ -108,6 +111,8 @@ else
 
 
 <div id="feature">
+</div>
+<div id="feature1">
 </div>
 
 <!--</div>--><!-- End Filters-->				
