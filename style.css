@@ -1209,6 +1209,10 @@ margin:0;
 width:220px;
 }
 
+#feature {
+float: left;
+}
+
 #BottomFeature {
 width:550px;
 }
