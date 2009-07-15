@@ -1,6 +1,6 @@
 <?php
 require_once('../../../wp-config.php');
-//global $wpdb, $current_site;
+global $wpdb, $current_site;
 
 
 
@@ -75,7 +75,7 @@ setcookie("Event", $cookie_event,time()+(60*60*24*365),"/");
 setcookie("activity", $cookie_activity,time()+(60*60*24*365),"/");
 setcookie("area", $cookie_area,time()+(60*60*24*365),"/");
 //setcookie("Event", $cookie_event,time()+(60*60*24*365),"/");
-header("Location: http://{$_SERVER['SERVER_NAME']}/");
+//header("Location: http://{$_SERVER['SERVER_NAME']}/");
 
 
 
