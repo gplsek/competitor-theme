@@ -30,6 +30,7 @@ jQuery.noConflict();
 
 
 <?
+$_SESSION['cat'] = "";
 $template_path = get_bloginfo('template_directory');?>
            
             <div id="mainTabs" class="main_column">
@@ -91,7 +92,7 @@ $template_path = get_bloginfo('template_directory');?>
 					}
 					
 					//echo get_mag(get_option('siteurl'));
-					if ((get_mag(get_option('siteurl')) == "velonews") || (get_mag(get_option('siteurl')) == "hotparks"))
+					if ((get_mag(get_option('siteurl')) == "velonews"))
 					{
 						include_once(TEMPLATEPATH . '/layouts/widget_layout.php');
 					}

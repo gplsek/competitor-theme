@@ -40,7 +40,7 @@ $categories =  get_categories('hide_empty=0');
 $option = "";
 $select_all = "";
 
-if (($magazine == 'competitor') || ($magazine == '2hotparks') || ($magazine == 'tworld')) // custom setting for home
+if (($magazine == 'competitor') || ($magazine == 'hotparks') || ($magazine == 'tworld')) // custom setting for home
 {
 include(TEMPLATEPATH . '/layouts/custom_content.php');
 
