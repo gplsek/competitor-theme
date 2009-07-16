@@ -92,7 +92,7 @@ $template_path = get_bloginfo('template_directory');?>
 					}
 					
 					//echo get_mag(get_option('siteurl'));
-					if ((get_mag(get_option('siteurl')) == "velonews"))
+					if ((get_mag(get_option('siteurl')) == "hotparks"))  //change to velonews when we go live
 					{
 						include_once(TEMPLATEPATH . '/layouts/widget_layout.php');
 					}
