@@ -22,6 +22,11 @@ jQuery(function() {
 	jQuery('#feature1').show('slow');
 	});
 	
+	jQuery("#contentTabs a").click(function(){
+	jQuery('#feature1').hide();
+	jQuery('#feature').show('slow');
+	});
+	
 	
 </script>
 <?php 
@@ -73,7 +78,7 @@ else
 {
 	foreach ($categories as $cate) {
 			if (get_option('comp_nav_categories_'.$cate->cat_ID)){
-  				$option .= '<li><a href="'.$template_path.'/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature1">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
+  				$option .= '<li><a id="BottomFeature" href="'.$template_path.'/layouts/default.php?cat='.$cate->cat_ID.$paging.'" title="feature1">'.$cate->cat_name .' ('.$cate->category_count.')</a></li>';
 	$select_all .= $cate->cat_ID.",";
 
 	} //end if
@@ -88,9 +93,9 @@ else
 	<a name="top"></a>
 <div id="contentTabs" class="filters">
 <ul id="TopFeature" class="main">
-    <li><a class="first active" href="<?= $template_path?>/layouts/default.php?select_all=<?= $select_all?>&sort=post_date<?= $paging ?>" title="feature">MOST RECENT</a></li>
-    <li><a href="<?= $template_path?>/layouts/default.php?select_all=<?= $select_all?>&sort=views<?= $paging ?>" title="feature">MOST VIEWED</a></li>
-    <li><a href="<?= $template_path?>/layouts/default.php?select_all=<?= $select_all?>&sort=comment_count<?= $paging ?>" title="feature">MOST COMMENTED</a></li>
+    <li><a id="contentTabs" class="first active" href="<?= $template_path?>/layouts/default.php?select_all=<?= $select_all?>&sort=post_date<?= $paging ?>" title="feature">MOST RECENT</a></li>
+    <li><a id="contentTabs" href="<?= $template_path?>/layouts/default.php?select_all=<?= $select_all?>&sort=views<?= $paging ?>" title="feature">MOST VIEWED</a></li>
+    <li><a id="contentTabs" href="<?= $template_path?>/layouts/default.php?select_all=<?= $select_all?>&sort=comment_count<?= $paging ?>" title="feature">MOST COMMENTED</a></li>
 </ul>
 <!--	</div>-->
 <!--	<div id="BottomFeature">-->
@@ -99,7 +104,7 @@ else
 <ul id="BottomFeature" class="secondary">
 
 
-	<li><a href="<?= $template_path?>/layouts/default.php?cat=<?= $select_all?><?= $paging ?>" title="feature1">All</a></li>
+	<li><a id="BottomFeature" href="<?= $template_path?>/layouts/default.php?cat=<?= $select_all?><?= $paging ?>" title="feature1">All</a></li>
 	<?= $option;?>
 
 
